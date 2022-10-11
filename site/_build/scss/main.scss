@@ -1,0 +1,66 @@
+ /* ==========================================================================
+ *
+ *    CSS main
+ *
+ *  ========================================================================== */
+
+
+
+/* --------------------------------------------------------------------------- */
+/*
+/*	Variables
+/*
+/* --------------------------------------------------------------------------- */
+
+// fonts
+$fontRegular:  arial, sans-serif;
+
+
+$colorPrimary: #f37021;
+$colorSecondary: #203062;
+$colorFont: #4b4b4b;
+
+// colors
+$colorDanger: red;
+
+
+/* --------------------------------------------------------------------------- */
+/*
+/*	Vendor Imports
+/*
+/* --------------------------------------------------------------------------- */
+
+@import
+'vendor/normalize';
+
+
+
+
+/* --------------------------------------------------------------------------- */
+/*
+/*	Imports
+/*
+/* --------------------------------------------------------------------------- */
+
+// template
+@import
+'template/fonts',
+'template/globals',
+'template/padding',
+'template/header',
+'template/footer',
+'template/animation',
+'template/consentfriend';
+
+
+// modules
+@import
+'modules/form',
+'modules/teaser';
+
+
+// components
+@import
+'components/headlines',
+'components/buttons',
+'components/content';

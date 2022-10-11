@@ -1,0 +1,26 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	content
+/*
+/* --------------------------------------------------------------------------- */
+.content {
+
+    a {
+        text-decoration: underline;
+
+        // long Links break
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+
+	// responsive
+	@media (max-width: 320px) {}
+}

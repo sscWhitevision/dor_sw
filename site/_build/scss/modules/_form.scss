@@ -1,0 +1,186 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	form
+/*
+/* --------------------------------------------------------------------------- */
+.form {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+
+        &--2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &--3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &--4 {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    &__field {
+        &--error {
+            color: $colorDanger;
+        }
+    }
+
+    &__error {
+        font-size: 0.85rem;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+
+    &__input {
+        display: block;
+        width: 100%;
+        outline: none;
+        appearance: none;
+        border: 2px solid currentColor;
+        height: 42px;
+        padding: 0 0.5em;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        &--select {}
+    }
+    &__field--error &__inputBlock {
+        border-color: $colorDanger;
+    }
+
+
+    // radio
+    &__radio {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        &Button {
+            display: block;
+            width: 25px;
+            height: 25px;
+            border: 2px solid currentColor;
+            border-radius: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 15px;
+                height: 15px;
+                background: currentColor;
+                border-radius: 100%;
+                opacity: 0;
+                transform: scale(0);
+                transition: all 0.3s ease;
+            }
+        }
+        :checked + &Button:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        &Field {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    // Checkbox
+    &__checkbox {
+        display: inline-grid;
+        grid-template-columns: 24px 1fr;
+        grid-gap: 0.5em;
+
+        input {
+            display: none;
+        }
+
+        &Button {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid currentColor;
+            width: 24px;
+            height: 24px;
+        }
+
+        &Icon {
+            display: block;
+            width: 11px;
+            height: 11px;
+            opacity: 0;
+            fill: #000;
+        }
+        input:checked + &Button &Icon {
+            animation: checkbox 0.3s ease;
+            animation-fill-mode: forwards;
+
+            @keyframes checkbox {
+                0% { opacity: 0; transform: scale(0); }
+                80% { opacity: 1; transform: scale(1.8); }
+                100% { opacity: 1; transform: scale(1); }
+            }
+        }
+
+        &Label {
+            &--small {
+                font-size: 0.85rem;
+
+                @media (max-width: 500px) {
+                    font-size: 0.75rem;
+                }
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // select
+    &__select {
+        position: relative;
+
+        &Icon {
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 0.5em;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            fill: currentColor;
+        }
+    }
+}

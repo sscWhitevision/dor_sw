@@ -1,0 +1,32 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	teaser
+/*
+/* --------------------------------------------------------------------------- */
+.teaser {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+	gap: 4.4rem;
+	
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__headline {
+        color: $colorSecondary;
+        font-size: 4rem;
+        line-height: 1.13;
+        font-weight: bold;
+    }
+
+    &__paragraph {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    &__logo {
+		fill: #000;
+		height: 2rem;
+    }
+}
