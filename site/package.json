@@ -1,0 +1,35 @@
+{
+  "name": "Quadro-Prototyp-Vorlage",
+  "version": "1.0.1",
+  "description": "Quadro Frontent Workflow",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quadro - Jan Dähne",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jdaehne/kickstart-prototyp.git"
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-csso": "*",
+    "gulp-group-css-media-queries": "*",
+    "gulp-imagemin": "^7.0.1",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-svgmin": "*",
+    "gulp-svgstore": "*",
+    "gulp-uglify": "*",
+    "gulp-cache-bust": "*"
+  },
+  "dependencies": {
+    "sass": "*"
+  }
+}
