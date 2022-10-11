@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-        <link rel="stylesheet" href="css/main.css?t=1665474253358" />
+        <link rel="stylesheet" href="css/main.css?t=1665485789322" />
     </head>
     <body>
         <!-- header -->
@@ -21,14 +21,10 @@
             <div class="background--secondary">
                 <div class="container">
                     <div class="header__top">
-                        <ul class="header__social">
-                            <a
-                                href="https://"
-                                target="_blank"
-                                class="header__socialButton">
+                        <div class="header__social">
+                            <a href="https://" target="_blank" class="header__socialButton">
                                 <svg class="header__socialIcon">
-                                    <use
-                                        xlink:href="img/sprite.svg#linkedin"></use>
+                                    <use xlink:href="img/sprite.svg#linkedin"></use>
                                 </svg>
                             </a>
                             <a
@@ -58,14 +54,14 @@
                                         xlink:href="img/sprite.svg#twitter"></use>
                                 </svg>
                             </a>
-                            <div ">
+                            <div>
                                 <svg class="header__topLogo">
                                     <use
                                         xlink:href="img/sprite.svg#catalyst-for-success"></use>
                                 </svg>
                             </div>
-                        </ul>
-                        <ul class="header__language">
+                        </div>
+                        <div class="header__language">
                             <div class="header__languageButton">
                                 <svg class="header__languageIcon">
                                     <use
@@ -73,67 +69,52 @@
                                 </svg>
                                 <span>International</span>
                             </div>
-
-                            <div class="header__search">
-                                <input
-                                    type="text"
-                                    name="search"
-                                    class="header__searchInput"
-                                    placeholder="search..." />
-                                <a class="header__searchButton" href="#">
-                                    <svg class="header__searchIcon">
-                                        <use
-                                            xlink:href="img/sprite.svg#search"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pt0 pb0">
-                <div class="container">
-                    <div class="header__bottom">
-                        <div class="">
-                            <a
-                                href="#"
-                                target="_blank"
-                                class="header__bottomLogo">
-                                <svg class="header__bottomIcon">
-                                    <use
-                                        xlink:href="img/sprite.svg#logo-big"></use>
+                        </div>
+                        <div class="header__search">
+                            <input type="text" name="search" class="header__searchInput" placeholder="search...">
+                            <a class="header__searchButton" href="#">
+                                <svg class="header__searchIcon">
+                                    <use xlink:href="img/sprite.svg#search"></use>
                                 </svg>
                             </a>
                         </div>
-                        <div>
-                            <ul class="header__nav">
-                                <li class="header__navItem">
-                                    <a href="#" target="_blank">About us</a>
-                                </li>
-                                <li class="header__navItem">
-                                    <a href="#" target="_blank">Industires</a>
-                                </li>
-                                <li class="header__navItem">
-                                    <a href="#" target="_blank">Services</a>
-                                </li>
-                                <li class="header__navItem">
-                                    <a href="#" target="_blank">
-                                        News and Evenets
-                                    </a>
-                                </li>
-                                <li class="header__navItem">
-                                    <a href="#" target="_blank">Insights</a>
-                                </li>
-                                <li class="header__navItem">
-                                    <a href="#" target="_blank">Contact us</a>
-                                </li>
-                                <li class="header__navItem">
-                                    <a href="#" target="_blank">Carrers</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header__bottom">
+                    <div>
+                        <a href="#" target="_blank" class="header__bottomLogo">
+                            <svg class="header__bottomIcon"><use xlink:href="img/sprite.svg#logo-big"></use></svg>
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank">About us</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Industires</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Services</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    News and Evenets
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Insights</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Carrers</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -141,46 +122,50 @@
         <!-- HeroSlider -->
 
         <!-- Teaser -->
-
         <div class="pt0">
-            <div class="container">
-                <div class="teaser__wrapper">
-                    <div class="teaser">
-                        <h2 class="teaser__headline">ShineWing International</h2>
-                        <p class="teaser__paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris.
-                        </p>
-                            <a href="">
-                                <svg class="teaser__logo">
-                                    <use
-                                        xlink:href="img/sprite.svg#catalyst-for-success"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="button buttonPrimary">Read More</a>
+            <div class="teaser__background">
+                <div class="container">
+                    <div class="teaser__wrapper">
+                        <div class="teaser">
+                            <h2>ShineWing International</h2>
+                            <div class="teaser__introtext">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore et
+                                    dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris.</p>
+                            </div>
+                            <div class="teaser__button">
+                                <a class="buttonText" href="">
+                                    <svg class="buttonText__icon"><use xlink:href="img/sprite.svg#brand-icon"></use></svg>
+                                    <span>Lorem, ipsum dolor.</span>
+                                </a>
+                            </div>
+                            <div class="teaser__button">
+                                <a href="#" class="button">Read More</a>
+                            </div>
                         </div>
-                    <div class="teaser">
-                        <h2 class="teaser__headline">ShineWing International</h2>
-                        <p class="teaser__paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris.
-                        </p>
-                            <a href="">
-                                <svg class="teaser__logo">
-                                    <use
-                                        xlink:href="img/sprite.svg#catalyst-for-success"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="button buttonPrimary">Read More</a>
+                        <div class="teaser">
+                            <h2>ShineWing International</h2>
+                            <div class="teaser__introtext">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore et
+                                    dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris.</p>
+                            </div>
+
+                            <div class="teaser__button">
+                                <a href="#" class="button">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script async src="js/main.min.js?t=1665474253358"></script>
+
+
+
+
+
+        <script async src="js/main.min.js?t=1665485789322"></script>
     </body>
 </html>

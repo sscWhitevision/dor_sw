@@ -5,20 +5,33 @@
 /* --------------------------------------------------------------------------- */
 .button {
 	border-radius: 10px;
-    font-size: 1.8rem;
-    line-height: 1.12;
     padding: 20px;
 	text-align: center;
+	background-color: $colorPrimary;
+	color: #fff;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-width: 270px;
 
 	&:hover {
 
 	}
 
-	&Primary{
-		background-color: $colorPrimary;
-		color: #fff;
-		max-width: 270px;
-		width: 100%;
-	}
 	@media (max-width: 320px) {}
+}
+
+
+.buttonText {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&__icon {
+		fill: $colorPrimary;
+		height: 1em;
+		width: 1em;
+		margin-right: 0.75em;
+	}
 }

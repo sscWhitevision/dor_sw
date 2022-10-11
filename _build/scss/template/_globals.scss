@@ -13,10 +13,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-	font-size: 10px;
+	font-size: 20px;
 	color: $colorFont;
 	font-family: $fontRegular;
-	line-height: 2;
+	line-height: 1;
 }
 
 // body
@@ -33,6 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     text-rendering: optimizeSpeed;
+	background: #f8f8f8;
 }
 
 
@@ -44,9 +45,9 @@ p, a {
 }
 
 p {
-	// &:not(:last-child) {
-	// 	margin-bottom: 1em;
-	// }
+	&:not(:last-child) {
+		margin-bottom: 1em;
+	}
 }
 
 a {

@@ -4,23 +4,30 @@
 /*
 /* --------------------------------------------------------------------------- */
 .header {
-    &__inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    background: #fff;
 
     &__top {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
+        gap: 2rem;
+        padding: 10px 0;
 
         &Logo {
             display: flex;
             align-items: center;
             width: 130px;
             height: 16px;
+            margin-left: 5px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &Icon {
+            height: 82px;
         }
     }
 
@@ -28,8 +35,9 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        font-size: 1.8rem;
+        font-size: 0.85rem;
         color: #fff;
+        margin-left: auto;
 
         &Button {
             cursor: pointer;
@@ -37,6 +45,8 @@
             justify-content: center;
             align-items: center;
             fill: currentColor;
+            transition: all 0.2s ease;
+
             &:hover {
                 fill: $colorPrimary;
             }
@@ -77,32 +87,19 @@
     &__search {
         display: flex;
         align-items: center;
-        height: 60px;
-
-        &:hover > &Input {
-            width: 240px;
-            padding: 0 6px;
-            background-color: #fff;
-        }
-
-        &:hover > &Button,
-        &Input:focus + &Button,
-        &Input:not(:placeholder-shown) + &Button {
-            background: #fff;
-            color: #cd595a;
-        }
 
         &Input {
             outline: none;
             border: none;
             background: none;
-            width: 0;
-            padding: 0;
-            color: #fff;
+            width: 40px;
             float: left;
-            font-size: 16px;
             transition: 0.3s;
             line-height: 40px;
+            display: block;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #fff;
         }
 
         &Button {
@@ -110,19 +107,22 @@
             float: right;
             width: 40px;
             height: 40px;
-            border-radius: 50px;
+            border-radius: 50%;
             background: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             text-decoration: none;
             transition: 0.3s;
+            padding: 10px;
+            margin-left: -40px;
+            background: #efefef;
         }
 
-        &Input:focus,
-        &Input:not(:placeholder-shown) {
+        &:hover > &Input,
+        &Input:focus {
             width: 240px;
-            padding: 0 6px;
+            padding: 0 3em 0 1em;
         }
 
         &Field {
@@ -131,121 +131,52 @@
         }
 
         &Icon {
-            height: 28px;
-            width: 28px;
+            height: 100%;
+            width: 100%;
             fill: $colorSecondary;
             align-self: center;
-            // margin-left: -35px;
-        }
-    }
-
-    &__bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        &Icon {
-            height: 82px;
         }
     }
 
     &__nav {
-        display: flex;
-        align-items: center;
-        gap: 4.8rem;
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 2em;
 
-        &Item {
-            font-size: 2rem;
-            text-transform: uppercase;
-            line-height: 1.15px;
-            padding: 5.8rem 0;
-            :hover {
-                color: $colorPrimary;
+            li {
+                text-transform: uppercase;
+                line-height: 1.15px;
+
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 145px;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0;
+                    height: 5px;
+                    background: $colorPrimary;
+                    transition: all .2s ease;
+                }
+
+                &:hover:after {
+                    left: 0;
+                    right: 0;
+                }
             }
         }
     }
 
-    // nav button
-    &__navButton {
-        color: $colorSecondary;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // width: 35px;
-        // height: 25px;
-        margin-left: auto;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        position: relative;
-
-        & > span {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background: currentColor;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: all 0.25s ease-in-out;
-        }
-
-        & > *:nth-child(1) {
-            top: 0px;
-        }
-
-        & > *:nth-child(2),
-        & > *:nth-child(3) {
-            top: calc(50% - 1px);
-        }
-
-        & > *:nth-child(2) {
-            left: 10px;
-            width: calc(100% - 10px);
-        }
-
-        & > *:nth-child(3) {
-            opacity: 0;
-        }
-
-        & > *:nth-child(4) {
-            bottom: 0;
-            left: 5px;
-            width: calc(100% - 5px);
-        }
-
-        &.active > *:nth-child(1) {
-            top: calc(50% - 2px);
-            width: 0%;
-            left: 50%;
-
-            @media (max-width: 600px) {
-                top: calc(50% - 1px);
-            }
-        }
-
-        &.active > *:nth-child(2) {
-            transform: rotate(45deg);
-            width: 100%;
-            left: 0;
-        }
-
-        &.active > *:nth-child(3) {
-            transform: rotate(-45deg);
-            opacity: 1;
-        }
-
-        &.active > *:nth-child(4) {
-            top: calc(50% - 2px);
-            width: 0%;
-            left: 50%;
-
-            @media (max-width: 600px) {
-                top: calc(50% - 1px);
-            }
-        }
-    }
-
-    @media (max-width: 320px) {
-    }
 }
