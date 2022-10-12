@@ -1,0 +1,40 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	footerBottom
+/*
+/* --------------------------------------------------------------------------- */
+.footerBottom {
+	color: #fff;
+
+	ul {
+		display: flex;
+		align-items: center;
+		font-size: .8rem;
+
+		li {
+			margin-right: 1em;
+			 & a:hover{
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+	&__container {
+		padding: 1rem 0;
+		background-color: $backgorundDark;
+		border-bottom: 1px solid #707070;
+	}
+
+	&__logo {
+		width: 130px;
+		height: auto;
+	}
+
+	&__copyright{
+		margin-left: auto;
+		font-size: 0.6rem;
+	}
+
+	
+}

@@ -1,0 +1,64 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	news
+/*
+/* --------------------------------------------------------------------------- */
+.news {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	min-height: 520px;
+	padding: 0 2.3em;
+
+	&:hover &__image {
+		transform: scale(1.1);
+		transition: all .2s ease;
+	}
+
+	&__imageContainer + &__headline {
+		justify-content: end !important;
+	}
+
+	&--backgroundSecondary {
+		background-color: $colorSecondary;
+	}
+	&--backgroundWhite {
+		background-color: #fff;
+		color: $colorSecondary;
+	}
+
+	&--backgroundGrey {
+		background-color: $backgroundGrey;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1.5em 1.5em;
+	}
+
+	&__type {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: $colorPrimary;
+		text-transform: uppercase;
+		padding: 10px 20px;
+		font-size: 0.63rem;
+		z-index: 10;
+		color: #fff;
+	}
+
+	&__headline {}
+
+	&__text {
+		// font-size: 0.9rem;
+	}
+
+	&__button a{
+		text-transform: none;
+		width: 100%;
+	}
+}

@@ -11,14 +11,16 @@
 /*	Variables
 /*
 /* --------------------------------------------------------------------------- */
-
 // fonts
-$fontRegular:  arial, sans-serif;
+$fontRegular:  'Arial', sans-serif;
 
 
 $colorPrimary: #f37021;
 $colorSecondary: #203062;
 $colorFont: #4b4b4b;
+
+$backgorundDark: #4b4b4b;
+$backgroundGrey:  rgba(0,0,0,.2);
 
 // colors
 $colorDanger: red;
@@ -56,7 +58,14 @@ $colorDanger: red;
 // modules
 @import
 'modules/form',
-'modules/teaser';
+'modules/teaser',
+'modules/imageContent',
+'modules/news',
+'modules/imageNews',
+'modules/footerSocial',
+'modules/footerCenter',
+'modules/footerBottom',
+'modules/tabs';
 
 
 // components

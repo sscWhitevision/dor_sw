@@ -1,0 +1,45 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	imageNews
+/*
+/* --------------------------------------------------------------------------- */
+.imageNews {
+	position: relative;
+	display: block;
+	color: #fff;
+	min-height: 520px;
+	background-color: $backgroundGrey;
+
+	&:hover &__image {
+		transform: scale(1.1);
+		transition: all .2s ease;
+	}
+
+	
+
+	&__type {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: $colorPrimary;
+		text-transform: uppercase;
+		padding: 10px 20px;
+		font-size: 0.63rem;
+		z-index: 10;
+	}
+
+	&__imageContainer {
+		overflow: hidden;
+		margin-bottom: 1em;
+	}
+	
+	&__image {
+		width: 100%;
+		display: block;
+	}
+
+	&__headline{
+		padding: 0 40px;
+	}
+	
+}

@@ -1,0 +1,36 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	footerCenter
+/*
+/* --------------------------------------------------------------------------- */
+.footerCenter {
+	&__container {
+		background-color: #fff;
+		padding-top: 2em;
+		padding-bottom: 3em;
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2em;
+		// font-size: .9rem;
+
+		li {
+			text-transform: uppercase;
+			line-height: 1.15px;
+
+			&:hover {
+				color: $colorPrimary;
+			}
+		}
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+	}
+}

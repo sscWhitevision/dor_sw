@@ -10,10 +10,10 @@
 
 // root
 :root {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
 
-	font-size: 20px;
+	font-size: 18px;
 	color: $colorFont;
 	font-family: $fontRegular;
 	line-height: 1;
@@ -61,6 +61,9 @@ a {
 // container
 .container {
 	margin: 0 70px;
+	&Max{
+		margin: 0;
+	}
 }
 
 

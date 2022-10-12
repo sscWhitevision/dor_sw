@@ -131,6 +131,25 @@ $(document).ready(function() {
     $(".js-navbutton").click(function(){
         $(this).toggleClass("active");
     });
+    
+    
+    
+    // * * * * * * * * * * * * * * * * * * * * * * * * *
+    // * tabs
+    // *
+    // *
+    $(".js-tab").click(function(){
+        var tabIndex = $(this).index(),
+            $wrapper = $(this).parents(".js-tab-wrapper");
+
+        $wrapper.find(".js-tab").removeClass("active");
+        $(this).addClass("active");
+
+        $wrapper.find(".js-tab-content").hide();
+        $wrapper.find('.js-tab-content:eq(' + tabIndex + ')').show();
+    });
+
+    $(".js-tab:first-child").trigger("click");
 
 
 });

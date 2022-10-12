@@ -1,0 +1,42 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	tabs
+/*
+/* --------------------------------------------------------------------------- */
+.tabs {
+	display: flex;
+
+
+	&__item{
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+		cursor: pointer;
+		padding-bottom: 1em;
+		position: relative;
+		
+		&.active{
+			font-weight: bold;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom:0;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: $colorPrimary;
+			}
+		}
+	}
+
+	&__itemButton{
+		color: $colorPrimary;
+	}
+
+	&__content{
+		display: none;
+	}
+	&__contentText{
+		padding-bottom: 2em;
+	}
+}
