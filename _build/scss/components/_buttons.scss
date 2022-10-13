@@ -5,7 +5,7 @@
 /* --------------------------------------------------------------------------- */
 .button {
 	border-radius: 10px;
-    padding: 20px;
+	padding: 20px;
 	text-align: center;
 	background-color: $colorPrimary;
 	color: #fff;
@@ -13,17 +13,23 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	min-width: 270px;
+	width: 270px;
 	text-transform: uppercase;
 	font-size: 0.85rem;
 
-	&:hover {
+	&:hover {}
 
-	}
+	// @media (max-width:1000px) {
+	// 	min-width: 200px;
+	// 	font-size: 0.7rem;
+	// }
+	// @media (max-width:600px) {
+	// 	min-width: 150px;
+	// 	font-size: 0.7rem;
+	// 	padding: 15px;
 
-	@media (max-width: 320px) {}
+	// }
 }
-
 
 .buttonText {
 	display: inline-flex;

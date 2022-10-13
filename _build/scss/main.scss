@@ -33,7 +33,9 @@ $colorDanger: red;
 /* --------------------------------------------------------------------------- */
 
 @import
-'vendor/normalize';
+'vendor/normalize',
+'vendor/slick';
+
 
 
 
@@ -65,7 +67,8 @@ $colorDanger: red;
 'modules/footerSocial',
 'modules/footerCenter',
 'modules/footerBottom',
-'modules/tabs';
+'modules/tabs',
+'modules/slider';
 
 
 // components

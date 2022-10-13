@@ -1,0 +1,134 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	slider
+/*
+/* --------------------------------------------------------------------------- */
+.slider {
+	color: #fff;
+
+	&__hero {
+		position: relative;
+	}
+
+	&__content {
+		position: absolute;
+		width: 70%;
+		top: 30%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@media (max-width:1200px) {
+			top: 20%;
+		}
+
+		@media (max-width:800px) {
+			top: 10%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: calc(100vh - 205px);
+		object-fit: cover;
+
+		@media (max-width:1350px) {
+			height: calc(100vh - 174px);
+		}
+
+		@media (max-width:1000px) {
+			height: calc(100vh - 117px);
+		}
+	}
+
+	&__nav {
+		position: absolute;
+		bottom: 5%;
+		left: 0;
+		font-size: 0.9rem;
+
+		@media (max-width:1000px) {
+			font-size: 0.8rem;
+		}
+
+		&List {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+
+			:not(:last-child) {
+				margin-right: 2em;
+			}
+		}
+
+		&Item {
+			position: relative;
+			flex: 1 1 0px;
+			padding-left: 15px;
+			padding-bottom: 10px;
+			padding: 10px 0 20px 15px;
+			cursor: pointer;
+
+			@media (max-width:1000px) {
+				// flex: 0 0 50%;
+				flex-wrap: wrap;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background-color: #fff;
+			}
+
+			&.active:before,
+			&:hover:before {
+				transition: all .2s ease;
+				width: 5px;
+				background-color: $colorPrimary;
+			}
+		}
+	}
+
+	.slick-dots {
+		position: absolute;
+		right: 2em;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+
+		@media (max-width:1000px) {
+			top: unset;
+			bottom: 2em;
+			right: 50%;
+			transform: translateX(-50%);
+			transform: translateY(0);
+			flex-direction: row;
+		}
+
+		li button {
+			background-color: transparent;
+			font-size: 0;
+			width: 16px;
+			height: 16px;
+			border-radius: 16px;
+			border: 1px solid #fff;
+		}
+
+		li.slick-active button,
+		button:hover {
+			border: 0px;
+			background-color: #fff;
+			height: 16px;
+			transition: all .2s ease;
+		}
+	}
+
+	@media (max-width: 320px) {}
+}

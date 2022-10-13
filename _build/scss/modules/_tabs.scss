@@ -6,37 +6,47 @@
 .tabs {
 	display: flex;
 
-
-	&__item{
-		&:not(:last-child) {
-			margin-right: 40px;
-		}
+	&__item {
 		cursor: pointer;
 		padding-bottom: 1em;
 		position: relative;
-		
-		&.active{
+
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+
+		&.active {
 			font-weight: bold;
-			&:after{
+
+			&:after {
 				content: '';
 				position: absolute;
-				bottom:0;
+				bottom: 0;
 				left: 0;
 				right: 0;
 				height: 2px;
 				background: $colorPrimary;
 			}
 		}
+
+		@media (max-width:1000px){
+			font-size: 0.7rem;
+		}
 	}
 
-	&__itemButton{
+	&__itemButton {
 		color: $colorPrimary;
 	}
 
-	&__content{
+	&__content {
 		display: none;
 	}
-	&__contentText{
+
+	&__contentText {
 		padding-bottom: 2em;
+		line-height: 1.5;
+		@media (max-width:1000px){
+			font-size: 0.8em;
+		}
 	}
 }

@@ -5,6 +5,16 @@
 /* --------------------------------------------------------------------------- */
 .footerBottom {
 	color: #fff;
+	display: flex;
+	align-items: center;
+	@media (max-width:600px) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	a {
+		margin-right: 1em;
+	}
 
 	ul {
 		display: flex;
@@ -12,12 +22,14 @@
 		font-size: .8rem;
 
 		li {
+			display: flex;
+			align-items: center;
 			margin-right: 1em;
-			 & a:hover{
+
+			& a:hover {
 				text-decoration: underline;
 			}
 		}
-
 	}
 
 	&__container {
@@ -27,14 +39,21 @@
 	}
 
 	&__logo {
+
 		width: 130px;
-		height: auto;
+		height: 30px;
 	}
 
-	&__copyright{
+	&__copyright {
 		margin-left: auto;
 		font-size: 0.6rem;
-	}
+		display: flex;
 
-	
+		@media (max-width:600px) {
+			// justify-content: center;
+			margin-left: unset;
+			margin-top: 20px;
+		}
+
+	}
 }

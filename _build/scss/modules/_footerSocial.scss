@@ -10,6 +10,9 @@
 		padding: 1em 0;
 		background-color: #fff;
 		border-bottom: 1px solid #707070;
+		@media (max-width:1000px) {
+		border-bottom: 0;
+		}
 	}
 
 	&__text {

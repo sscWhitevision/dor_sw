@@ -10,12 +10,15 @@
 	min-height: 520px;
 	background-color: $backgroundGrey;
 
-	&:hover &__image {
-		transform: scale(1.1);
-		transition: all .2s ease;
+	@media (max-width:1000px) {
+		min-height: 220px;
+		display: flex;
 	}
 
-	
+	&:hover &__image {
+		transform: scale(1.1);
+		transition: all .6s ease;
+	}
 
 	&__type {
 		position: absolute;
@@ -31,15 +34,51 @@
 	&__imageContainer {
 		overflow: hidden;
 		margin-bottom: 1em;
+		transition: all .6s ease;
+
+		@media (max-width:1000px) {
+			object-fit: cover;
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, .2);
+		}
 	}
-	
+
 	&__image {
 		width: 100%;
 		display: block;
 	}
 
-	&__headline{
+	&__headline {
 		padding: 0 40px;
+
+		@media (max-width:1000px) {
+			display: flex;
+			position: relative;
+			z-index: 10;
+			padding: 0 6px;
+			text-align: left;
+			align-items: center;
+			justify-content: center;
+
+			h3 {
+				font-size: 1.2em;
+				margin-bottom: 0;
+			}
+		}
 	}
-	
 }

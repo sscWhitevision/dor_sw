@@ -17,6 +17,7 @@
 	color: $colorFont;
 	font-family: $fontRegular;
 	line-height: 1;
+
 }
 
 // body
@@ -63,6 +64,10 @@ a {
 	margin: 0 70px;
 	&Max{
 		margin: 0;
+	}
+
+	@media (max-width:1440px){
+		margin: 0 40px;
 	}
 }
 
