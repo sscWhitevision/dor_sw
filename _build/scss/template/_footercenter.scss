@@ -28,7 +28,7 @@
 			text-transform: uppercase;
 			line-height: 1.15px;
 			
-
+			&.active a,
 			&:hover {
 				color: $colorPrimary;
 			}

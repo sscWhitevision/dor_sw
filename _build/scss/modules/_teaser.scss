@@ -10,9 +10,10 @@
 
     &__background {
         padding: 5rem 0;
-        @media (max-width:1000px){
+
+        @media (max-width:1000px) {
             padding: 2rem 0;
-		}
+        }
     }
 
     &__wrapper {
@@ -29,14 +30,12 @@
     &__introtext {
         line-height: 1.5;
         margin-bottom: 45px;
+
         @media (max-width:1000px) {
             font-size: 0.77em;
         }
     }
 
-    &__button {
-        margin-bottom: 40px;
-    }
 
     //Image Wrapper
     &__imageWrapper {

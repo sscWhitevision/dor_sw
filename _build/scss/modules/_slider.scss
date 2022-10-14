@@ -13,16 +13,38 @@
 	&__content {
 		position: absolute;
 		width: 70%;
-		top: 30%;
+		top: 40%;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
 
 		@media (max-width:1200px) {
-			top: 20%;
+			top: 30%;
+			width: 80%;
 		}
 
-		@media (max-width:800px) {
-			top: 10%;
+		@media (max-width:1000px) {
+			text-align: center;
+		}
+	}
+
+	&__headline {
+		font-weight: bold;
+		margin-bottom: 0.76em;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media (max-width:1000px) {
+			justify-content: center;
+		}
+
+		& a {
+			margin-right: 1em;
+			margin-bottom: .5em;
 		}
 	}
 
@@ -58,19 +80,23 @@
 			:not(:last-child) {
 				margin-right: 2em;
 			}
+
+			@media (max-width:900px) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1em 0;
+			}
 		}
 
 		&Item {
 			position: relative;
 			flex: 1 1 0px;
-			padding-left: 15px;
-			padding-bottom: 10px;
 			padding: 10px 0 20px 15px;
 			cursor: pointer;
+			color: #fff;
 
 			@media (max-width:1000px) {
-				// flex: 0 0 50%;
-				flex-wrap: wrap;
+				margin-bottom: 20px;
 			}
 
 			&:before {
@@ -78,7 +104,7 @@
 				position: absolute;
 				left: 0;
 				top: 0;
-				bottom: 0;
+				bottom: 0em;
 				width: 2px;
 				background-color: #fff;
 			}

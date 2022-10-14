@@ -5,11 +5,13 @@
 /* --------------------------------------------------------------------------- */
 .tabs {
 	display: flex;
+	flex-wrap: wrap;
 
 	&__item {
 		cursor: pointer;
 		padding-bottom: 1em;
 		position: relative;
+		margin-bottom: 1em;
 
 		&:not(:last-child) {
 			margin-right: 40px;

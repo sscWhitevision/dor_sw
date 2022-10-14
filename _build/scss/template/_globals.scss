@@ -3,43 +3,42 @@
 /*	Globals
 /*
 /* --------------------------------------------------------------------------- */
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 }
 
 // root
 :root {
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
-
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
 	font-size: 18px;
 	color: $colorFont;
 	font-family: $fontRegular;
 	line-height: 1;
-
 }
 
 // body
 html,
 body {
-    min-height: 100vh;
+	min-height: 100vh;
 
-    &.freeze {
-        overflow: hidden;
-    }
+	&.freeze {
+		overflow: hidden;
+	}
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    text-rendering: optimizeSpeed;
+	display: flex;
+	flex-direction: column;
+	text-rendering: optimizeSpeed;
 	background: #f8f8f8;
 }
 
-
 // text & links
-p, a {
+p,
+a {
 	margin: 0;
 	padding: 0;
 	/*-webkit-transform: translateZ(0);*/
@@ -57,21 +56,22 @@ a {
 	color: inherit;
 }
 
-
-
 // container
 .container {
 	margin: 0 70px;
-	&Max{
+
+	&Max {
 		margin: 0;
 	}
 
-	@media (max-width:1440px){
+	@media (max-width:1440px) {
 		margin: 0 40px;
 	}
+
+	@media (max-width:800px) {
+		margin: 0 20px;
+	}
 }
-
-
 
 // lists
 ul {
@@ -80,9 +80,16 @@ ul {
 	padding: 0;
 }
 
-.background{
-
-	&--secondary{
+.background {
+	&--secondary {
 		background-color: $colorSecondary;
 	}
+}
+
+.colorSecondary{
+	color: $colorSecondary;
+}
+
+.colorPrimary{
+	color: $colorPrimary;
 }

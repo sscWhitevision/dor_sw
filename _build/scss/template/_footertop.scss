@@ -3,21 +3,22 @@
 /*	footerSocial
 /*
 /* --------------------------------------------------------------------------- */
-.footerSocial {
+.footerTop {
 	text-align: center;
-	
+
 	&__container {
-		padding: 1em 0;
+		padding: 12px 0;
 		background-color: #fff;
 		border-bottom: 1px solid #707070;
+
 		@media (max-width:1000px) {
-		border-bottom: 0;
+			border-bottom: 0;
 		}
 	}
 
 	&__text {
-		margin-bottom: 10px;
-		// font-size: .9rem;
+		margin-bottom: 1rem;
+		font-size: .9rem;
 	}
 
 	&__wrapper {

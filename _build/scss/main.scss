@@ -54,6 +54,9 @@ $colorDanger: red;
 'template/header',
 'template/footer',
 'template/animation',
+'template/footerTop',
+'template/footerCenter',
+'template/footerBottom',
 'template/consentfriend';
 
 
@@ -64,15 +67,16 @@ $colorDanger: red;
 'modules/imageContent',
 'modules/news',
 'modules/imageNews',
-'modules/footerSocial',
-'modules/footerCenter',
-'modules/footerBottom',
 'modules/tabs',
-'modules/slider';
-
+'modules/slider',
+'modules/banner',
+'modules/introtext',
+'modules/cardprofile';
 
 // components
 @import
 'components/headlines',
 'components/buttons',
-'components/content';
+'components/content',
+'components/iconitem';
+

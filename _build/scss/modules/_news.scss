@@ -22,8 +22,8 @@
 		transition: all .2s ease;
 	}
 
-	&__imageContainer + &__headline {
-		justify-content: end !important;
+	&__headline{
+		margin-bottom: 2.44rem;
 	}
 
 	&--backgroundSecondary {
@@ -64,15 +64,7 @@
 		color: #fff;
 	}
 
-	&__headline h3 {
-		@media (max-width:1000px) {
-			margin-bottom: 0;
-			font-size: 1.2em;
-		}
-	}
-
 	&__text {
-		// font-size: 0.9rem;
 		@media (max-width:1000px) {
 			display: none;
 		}
@@ -82,5 +74,6 @@
 		text-transform: none;
 		width: 100%;
 		margin-top: 1em;
+		max-width: unset;
 	}
 }

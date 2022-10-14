@@ -60,4 +60,11 @@
         object-fit: cover;
         height: 100%;
     }
+
+    &__headline--colorPrimary{
+        color: $colorPrimary;
+    }
+    &__headline--colorSecondary{
+        color: $colorSecondary;
+    }
 }
