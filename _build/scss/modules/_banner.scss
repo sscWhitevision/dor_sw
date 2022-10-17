@@ -11,8 +11,9 @@
 		height: 440px;
 		object-fit: cover;
 		display: block;
-		@media (max-width:1000px){
-		height: 200px;	
+
+		@media (max-width:1000px) {
+			height: 200px;
 		}
 	}
 
@@ -31,6 +32,7 @@
 
 		& h1 {
 			font-size: 1.9rem;
+			font-weight: bold;
 			margin-bottom: unset;
 		}
 	}
@@ -44,19 +46,21 @@
 
 	&__breadcrump {
 		font-size: 0.7rem;
+
 		ul {
 			display: flex;
 			justify-content: center;
-			li{
-				&:not(:last-child){
+
+			li {
+				&:not(:last-child) {
 					margin-right: 5px;
-					:after{
+
+					:after {
 						content: ">";
 						margin-left: 5px;
 					}
 				}
 			}
-
 		}
 	}
 }

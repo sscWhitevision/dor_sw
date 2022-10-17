@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
     // * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -11,7 +11,7 @@ $(document).ready(function() {
     // * This adds a link tag (<a>) to other elements within a wrapper
     // * links comes from a link. Example: add a link to h2, image etc. inside a teaser
     // *
-    $(".js-href-teleport").each(function(){
+    $(".js-href-teleport").each(function () {
         var $link = $(this).parents(".js-href-teleport-wrapper").find(".js-href-teleport-link"),
             href = $link.attr("href"),
             target = $link.attr("target") ? $link.attr("target") : '_self';
@@ -32,27 +32,27 @@ $(document).ready(function() {
     // * This makes the whole element clickable and still
     // * makes other links inside clickable with their target
     // *
-    $(".js-click-item-parent").delegate('a', 'click', function(e){
-		var target = $(this).attr("target"),
-			url = $(this).attr("href");
+    $(".js-click-item-parent").delegate('a', 'click', function (e) {
+        var target = $(this).attr("target"),
+            url = $(this).attr("href");
 
-		if (target == "_blank") {
-			window.open(url);
-		}else {
-			window.location = url;
-		}
+        if (target == "_blank") {
+            window.open(url);
+        } else {
+            window.location = url;
+        }
         return false;
-    }).click(function(){
-		var target = $(this).find("a.js-click-item-link").attr("target"),
-			url = $(this).find("a.js-click-item-link").attr("href");
+    }).click(function () {
+        var target = $(this).find("a.js-click-item-link").attr("target"),
+            url = $(this).find("a.js-click-item-link").attr("href");
 
-		if (target == "_blank") {
-			window.open(url);
-		}else {
-			window.location = url;
-		}
+        if (target == "_blank") {
+            window.open(url);
+        } else {
+            window.location = url;
+        }
         return false;
-    });​
+    });
 
 
 
@@ -61,13 +61,13 @@ $(document).ready(function() {
     // *
     // * Smooth-Scroll to targets on page
     // *
-    $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 scrollTo(target);
-            return false;
+                return false;
             }
         }
     });
@@ -86,25 +86,25 @@ $(document).ready(function() {
     // *
     var offset = 80; // Distance from Browserbottom & -top where the animation should start
 
-    function fadeInElements(){
+    function fadeInElements() {
         var viewPortStart = $(window).scrollTop(),
             viewPortEnd = viewPortStart + $(window).height();
 
 
-        $(".animateIn:visible").each(function(){
+        $(".animateIn:visible").each(function () {
             var elementTop = $(this).offset().top,
                 elementBottom = $(this).offset().top + $(this).outerHeight();
 
             if ((elementTop + offset) <= viewPortEnd && (elementBottom - offset) >= viewPortStart) {
                 var delay = $(this).data("animation-delay");
                 $(this).css("transition-delay", delay + "s").addClass("animateIn--active");
-            }else {
+            } else {
                 $(this).removeClass("animateIn--active");
             }
         });
     }
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         fadeInElements();
     });
 
@@ -115,11 +115,11 @@ $(document).ready(function() {
     // * add target blank to external links
     // *
     // *
-    $('a:not([data-targetblank=ignore])').each(function() {
-        if(location.hostname === this.hostname || !this.hostname.length) {
+    $('a:not([data-targetblank=ignore])').each(function () {
+        if (location.hostname === this.hostname || !this.hostname.length) {
             // ... do nothing?
-        }else {
-            $(this).attr('target','_blank');
+        } else {
+            $(this).attr('target', '_blank');
         }
     });
 
@@ -128,17 +128,17 @@ $(document).ready(function() {
     // * navButton
     // *
     // *
-    $(".js-navbutton").click(function(){
+    $(".js-navbutton").click(function () {
         $(this).toggleClass("active");
     });
-    
-    
-    
+
+
+
     // * * * * * * * * * * * * * * * * * * * * * * * * *
     // * tabs
     // *
     // *
-    $(".js-tab").click(function(){
+    $(".js-tab").click(function () {
         var tabIndex = $(this).index(),
             $wrapper = $(this).parents(".js-tab-wrapper");
 
@@ -150,7 +150,7 @@ $(document).ready(function() {
     });
     $(".js-tab:first-child").trigger("click");
 
-     // * * * * * * * * * * * * * * * * * * * * * * * * *
+    // * * * * * * * * * * * * * * * * * * * * * * * * *
     // * sliderImage
     // *
     // *
@@ -166,18 +166,29 @@ $(document).ready(function() {
         });
     }
 
-    $(".js-slider-nav-item").click(function(){
+    $(".js-slider-nav-item").click(function () {
         var index = $(this).index();
         $heroImage.slick('slickGoTo', index);
     });
 
-    $heroImage.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $heroImage.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         $(".js-slider-nav-item").removeClass("active");
         $('.js-slider-nav-item:eq(' + nextSlide + ')').addClass("active");
     });
 
     $(".js-slider-nav-item:first-child").addClass("active");
 
+    // * * * * * * * * * * * * * * * * * * * * * * * * *
+    // * accordion
+    // *
+    // *
+    $(".js-accordion-button").click(function () {
+
+        $(this).toggleClass("active").siblings().slideToggle().parents(".js-accordion").siblings().find(".js-accordion-panel").slideUp();
+
+
+    });
+    // $(".js-accordion:first-child").trigger("click");
 
 });
 
@@ -187,10 +198,10 @@ $(document).ready(function() {
 // * sticky Header
 // *
 // *
-$(window).on("load scroll", function(){
-    if($(window).scrollTop() >= 40) {
+$(window).on("load scroll", function () {
+    if ($(window).scrollTop() >= 40) {
         $(".js-header").addClass("sticky");
-    }else {
+    } else {
         $(".js-header").removeClass("sticky");
     }
 });

@@ -19,6 +19,7 @@ $colorPrimary: #f37021;
 $colorSecondary: #203062;
 $colorFont: #4b4b4b;
 
+$colorBackground: #f8f8f8;
 $backgorundDark: #4b4b4b;
 $backgroundGrey:  rgba(0,0,0,.2);
 
@@ -71,7 +72,9 @@ $colorDanger: red;
 'modules/slider',
 'modules/banner',
 'modules/introtext',
-'modules/cardprofile';
+'modules/cardprofile',
+'modules/accordion',
+'modules/squarecard';
 
 // components
 @import

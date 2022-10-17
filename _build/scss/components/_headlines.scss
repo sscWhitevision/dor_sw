@@ -28,14 +28,6 @@ h1,
 	}
 }
 
-// {
-// 	color: currentColor;
-// 	font-size: 2.2rem;
-// 	line-height: 1.13;
-// 	margin-bottom: .5em;
-// 	@media (max-width:1000px) {
-// 		font-size: 1.4rem;
-// 	}
 h2,
 .h2 {
 	color: currentColor;
@@ -51,16 +43,20 @@ h3,
 .h3 {
 	color: currentColor;
 	font-size: 2rem;
-	margin-bottom: 2.33rem;
 	font-weight: bold;
 	line-height: 1.13;
+	@media (max-width:1000px) {
+		font-size: 1.4rem;
+	}
 }
 
 h4,
 .h4 {
 	color: currentColor;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	line-height: 1.13;
+	font-weight: bold;
+
 }
 
 h5,

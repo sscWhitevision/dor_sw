@@ -1,0 +1,54 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	squareCard
+/*
+/* --------------------------------------------------------------------------- */
+.squareCard {
+	background-color: $colorSecondary;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		height: 10px;
+		background-color: $colorPrimary;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		@media (max-width:800px){}
+	}
+
+	&__container .introText {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		// align-items: center;
+		text-align: left;
+		padding-right: 30px;
+		margin-bottom: 0;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 50px 30px;
+	}
+
+	&__image {
+		object-fit: cover;
+		aspect-ratio: 2 / 1;
+	}
+
+	&__text {
+		padding: 50px 40px 70px 40px;
+		color: #fff;
+		font-size: 1.4rem;
+	}
+
+	@media (max-width: 320px) {}
+}

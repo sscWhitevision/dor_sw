@@ -1,0 +1,71 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	accordion
+/*
+/* --------------------------------------------------------------------------- */
+.accordion {
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	&__headline {
+		color: #fff;
+		font-weight: bold;
+		font-size: 1.22rem;
+		margin-right: auto;
+
+		@media (max-width:1000px) {
+			font-size: 1rem;
+		}
+	}
+
+	&__button {
+		background-color: $colorSecondary;
+		height: 85px;
+		width: 100%;
+		outline: none;
+		border: none;
+		display: flex;
+		align-items: center;
+		padding: 25px;
+
+		@media (max-width:1000px) {
+			height: 67px;
+			padding: 20px;
+		}
+	}
+
+	&__icon {
+		fill: $colorPrimary;
+		width: 45px;
+		height: 35px;
+		margin-right: 20px;
+
+		@media (max-width:1000px) {
+			width: 25px;
+			height: 21px;
+		}
+	}
+
+	&__angle {
+		fill: #fff;
+		width: 27px;
+		height: 25px;
+		transition: all .2s ease;
+	}
+
+	.active &__angle {
+		transform: rotate(180deg);
+	}
+
+	&__panel {
+		background-color: $colorBackground;
+		padding: 30px;
+		line-height: 1.5;
+		display: none;
+
+		@media (max-width:1000px) {
+			font-size: .8rem;
+		}
+	}
+}

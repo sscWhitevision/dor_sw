@@ -7,8 +7,27 @@
 	margin-bottom: 3rem;
 	text-align: center;
 
+	&__headline {
+		&--noBold {
+			font-weight: normal;
+		}
+	}
+
+	& h3 {
+		margin-bottom: .7em;
+
+		@media (max-width:1000px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	& h4 {
+		margin-bottom: .9em;
+	}
+
 	&__paragraph {
 		line-height: 1.5;
+		margin-bottom: 1.5em;
 
 		@media (max-width:1000px) {
 			font-size: 0.77em;
