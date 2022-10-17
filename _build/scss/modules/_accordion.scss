@@ -4,6 +4,23 @@
 /*
 /* --------------------------------------------------------------------------- */
 .accordion {
+	&__container {
+		margin-top: -120px;
+		position: relative;
+
+		@media (max-width:1000px) {
+			margin-top: -40px;
+		}
+	}
+
+	&__wrapper {
+		padding: 100px 80px 60px 80px;
+
+		@media (max-width:1000px) {
+			padding: 40px 24px;
+		}
+	}
+
 	&:not(:last-child) {
 		margin-bottom: 20px;
 	}

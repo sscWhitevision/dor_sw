@@ -1,0 +1,30 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	textLeft
+/*
+/* --------------------------------------------------------------------------- */
+.textLeft {
+	&__headline {
+		font-size: 1.77rem;
+		padding-bottom: 22px;
+	}
+
+	&__description {
+		margin-bottom: 2em;
+	}
+
+	&__image {
+		width: 323px;
+		height: 133px;
+		margin-bottom: 2em;
+	}
+
+	&__paragraph {
+		line-height: 1.5;
+		margin-bottom: 20px;
+
+		@media (max-width:1000px){
+			font-size: 0.8rem;
+		}
+	}
+}
