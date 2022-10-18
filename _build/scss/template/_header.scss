@@ -226,6 +226,7 @@
         }
 
         &Logo {
+
             // @media (max-width:1200px) {
             //     width: 120px;
             //     height: 52px;
@@ -235,6 +236,8 @@
         &Icon {
             width: 190px;
             height: 100px;
+            display: block;
+            fill: $colorSecondary;
 
             @media (max-width:1200px) {
                 width: 120px;
