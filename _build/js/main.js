@@ -211,10 +211,10 @@ $(document).ready(function () {
 
     $(".js-header-language-input").on("input", function () {
         var input = $(this).val(),
-            $languageList = $(".js-header-labguage-list");
+            $languageList = $(".js-header-language-list");
 
-        $languageList.find(".js-header-labguage-listitem").hide();
-        $languageList.find(".js-header-labguage-listitem:Contains(" + input + ")").show();
+        $languageList.find(".js-header-language-listitem").hide();
+        $languageList.find(".js-header-language-listitem:Contains(" + input + ")").show();
         console.log(input);
     });
 
