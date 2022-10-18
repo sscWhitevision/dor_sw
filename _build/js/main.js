@@ -196,12 +196,12 @@ $(document).ready(function () {
     // *
     // *
     $(document).click(function (event) {
-        var container = $(".js-header-language-button");
-        if (container.is(event.target) || container.has(event.target).length) {
-            container.addClass("active");
+        var $wrapper = $(".js-header-language-wrapper");
+        if ($wrapper.is(event.target) || $wrapper.has(event.target).length) {
+            $wrapper.addClass("active");
         }
         else {
-            container.removeClass("active");
+            $wrapper.removeClass("active");
         }
     });
 
