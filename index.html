@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Hompage - SW</title>
+    <title>DOR_SW - Shinewing</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/main.css?t=1666084811414" />
+    <link rel="stylesheet" href="css/main.css?t=1666093180939" />
 </head>
 
 <body>
@@ -45,8 +45,8 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="header__language js-header-dropdown">
-                        <div class="header__languageButton">
+                    <div class="header__language ">
+                        <div class="header__languageButton js-header-language-button">
                             <svg class="header__languageIcon">
                                 <use xlink:href="img/sprite.svg#globe-icon"></use>
                             </svg>
@@ -89,10 +89,10 @@
         </div>
         <div class="container">
             <div class="header__bottom">
-                <div>
+                <div class="header__bottomLogo">
                     <a href="/" target="_blank">
                         <svg class="header__bottomIcon">
-                            <use xlink:href="img/sprite.svg#logo-big"></use>
+                            <use xlink:href="img/sprite.svg#logo"></use>
                         </svg>
                     </a>
                 </div>
@@ -121,7 +121,52 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="header__navButton js-navbutton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+            <nav class="js-nav nav">
+                <div class="nav__search">
+                    <input type="text" name="search" class="nav__input" placeholder="Search">
+                    <a class="nav__button" href="#">
+                        <svg class="nav__searchIcon">
+                            <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/about-us.html" target="_blank">About us</a>
+                    </li>
+                    <li>
+                        <a href="/industries.html" target="_blank">Industires</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"> News and Evenets </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Insights</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Carrers</a>
+                    </li>
+                </ul>
+                <a class="buttonText" href="">
+                    <svg class="buttonText__icon">
+                        <use xlink:href="img/sprite.svg#brand-icon"></use>
+                    </svg>
+                    <span>Catalyst for succes</span>
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -504,7 +549,7 @@
             </div>
         </div>
     </div>
-    <script async src="js/main.min.js?t=1666084811414"></script>
+    <script async src="js/main.min.js?t=1666093180939"></script>
 </body>
 
 </html>

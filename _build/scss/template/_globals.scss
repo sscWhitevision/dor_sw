@@ -34,7 +34,11 @@ body {
 	flex-direction: column;
 	text-rendering: optimizeSpeed;
 	background: #f8f8f8;
-	position: relative;
+	// position: relative;
+
+	&.language-open * {
+		pointer-events: none;
+	}
 }
 
 // text & links

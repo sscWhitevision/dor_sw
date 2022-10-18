@@ -130,6 +130,8 @@ $(document).ready(function () {
     // *
     $(".js-navbutton").click(function () {
         $(this).toggleClass("active");
+        $(".js-nav").toggleClass("active");
+
     });
 
 
@@ -193,12 +195,13 @@ $(document).ready(function () {
     // * hederDropdown
     // *
     // *
-    // TODO active klasse entfernen wenn außerhalb geklickt wird
-    $(".js-header-dropdown").click(function () {
-
-        $(this).find(".header__dropdown").toggleClass("active");
+    $(document).click(function (event) {
+        if ($(event.target).is(".js-header-language-button")) {
+            $(".js-header-language-button").toggleClass("active");
+        } else {
+            $(".js-header-language-button").removeClass("active");
+        }
     });
-
 });
 
 

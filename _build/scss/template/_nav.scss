@@ -1,0 +1,88 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	nav
+/*
+/* --------------------------------------------------------------------------- */
+.nav {
+	display: none;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	background-color: #fff;
+	padding: 0 20px 20px 20px;
+	overflow-y: scroll;
+	overflow-x: none;
+
+	&.active {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__search {
+		display: flex;
+		align-items: center;
+		background-clip: padding-box;
+		background-color: #f4f4f4;
+		margin: 32px 0 12px 0;
+		height: 60px;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 30px;
+	}
+
+	&__input {
+		font-weight: normal;
+		color: #959595;
+		border: 0;
+		background-color: transparent;
+		width: 100%;
+		height: 60px;
+		padding: 0 24px;
+		outline: none;
+	}
+
+	&__button {
+		background-color: transparent;
+		border: 0;
+		padding: 0 22px;
+		height: 100%;
+		outline: none;
+		display: flex;
+		align-items: center;
+	}
+
+	&__searchIcon {
+		height: 20px;
+		width: 20px;
+		fill: $colorSecondary;
+	}
+
+	& ul {
+		& li {
+			font-size: 1.4rem;
+			padding: 25px 0;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			&:hover {
+				color: $colorPrimary;
+			}
+		}
+	}
+
+	& .buttonText {
+		justify-content: center;
+		margin: 0 auto;
+		padding-top: 40px;
+		font-size: 0.9rem;
+
+		&__icon {
+			height: 22px;
+			width: 22px;
+		}
+	}
+}
