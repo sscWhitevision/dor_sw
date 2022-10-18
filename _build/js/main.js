@@ -195,12 +195,26 @@ $(document).ready(function () {
     // * hederDropdown
     // *
     // *
-    $(document).click(function (event) {
-        if ($(event.target).is(".js-header-language-button")) {
-            $(".js-header-language-button").toggleClass("active");
-        } else {
-            $(".js-header-language-button").removeClass("active");
-        }
+    $(".js-header-language-button").click(function(){
+        $(this).addClass("active");
+        $("body").addClass("location-open");
+    });
+
+    jQuery.expr[':'].Contains = function(a,i,m){
+        return (a.textContent || a.innerText || "").toLowerCase().indexOf(m[3].toLowerCase())>=0;
+    };
+
+    $(".js-header-language-input").on("input", function(){
+        var input = $(this).val(),
+            $languageList = $(".js-header-labguage-list");
+
+        $languageList.find(".js-header-labguage-listitem").hide();
+        $languageList.find(".js-header-labguage-listitem:Contains(" + input + ")").show();
+        console.log(input);
+    });
+
+    $(document).on("click", "body.location-open", function(){
+        console.log("body");
     });
 });
 
