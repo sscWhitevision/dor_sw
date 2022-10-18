@@ -36,6 +36,15 @@
         }
     }
 
+    &__button
+     {
+        margin-bottom: 2em;
+    }
+
+    & h3{
+        margin-bottom: 1.5em;
+    }
+
     &__imageWrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;

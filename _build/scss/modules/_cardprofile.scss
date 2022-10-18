@@ -35,8 +35,9 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 40px;
+		bottom: 30px;
 		text-align: center;
+		z-index: 5;
 	}
 
 	&__name {
