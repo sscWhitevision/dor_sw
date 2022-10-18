@@ -32,6 +32,7 @@
         font-size: 0.85rem;
         color: #fff;
         margin-left: auto;
+        position: relative;
 
         & span {
             @media (max-width:1000px) {
@@ -56,6 +57,74 @@
             height: 28px;
             width: 28px;
             margin-right: 10px;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+    }
+
+    &__dropdown.active {
+        display: block;
+        position: absolute;
+        bottom: -16px;
+        left: 0px;
+        z-index: 10;
+        background-color: #fff;
+        color: $colorSecondary;
+        transform: translate(-20px, 100%);
+
+        @media (max-width:1000px) {
+            bottom: -5px;
+            transform: translate(-200px, 100%);
+        }
+    }
+
+    &__dropdownList {
+        max-height: 314px;
+        padding: 14px 13px 30px 33px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    &__dropdownItem {
+        font-size: 1rem;
+        padding: 10px 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__dropdownSearch {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__dropdownSearchButton {
+        display: flex;
+    }
+
+    &__dropdownSearchIcon {
+        height: 18px;
+        width: 18px;
+        fill: #fff;
+        align-self: center;
+        margin-left: -40px;
+    }
+
+    &__dropdownInput {
+        padding-left: 33px;
+        height: 60px;
+        width: 260px;
+        background-color: $colorPrimary;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 0.7rem;
+
+        &::placeholder {
+            color: #fff;
         }
     }
 

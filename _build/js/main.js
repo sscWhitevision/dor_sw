@@ -188,7 +188,16 @@ $(document).ready(function () {
 
 
     });
-    // $(".js-accordion:first-child").trigger("click");
+
+    // * * * * * * * * * * * * * * * * * * * * * * * * *
+    // * hederDropdown
+    // *
+    // *
+    // TODO active klasse entfernen wenn außerhalb geklickt wird
+    $(".js-header-dropdown").click(function () {
+
+        $(this).find(".header__dropdown").toggleClass("active");
+    });
 
 });
 
