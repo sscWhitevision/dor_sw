@@ -31,16 +31,11 @@
         margin-bottom: 2em;
     }
 
-    &__button--secondary
-    {
-        
-    }
-
     & h3 {
         margin-bottom: 1.16em;
+
         @media (max-width:1000px) {
             margin-bottom: .65em;
-
         }
     }
 

@@ -81,7 +81,7 @@
         }
     }
 
-    &__language.active  &__dropdown {
+    &__language.active &__dropdown {
         display: block;
     }
 
@@ -225,14 +225,6 @@
 
         @media (max-width:1000px) {
             padding: 10px 0;
-        }
-
-        &Logo {
-
-            // @media (max-width:1200px) {
-            //     width: 120px;
-            //     height: 52px;
-            // }
         }
 
         &Icon {
