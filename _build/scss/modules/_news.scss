@@ -22,8 +22,13 @@
 		transition: all .2s ease;
 	}
 
-	&__headline{
-		margin-bottom: 2.44em;
+	&__headline {
+		font-weight: normal;
+		margin-bottom: 1.5em;
+
+		@media (max-width:1000px) {
+			font-size: 1.2rem;
+		}
 	}
 
 	&--backgroundSecondary {
@@ -47,6 +52,7 @@
 		@media (max-width:1000px) {
 			grid-template-columns: 1fr 1fr;
 		}
+
 		@media (max-width:800px) {
 			grid-template-columns: 1fr;
 		}
@@ -70,10 +76,20 @@
 		}
 	}
 
+	&__content {
+		display: flex;
+		align-items: center;
+		padding: 0 1em;
+	}
+
 	&__button a {
 		text-transform: none;
 		width: 100%;
 		margin-top: 1em;
 		max-width: unset;
+	}
+
+	&__button {
+		padding: 0 1em;
 	}
 }

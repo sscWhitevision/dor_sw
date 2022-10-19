@@ -58,9 +58,6 @@
 		display: block;
 	}
 
-	// &__content &__headline {
-	// 	padding: 0;
-	// }
 	&__headline {
 		margin-bottom: 2em;
 
@@ -68,5 +65,11 @@
 			font-size: 1.20rem;
 			margin-bottom: 1em;
 		}
+	}
+
+	&__button a{
+		margin-top: 2em;
+		width: 100%;
+		max-width: unset;
 	}
 }
