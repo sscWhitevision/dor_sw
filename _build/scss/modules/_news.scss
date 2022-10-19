@@ -14,7 +14,7 @@
 
 	@media (max-width:1000px) {
 		min-height: 220px;
-		padding: 0 6px;
+		padding: 0 12px;
 	}
 
 	&:hover &__image {
@@ -22,14 +22,7 @@
 		transition: all .2s ease;
 	}
 
-	&__headline {
-		font-weight: normal;
-		margin-bottom: 1.5em;
 
-		@media (max-width:1000px) {
-			font-size: 1.2rem;
-		}
-	}
 
 	&--backgroundSecondary {
 		background-color: $colorSecondary;
@@ -79,7 +72,7 @@
 	&__content {
 		display: flex;
 		align-items: center;
-		padding: 0 1em;
+		// padding: 0 1em;
 	}
 
 	&__button a {
@@ -89,7 +82,18 @@
 		max-width: unset;
 	}
 
+	&__headline {
+		font-weight: normal;
+		margin-bottom: 1.5em;
+
+		@media (max-width:1000px) {
+			font-size: 1.2rem;
+			margin-bottom: 0;
+
+		}
+	}
+
 	&__button {
-		padding: 0 1em;
+		// padding: 0 1em;
 	}
 }
