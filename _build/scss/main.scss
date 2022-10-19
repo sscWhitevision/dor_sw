@@ -3,86 +3,64 @@
  *    CSS main
  *
  *  ========================================================================== */
-
-
-
-/* --------------------------------------------------------------------------- */
-/*
+ /* --------------------------------------------------------------------------- */
+ /*
 /*	Variables
 /*
 /* --------------------------------------------------------------------------- */
-// fonts
-$fontRegular:  'Arial', sans-serif;
-
-
-$colorPrimary: #f37021;
-$colorSecondary: #203062;
-$colorFont: #4b4b4b;
-
-$colorBackground: #f8f8f8;
-$backgorundDark: #4b4b4b;
-$backgroundGrey:  rgba(0,0,0,.2);
-
-// colors
-$colorDanger: red;
-
-
-/* --------------------------------------------------------------------------- */
-/*
+ // fonts
+ $fontRegular: 'Arial', sans-serif;
+ $colorPrimary: #f37021;
+ $colorSecondary: #203062;
+ $colorFont: #4b4b4b;
+ $colorBackground: #f8f8f8;
+ $backgorundDark: #4b4b4b;
+ $backgroundGrey: rgba(0, 0, 0, .2);
+ // colors
+ $colorDanger: red;
+ /* --------------------------------------------------------------------------- */
+ /*
 /*	Vendor Imports
 /*
 /* --------------------------------------------------------------------------- */
-
-@import
-'vendor/normalize',
-'vendor/slick';
-
-
-
-
-
-/* --------------------------------------------------------------------------- */
-/*
+ @import 'vendor/normalize',
+ 'vendor/slick';
+ /* --------------------------------------------------------------------------- */
+ /*
 /*	Imports
 /*
 /* --------------------------------------------------------------------------- */
-
-// template
-@import
-'template/fonts',
-'template/globals',
-'template/padding',
-'template/header',
-'template/footer',
-'template/animation',
-'template/footerTop',
-'template/footerCenter',
-'template/footerBottom',
-'template/consentfriend',
-'template/nav';
-
-
-// modules
-@import
-'modules/form',
-'modules/teaser',
-'modules/imageContent',
-'modules/news',
-'modules/imageNews',
-'modules/tabs',
-'modules/slider',
-'modules/banner',
-'modules/introtext',
-'modules/cardprofile',
-'modules/accordion',
-'modules/squarecard',
-'modules/textleft';
-
-
-// components
-@import
-'components/headlines',
-'components/buttons',
-'components/content',
-'components/iconitem';
-
+ // template
+ @import 'template/fonts',
+ 'template/globals',
+ 'template/padding',
+ 'template/header',
+ 'template/footer',
+ 'template/animation',
+ 'template/footerTop',
+ 'template/footerCenter',
+ 'template/footerBottom',
+ 'template/consentfriend',
+ 'template/nav';
+ // modules
+ @import 'modules/form',
+ 'modules/teaser',
+ 'modules/imageContent',
+ 'modules/news',
+ 'modules/imageNews',
+ 'modules/tabs',
+ 'modules/slider',
+ 'modules/banner',
+ 'modules/introtext',
+ 'modules/cardprofile',
+ 'modules/accordion',
+ 'modules/squarecard',
+ 'modules/textleft',
+ 'modules/filter',
+ 'modules/newsbox',
+ 'modules/pagination';
+ // components
+ @import 'components/headlines',
+ 'components/buttons',
+ 'components/content',
+ 'components/iconitem';

@@ -34,8 +34,8 @@ body {
 	flex-direction: column;
 	text-rendering: optimizeSpeed;
 	background: #f8f8f8;
-	// position: relative;
 
+	// position: relative;
 	&.language-open * {
 		pointer-events: none;
 	}
@@ -75,6 +75,18 @@ a {
 
 	@media (max-width:800px) {
 		margin: 0 20px;
+	}
+}
+
+.container--big {
+	margin: 0 70px;
+
+	@media (max-width:1440px) {
+		margin: 0 40px;
+	}
+
+	@media (max-width:800px) {
+		margin: 0
 	}
 }
 
