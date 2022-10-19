@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/main.css?t=1666099733334" />
+    <link rel="stylesheet" href="css/main.css?t=1666165285888" />
 </head>
 
 <body>
@@ -45,12 +45,57 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="header__language">
-                        <div class="header__languageButton">
+                    <div class="header__language js-header-language-wrapper">
+                        <div class="header__languageButton ">
                             <svg class="header__languageIcon">
                                 <use xlink:href="img/sprite.svg#globe-icon"></use>
                             </svg>
                             <span>International</span>
+                        </div>
+                        <div class="header__dropdown">
+                            <div class="header__dropdownSearch">
+                                <input type="input" class="header__dropdownInput js-header-language-input"
+                                    placeholder="Type location">
+                                <a class="header__dropdownSearchButton" href="#">
+                                    <svg class="header__dropdownSearchIcon">
+                                        <use xlink:href="img/sprite.svg#search"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <ul class="header__dropdownList js-header-language-list">
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">International</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Australia</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Chile</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">China</a>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Egypt</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Germany</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Hong Kong</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">India </a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Indonesia</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Japan</a>
+                                </li>
+                                <li class="header__dropdownItem js-header-language-listitem">
+                                    <a href="">Taiwan</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="header__search">
@@ -66,10 +111,10 @@
         </div>
         <div class="container">
             <div class="header__bottom">
-                <div>
+                <div class="header__bottomLogo">
                     <a href="/" target="_blank">
                         <svg class="header__bottomIcon">
-                            <use xlink:href="img/sprite.svg#logo-big"></use>
+                            <use xlink:href="img/sprite.svg#logo"></use>
                         </svg>
                     </a>
                 </div>
@@ -82,23 +127,68 @@
                             <a href="/industries.html" target="_blank">Industires</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Services</a>
+                            <a href="/services.html" target="_blank">Services</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank"> News and Evenets </a>
+                            <a href="/news-and-events.html" target="_blank"> News and Evenets </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Insights</a>
+                            <a href="/insights.html" target="_blank">Insights</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Contact us</a>
+                            <a href="/contact-us.html" target="_blank">Contact us</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Carrers</a>
+                            <a href="/carrers.html" target="_blank">Carrers</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="header__navButton js-navbutton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+            <nav class="js-nav nav">
+                <div class="nav__search">
+                    <input type="text" name="search" class="nav__input" placeholder="Search">
+                    <a class="nav__button" href="#">
+                        <svg class="nav__searchIcon">
+                            <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/about-us.html" target="_blank">About us</a>
+                    </li>
+                    <li>
+                        <a href="/industries.html" target="_blank">Industires</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"> News and Evenets </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Insights</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Carrers</a>
+                    </li>
+                </ul>
+                <a class="buttonText" href="">
+                    <svg class="buttonText__icon">
+                        <use xlink:href="img/sprite.svg#brand-icon"></use>
+                    </svg>
+                    <span>Catalyst for succes</span>
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -134,19 +224,20 @@
                 </div>
                 <div class="imageContent__teaser">
                     <h3 class="colorPrimary">About SW</h3>
-                    <div class="teaser__introtext">
-                        <p>SW is a fast-expanding professional services network of experts in key locations around the
+                    <div class="introtext">
+                        <div class="introText__paragraph">
+                            SW is a fast-expanding professional services network of experts in key locations around the
                             world. As the only extensive international network with deep roots in Asia Pacific, we are
                             the gateway between one of the world's largest economies and the rest of the globe. With our
                             experience in navigating intricate local markets, we thrive on creating transnational growth
                             opportunities for both our clients and our people.
-
                             We are a global accounting and advisory network with over 10,000 people, including 500+
                             partners, in more than 80 offices across 16 regions, connecting and collaborating to take
                             care of your needs locally, nationally and internationally. The revenues of the year of 2020
                             reached approximately USD 533 million. We are ranked 19th in terms of fee income and 17th in
                             terms of total headcount among all top 30 networks globally according to the World Survey
-                            2020 of International Accounting Bulletin (IAB).</p>
+                            2020 of International Accounting Bulletin (IAB).
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,13 +247,15 @@
                 </div>
                 <div class="imageContent__teaser imageContent__teaser--reverse">
                     <h3 class="colorPrimary">Our Mission</h3>
-                    <div class="teaser__introtext">
-                        <p>At SW, our purpose is to help our clients and people grow and succeed by delivering the best
+                    <div class="introtext">
+                        <div class="introText__paragraph">At SW, our purpose is to help our clients and people grow and
+                            succeed by delivering the best
                             quality and results. Through helping businesses mitigate risks and create opportunities, we
                             bring positive, sustainable change for our clients, people and communities at large.
 
                             We are committed to being the leading professional service provider for companies that
                             consider Asia/ China as a key component to their success.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -247,12 +340,13 @@
                         </li>
                     </ul>
 
-                    <div class="teaser__introtext">
-                        <p>SW always aims at inspiring others to think differently and face challenges with an
+                    <div class="introtext">
+                        <div class="introText__paragraph">SW always aims at inspiring others to think differently and
+                            face challenges with an
                             optimistic attitude. We are dedicated to achieving the best outcome for our clients, while
                             underscore our core culture of working in unity and team spirit. We also advocate mutual
                             support among our people in order to maintain a healthy, robust and harmonic working
-                            environment.</p>
+                            environment.</div>
                     </div>
                 </div>
             </div>
@@ -611,7 +705,7 @@
             </div>
         </div>
     </div>
-    <script async src="js/main.min.js?t=1666099733334"></script>
+    <script async src="js/main.min.js?t=1666165285888"></script>
 </body>
 
 </html>

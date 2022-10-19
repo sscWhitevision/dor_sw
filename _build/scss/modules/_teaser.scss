@@ -27,22 +27,21 @@
         }
     }
 
-    &__introtext {
-        line-height: 1.5;
-        margin-bottom: 45px;
-
-        @media (max-width:1000px) {
-            font-size: 0.77em;
-        }
-    }
-
-    &__button
-     {
+    &__button {
         margin-bottom: 2em;
     }
 
-    & h3{
-        margin-bottom: 1.5em;
+    &__button--secondary
+    {
+        
+    }
+
+    & h3 {
+        margin-bottom: 1.16em;
+        @media (max-width:1000px) {
+            margin-bottom: .65em;
+
+        }
     }
 
     &__imageWrapper {

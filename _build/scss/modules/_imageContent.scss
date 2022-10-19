@@ -22,6 +22,7 @@
 
     &__teaser {
         padding: 95px 80px;
+        width: 100%;
 
         @media (max-width:1000px) {
             padding: 30px 20px;
@@ -43,6 +44,11 @@
                     justify-content: start;
                 }
             }
+        }
+
+        &--reverse--textLeft{
+            text-align: left;
+
         }
     }
 
