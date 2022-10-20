@@ -12,6 +12,11 @@
 	min-height: 520px;
 	padding: 0 2.3em;
 
+	&--member {
+		min-height: unset;
+		padding: 42px 36px;
+	}
+
 	@media (max-width:1000px) {
 		min-height: 220px;
 		padding: 0 12px;
@@ -21,8 +26,6 @@
 		transform: scale(1.1);
 		transition: all .2s ease;
 	}
-
-
 
 	&--backgroundSecondary {
 		background-color: $colorSecondary;
@@ -41,8 +44,14 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 1.5em 1.5em;
+		&--career{
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			@media (max-width:1400px) {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
 
-		@media (max-width:1000px) {
+		@media (max-width:1200px) {
 			grid-template-columns: 1fr 1fr;
 		}
 
@@ -89,8 +98,6 @@
 		@media (max-width:1000px) {
 			font-size: 1.2rem;
 			margin-bottom: 0;
-
 		}
 	}
-
 }

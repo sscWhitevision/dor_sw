@@ -1,0 +1,37 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	contact
+/* --------------------------------------------------------------------------- */
+.contact {
+	margin-bottom: 40px;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&__headline {
+		font-size: 1.2rem;
+		margin-bottom: 1em;
+		font-weight: bold;
+	}
+
+	&__info {
+		display: flex;
+		align-items: top;
+		font-size: 0.8rem;
+		 
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__icon {
+		fill: $colorPrimary;
+		height: 1rem;
+		width: 1rem;
+		margin-right: 0.5em;
+		margin-top: 6px;
+	}
+}

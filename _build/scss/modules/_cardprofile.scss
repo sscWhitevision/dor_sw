@@ -7,7 +7,6 @@
 	color: #fff;
 	position: relative;
 
-
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
@@ -16,16 +15,31 @@
 		@media (max-width:1200px) {
 			grid-template-columns: repeat(4, 1fr);
 			gap: 20px;
-
 		}
 
 		@media (max-width:800px) {
 			grid-template-columns: repeat(3, 1fr);
 			gap: 10px;
-
 		}
+
 		@media (max-width:500px) {
 			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__wrapper6 {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 30px;
+
+		@media (max-width:1200px) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+		}
+
+		@media (max-width:1000px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
 		}
 	}
 

@@ -44,6 +44,7 @@
  'template/footerBottom',
  'template/consentfriend',
  'template/nav';
+
  // modules
  @import 'modules/form',
  'modules/teaser',
@@ -61,7 +62,12 @@
  'modules/filter',
  'modules/newsbox',
  'modules/pagination',
- 'modules/magazin';
+ 'modules/magazin',
+ 'modules/bigtabs',
+ 'modules/contact',
+ 'modules/cardmember',
+ 'modules/profile';
+
  // components
  @import 'components/headlines',
  'components/buttons',

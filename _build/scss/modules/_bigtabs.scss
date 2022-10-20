@@ -1,0 +1,157 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	bigTabs
+/*
+/* --------------------------------------------------------------------------- */
+.bigTabs {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 60px;
+	background-color: transparent;
+
+	@media (max-width:1200px) {
+		padding: 0 50px;
+	}
+
+	@media (max-width:1000px) {
+		padding: 0 40px;
+	}
+
+	@media (max-width:800px) {
+		padding: 0 20px;
+	}
+
+	&__container {
+		margin: 0 70px;
+		margin-top: -85px;
+		position: relative;
+
+		@media (max-width:1440px) {
+			margin: 0 40px;
+			margin-top: -55px;
+		}
+
+		@media (max-width:1000px) {
+			margin: 0 0px;
+			margin-top: -40px;
+		}
+	}
+
+	&__item {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		padding: 18px;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: #fff;
+
+		@media (max-width:1000px) {
+			padding: 10px;
+			font-size: 0.7rem;
+		}
+
+		@media (max-width:800px) {}
+
+		&:hover,
+		&.active {
+			font-size: 1rem;
+			font-weight: bold;
+			color: #fff;
+			background-color: $colorPrimary;
+			margin-top: -20px;
+
+			@media (max-width:1000px) {
+				font-size: 0.8rem;
+				margin-top: -10px;
+			}
+		}
+	}
+
+	&__itemButton {
+		color: $colorPrimary;
+	}
+
+	&__content {
+		padding: 30px;
+		max-width: 83.33%;
+
+		&--noWidth {
+			max-width: unset;
+
+			@media (max-width:700px) {
+				padding: 0px;
+			}
+		}
+
+		@media (max-width:1000px) {
+			max-width: unset;
+		}
+	}
+
+	&__contentContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		background-color: #fff;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 4px;
+			background-color: $colorPrimary;
+		}
+	}
+
+	&__contentText {
+		padding-bottom: 2em;
+
+		@media (max-width:1000px) {
+			font-size: 0.8em;
+		}
+	}
+
+	&__flexContent {
+		display: flex;
+		flex-direction: row;
+
+		@media (max-width:700px) {
+			flex-direction: column;
+		}
+	}
+
+	&__linkBox {
+		background-color: $colorSecondary;
+		padding: 36px;
+		color: #858BA5;
+		font-size: 0.8rem;
+		margin-right: 60px;
+		white-space: nowrap;
+
+		@media (max-width:700px) {
+			margin-right: 0;
+			margin-bottom: 1em;
+		}
+
+		& li {
+			margin-bottom: 20px;
+		}
+
+		& li:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__linkBox + div{
+		@media (max-width:700px) {
+			padding: 20px;
+		}
+	}
+}

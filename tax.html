@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/main.css?t=1666273037089" />
+    <link rel="stylesheet" href="css/main.css?t=1666273037097" />
 </head>
 
 <body>
@@ -193,6 +193,7 @@
     </header>
 
     <!-- banner -->
+    <!-- TODO Headline und breadcrump je nachdem welche tab ausgewählt ist setzen -->
     <div class="pt0 ">
         <div class="container--max">
             <div class="banner">
@@ -202,12 +203,13 @@
                         <svg class="banner__icon">
                             <use xlink:href="img/sprite.svg#brand-icon"></use>
                         </svg>
-                        <h1>Insights</h1>
+                        <h1>Tax</h1>
                     </div>
                     <div class="banner__breadcrump">
                         <ul>
                             <li><a href="">Hompage</a></li>
-                            <li><a href="">Insights</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Tax</a></li>
                         </ul>
                     </div>
                 </div>
@@ -215,71 +217,113 @@
         </div>
     </div>
 
-    <!-- magazin -->
-    <div class="pt2 pb2">
-        <div class="container">
-            <div class="magazin__wrapper">
-                <div class="magazin">
-                    <div class="magazin__imageWrapper"><img src="uploads/magazin-1.jpg" alt="" class="magazin__image">
-                    </div>
-                    <div class="magazin__bar">
-                        <div class="magazin__text">Corporate Profile of ShineWing China (Mainland)</div>
-                        <a href="">
-                            <div class="magazin__button">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#download-solid"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
+    <!-- bigTabs -->
+    <div class="pb3">
+        <div class="bigTabs__container">
+            <div class="js-tab-wrapper">
+                <div class="js-tabs">
+                    <ul class="bigTabs">
+                        <li class="js-tab bigTabs__item active">Audit and Asstiance</li>
+                        <li class="js-tab bigTabs__item">Taxation</li>
+                        <li class="js-tab bigTabs__item">Advisory</li>
+                        <li class="js-tab bigTabs__item">Business Services</li>
+                    </ul>
+                    <ul>
+                        <div class="bigTabs__contentContainer">
+                            <li class="bigTabs__content js-tab-content">
+                                <h6 class="bigTabs__headline colorPrimary">Audit and Assurance
+                                </h6>
+                                <div class="bigTabs__contentText">
+                                    SW has always strived to upholding high integrity while developing a global service
+                                    network
+                                    to ensure high quality audit services tailored to the diversified needs of the
+                                    multi-national clients. With the breadth of knowledge and expertise across
+                                    industries
+                                    and
+                                    sectors, SW member firms serve regional, national and international clients of all
+                                    sizes
+                                    and
+                                    structures. By informing clients the up-to-date standards of regulatory institutions
+                                    and
+                                    technological challenges, we help to identify and manage risks in order to sustain a
+                                    high-performance business in today’s fast changing commercial environment.
+                                </div>
+                                <h6 class="bigTabs__headline colorPrimary">Our approach
+                                </h6>
+                                <div class="bigTabs__contentText">
+                                    SW is uniquely positioned to help deliver insights and promote transparency amidst
+                                    complexity and change. All SW member firms are required to strictly adhere to the
+                                    international auditing standards, delivering independent and ethical performance,
+                                    while
+                                    applying technical excellence.
+                                </div>
+                            </li>
+                            <li class="bigTabs__content js-tab-content">
+                                <h6 class="bigTabs__headline colorPrimary">Tax
+                                </h6>
+                                <div class="bigTabs__contentText">
+                                    Today, business and individuals are facing significant challenges like multiple tax
+                                    regulations and ever-increasing complex tax rules around the globe. It is vital that
+                                    companies develop well-planned tax strategies that are suitable for their
+                                    businesses.
+                                    SW, through its globally coordinated tax professionals, offers comprehensive and
+                                    practical services across all tax disciplines to help clients thrive in a
+                                    fast-changing
+                                    era.
+                                    Leveraging its professional teams in taxation with technical skills and industrial
+                                    expertise, SW can offer the necessary guidance and support. With our global advanced
+                                    management platform and integrated operational pattern, we’re dedicated to offering
+                                    the
+                                    best possible tax solutions for our clients’ business, while always maintaining the
+                                    highest level of integrity and concern for their reputation.
+                                </div>
+                            </li>
+                            <li class="bigTabs__content bigTabs__content--noWidth js-tab-content">
+                                <div class="bigTabs__flexContent">
+                                    <ul class="bigTabs__linkBox">
+                                        <li><a href="">IT Advisory</a></li>
+                                        <li><a href="">Sustainabilty</a></li>
+                                        <li><a href="">Corporate Finance</a></li>
+                                        <li><a href="">Risk Management</a></li>
+                                        <li><a href="">Management Conslting</a></li>
+                                    </ul>
+                                    <div>
+                                        <h6 class="bigTabs__headline colorPrimary">Advisory
+                                        </h6>
+                                        <div class="bigTabs__contentText">
+                                            Our professional teams from different markets offer a wide spectrum of
+                                            advisory
+                                            services, to effectively respond to the needs of our global clients. As a
+                                            trusted advisor, we leverage the expertise and skills across our member
+                                            firms to
+                                            develop the tailor-made solutions for our clients.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="bigTabs__content js-tab-content">
+                                <h6 class="bigTabs__headline colorPrimary">Buisness Services
+                                </h6>
+                                <div class="bigTabs__contentText">
+                                    In addition to audit and assurance services and advisory services, SW offers a broad
+                                    range of business support services for clients. Based on SWs’ extensive
+                                    international
+                                    experience and in-depth local expertise, our professional teams can work with
+                                    organizations to review their business model and help identify strategic initiatives
+                                    that will support and achieve their business objectives.
+                                    SW helps businesses connect multiple stakeholders in a well-structured, responsive
+                                    and
+                                    highly efficient service delivery global network. By truly understanding what is
+                                    important to our clients, navigating their challenges and providing comprehensive
+                                    support, we are always committed to delivering the best value on time.
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
                 </div>
-                <div class="magazin">
-                    <div class="magazin__imageWrapper"><img src="uploads/magazin-2.png" alt="" class="magazin__image">
-                    </div>
-                    <div class="magazin__bar">
-                        <div class="magazin__text">Corporate Profile of ShineWing China (Mainland)</div>
-                        <a href="">
-                            <div class="magazin__button">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#download-solid"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="magazin">
-                    <div class="magazin__imageWrapper"><img src="uploads/magazin-1.jpg" alt="" class="magazin__image">
-                    </div>
-                    <div class="magazin__bar">
-                        <div class="magazin__text">Corporate Profile of ShineWing China (Mainland)</div>
-                        <a href="">
-                            <div class="magazin__button">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#download-solid"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="magazin">
-                    <div class="magazin__imageWrapper"><img src="uploads/magazin-2.png" alt="" class="magazin__image">
-                    </div>
-                    <div class="magazin__bar">
-                        <div class="magazin__text">Corporate Profile of ShineWing China (Mainland)</div>
-                        <a href="">
-                            <div class="magazin__button">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#download-solid"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-
     <!-- footerSocial -->
     <div class="pt0">
         <div class="footerTop__container">
@@ -381,7 +425,7 @@
             </div>
         </div>
     </div>
-    <script async src="js/main.min.js?t=1666273037089"></script>
+    <script async src="js/main.min.js?t=1666273037097"></script>
 </body>
 
 </html>
