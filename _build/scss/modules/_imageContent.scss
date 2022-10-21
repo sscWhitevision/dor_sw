@@ -16,7 +16,7 @@
 
     &:hover .teaser__image {
         transition: all .6s ease;
-        transform: scale(1.1);
+        transform: scale(1.05);
         width: 100%;
     }
 
@@ -38,6 +38,7 @@
             }
 
             & .tabs {
+                margin-bottom: 18px;
                 justify-content: end;
 
                 @media (max-width:1000px) {
@@ -53,7 +54,11 @@
     }
 
     &__teaser h3 {
-        margin-bottom: 0.8em;
+        margin-bottom: 1.33em;
+    }
+
+    & .teaser__button{
+        margin-bottom: 0;
     }
 
     &__imageContainer {

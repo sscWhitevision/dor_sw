@@ -149,8 +149,14 @@ $(document).ready(function () {
 
         $wrapper.find(".js-tab-content").hide();
         $wrapper.find('.js-tab-content:eq(' + tabIndex + ')').show();
+
+        var currentTabText = $(this).text();
+        $(".js-service-breadcrump").text(currentTabText)
+        console.log(currentTabText);
     });
     $(".js-tab:first-child").trigger("click");
+
+
 
     // * * * * * * * * * * * * * * * * * * * * * * * * *
     // * sliderImage
@@ -218,6 +224,54 @@ $(document).ready(function () {
         console.log(input);
     });
 
+    // * * * * * * * * * * * * * * * * * * * * * * * * *
+    // * countrySelect
+    // *
+    // *
+
+    $(".js-country-select").change(function () {
+        $(".js-country-result-wrapper").children().hide();
+        var slectedCountryIndex = $(".js-country-select").find(":selected").index();
+        $(".js-country-result-wrapper").find('.js-country-result:eq(' + slectedCountryIndex + ')').show();
+        // var selectedCountry = $(".js-country-select").find(":selected").val();
+        // $(".js-country-result-wrapper").find(`#${selectedCountry}`).show();
+    });
+
+    // * * * * * * * * * * * * * * * * * * * * * * * * *
+    // * newsSelect
+    // *
+    // *
+    // Add all existing years to <select>
+    $newsBoxes = $(".js-news-result-wrapper").children();
+    var existingYears = $newsBoxes.map(function (index) {
+        var newsYear = $newsBoxes.eq(index).find(".js-news-date").text().slice(-4);
+        return newsYear
+    })
+    var uniqueYears = [...new Set(existingYears)].sort();
+
+    uniqueYears.forEach( function(year){
+        $(".js-news-select").append(`<option>${year}</option>`)
+    })
+
+    // Filter newsBoxes on change
+    $(".js-news-select").change(function () {
+        $newsBoxes.hide();
+
+        var showAll = $(".js-news-default-option").text();
+        var selectedYear = $(".js-news-select").find(":selected").text();
+
+        if (selectedYear === showAll) {
+            $newsBoxes.show();
+        }
+        else {
+            // Show only selected years
+            $newsBoxes.filter(function (index) {
+                // Get last 4 chars from js-news-date div
+                var newsYear = $newsBoxes.eq(index).find(".js-news-date").text().slice(-4);
+                return newsYear === selectedYear;
+            }).show();
+        }
+    });
 
 });
 

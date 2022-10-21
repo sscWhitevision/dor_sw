@@ -1,0 +1,37 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	countrySelect
+/*
+/* --------------------------------------------------------------------------- */
+.countrySelect {
+	height: 90px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	padding: 10px;
+
+	&__label {
+		font-size: 0.7rem;
+		margin-bottom: 1em;
+	}
+
+	&__resultsWrapper {
+		display: none;
+	}
+
+	&__results {
+		background-color: #fff;
+		border: 1px solid #aaa;
+		border-top: none;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0 40px;
+		padding: 45px;
+		@media (max-width:600px){
+			// padding: 20px;
+			grid-template-columns: 1fr;
+
+		}
+	}
+}

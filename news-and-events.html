@@ -9,34 +9,33 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/main.css?t=1666273037091" />
+    <link rel="stylesheet" href="css/main.css?t=1666360186214" />
 </head>
 
 <body>
-    <!-- TODO Filter -->
-    <!-- TODO Pagination -->
+
     <!-- header -->
     <header class="header">
         <div class="background--secondary">
             <div class="container">
                 <div class="header__top">
                     <div class="header__social">
-                        <a href="https://" target="_blank" class="header__socialButton">
+                        <a href="https://" target="  " class="header__socialButton">
                             <svg class="header__socialIcon">
                                 <use xlink:href="img/sprite.svg#linkedin"></use>
                             </svg>
                         </a>
-                        <a href="https://" target="_blank" class="header__socialButton">
+                        <a href="https://" target="  " class="header__socialButton">
                             <svg class="header__socialIcon">
                                 <use xlink:href="img/sprite.svg#youtube"></use>
                             </svg>
                         </a>
-                        <a href="https://" target="_blank" class="header__socialButton">
+                        <a href="https://" target="  " class="header__socialButton">
                             <svg class="header__socialIcon">
                                 <use xlink:href="img/sprite.svg#facebook"></use>
                             </svg>
                         </a>
-                        <a href="https://" target="_blank" class="header__socialButton">
+                        <a href="https://" target="  " class="header__socialButton">
                             <svg class="header__socialIcon">
                                 <use xlink:href="img/sprite.svg#twitter"></use>
                             </svg>
@@ -114,7 +113,7 @@
         <div class="container">
             <div class="header__bottom">
                 <div class="header__bottomLogo">
-                    <a href="/" target="_blank">
+                    <a href="/index" target="">
                         <svg class="header__bottomIcon">
                             <use xlink:href="img/sprite.svg#logo"></use>
                         </svg>
@@ -123,25 +122,25 @@
                 <nav class="header__nav">
                     <ul>
                         <li>
-                            <a href="/about-us.html" target="_blank">About us</a>
+                            <a href="/about-us.html" target="  ">About us</a>
                         </li>
                         <li>
-                            <a href="/industries.html" target="_blank">Industires</a>
+                            <a href="/industries.html" target="  ">Industires</a>
                         </li>
                         <li>
-                            <a href="/services.html" target="_blank">Services</a>
+                            <a href="/services.html" target="  ">Services</a>
                         </li>
                         <li>
-                            <a href="/news-and-events.html" target="_blank"> News and Evenets </a>
+                            <a href="/news-and-events.html" target="  "> News and Evenets </a>
                         </li>
                         <li>
-                            <a href="/insights.html" target="_blank">Insights</a>
+                            <a href="/insights.html" target="  ">Insights</a>
                         </li>
                         <li>
-                            <a href="/contact-us.html" target="_blank">Contact us</a>
+                            <a href="/contact-us.html" target="  ">Contact us</a>
                         </li>
                         <li>
-                            <a href="/careers.html" target="_blank">Careers</a>
+                            <a href="/careers.html" target="  ">Careers</a>
                         </li>
                     </ul>
                 </nav>
@@ -163,25 +162,25 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="/about-us.html" target="_blank">About us</a>
+                        <a href="/about-us.html" target="  ">About us</a>
                     </li>
                     <li>
-                        <a href="/industries.html" target="_blank">Industires</a>
+                        <a href="/industries.html" target="  ">Industires</a>
                     </li>
                     <li>
-                        <a href="/services.html" target="_blank">Services</a>
+                        <a href="/services.html" target="  ">Services</a>
                     </li>
                     <li>
-                        <a href="/news-and-events.html" target="_blank"> News and Evenets </a>
+                        <a href="/news-and-events.html" target="  "> News and Evenets </a>
                     </li>
                     <li>
-                        <a href="/insights.html" target="_blank">Insights</a>
+                        <a href="/insights.html" target="  ">Insights</a>
                     </li>
                     <li>
-                        <a href="/contact-us.html" target="_blank">Contact us</a>
+                        <a href="/contact-us.html" target="  ">Contact us</a>
                     </li>
                     <li>
-                        <a href="/careers.html" target="_blank">Careers</a>
+                        <a href="/careers.html" target="  ">Careers</a>
                     </li>
                 </ul>
                 <a class="buttonText" href="">
@@ -218,12 +217,12 @@
     </div>
 
     <!-- filter -->
+    <!-- TODO Pagination -->
     <div class="pt1 pb1">
         <div class="container">
             <div class="filter">
-                <select name="year" class="filter__select" data-placeholder="Year" id="" data-select-id="year">
-                    <option value="0" data-select-id="1">All News</option>
-                    <option value="2022" data-select-id="7">2022</option>
+                <select name="year" class="filter__select js-news-select">
+                    <option value="0" class="js-news-default-option">All News</option>
                 </select>
             </div>
         </div>
@@ -232,14 +231,14 @@
     <!-- news -->
     <div class="pt2 pb2">
         <div class="containerBig">
-            <div class="news__wrapper">
-                <a href="">
+            <div class="news__wrapper js-news-result-wrapper">
+                <a id="2022" href="">
                     <div class="newsBox newsBox--backgroundSecondary">
                         <div class="newsBox__imageContainer">
                             <img src="uploads/platzhalter-4.jpg" alt="" class="newsBox__image" />
                         </div>
                         <div class="newsBox__content">
-                            <div class="newsBox__date">23 August 2022</div>
+                            <div class="newsBox__date js-news-date">23 August 2032</div>
                             <h5 class="newsBox__headline">
                                 SW International hosted its 2022 Managing Partners Forum
                             </h5>
@@ -257,7 +256,7 @@
                             <img src="uploads/platzhalter-4.jpg" alt="" class="newsBox__image" />
                         </div>
                         <div class="newsBox__content">
-                            <div class="newsBox__date">23 August 2022</div>
+                            <div class="newsBox__date js-news-date">23 August 2022</div>
                             <h5 class="newsBox__headline">
                                 SW International hosted its 2022 Managing Partners Forum
                             </h5>
@@ -275,7 +274,7 @@
                             <img src="uploads/platzhalter-4.jpg" alt="" class="newsBox__image" />
                         </div>
                         <div class="newsBox__content">
-                            <div class="newsBox__date">23 August 2022</div>
+                            <div class="newsBox__date js-news-date">23 August 2022</div>
                             <h5 class="newsBox__headline">
                                 SW International hosted its 2022 Managing Partners Forum
                             </h5>
@@ -293,7 +292,7 @@
                             <img src="uploads/platzhalter-4.jpg" alt="" class="newsBox__image" />
                         </div>
                         <div class="newsBox__content">
-                            <div class="newsBox__date">23 August 2022</div>
+                            <div class="newsBox__date js-news-date">23 August 2032</div>
                             <h5 class="newsBox__headline">
                                 SW International hosted its 2022 Managing Partners Forum
                             </h5>
@@ -342,22 +341,22 @@
                 <div class="footerTop">
                     <div class="footerTop__text">Follow Us</div>
                     <div class="footerTop__wrapper">
-                        <a href="https://" target="_blank" class="footerTop__button">
+                        <a href="https://" target="  " class="footerTop__button">
                             <svg class="footerTop__Icon">
                                 <use xlink:href="img/sprite.svg#linkedin"></use>
                             </svg>
                         </a>
-                        <a href="https://" target="_blank" class="footerTop__button">
+                        <a href="https://" target="  " class="footerTop__button">
                             <svg class="footerTop__Icon">
                                 <use xlink:href="img/sprite.svg#youtube"></use>
                             </svg>
                         </a>
-                        <a href="https://" target="_blank" class="footerTop__button">
+                        <a href="https://" target="  " class="footerTop__button">
                             <svg class="footerTop__Icon">
                                 <use xlink:href="img/sprite.svg#facebook"></use>
                             </svg>
                         </a>
-                        <a href="https://" target="_blank" class="footerTop__button">
+                        <a href="https://" target="  " class="footerTop__button">
                             <svg class="footerTop__Icon">
                                 <use xlink:href="img/sprite.svg#twitter"></use>
                             </svg>
@@ -375,25 +374,25 @@
                 <nav class="footerCenter">
                     <ul>
                         <li>
-                            <a href="#" target="_blank">About us</a>
+                            <a href="#" target="  ">About us</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Industires</a>
+                            <a href="#" target="  ">Industires</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Services</a>
+                            <a href="#" target="  ">Services</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank"> News and Evenets </a>
+                            <a href="#" target="  "> News and Evenets </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Insights</a>
+                            <a href="#" target="  ">Insights</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Contact us</a>
+                            <a href="#" target="  ">Contact us</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Careers</a>
+                            <a href="#" target="  ">Careers</a>
                         </li>
                     </ul>
                 </nav>
@@ -436,7 +435,7 @@
             </div>
         </div>
     </div>
-    <script async src="js/main.min.js?t=1666273037091"></script>
+    <script async src="js/main.min.js?t=1666360186214"></script>
 </body>
 
 </html>
