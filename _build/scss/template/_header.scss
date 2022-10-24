@@ -14,6 +14,7 @@
 
         @media (max-width:1000px) {
             padding: 5px 0;
+            gap: 0;
         }
 
         &Logo {
@@ -31,8 +32,9 @@
         gap: 10px;
         font-size: 0.85rem;
         color: #fff;
-        margin-left: auto;
         position: relative;
+        margin-left: auto;
+
 
         & span {
             @media (max-width:1000px) {
@@ -62,6 +64,7 @@
             width: 28px;
             margin-right: 10px;
             pointer-events: none;
+
         }
     }
 

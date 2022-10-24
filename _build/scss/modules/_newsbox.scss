@@ -67,9 +67,9 @@
 		}
 	}
 
-	&__button a{
+	&__button{
 		margin-top: 2em;
-		width: 100%;
 		max-width: unset;
+		width: 100% !important;
 	}
 }

@@ -4,7 +4,6 @@
 /*
 /* --------------------------------------------------------------------------- */
 .nav {
-	//TODO body scroll verhindern
 	display: none;
 	position: absolute;
 	top: 100px;
@@ -16,13 +15,10 @@
 	padding: 0 20px 20px 20px;
 	overflow-y: scroll;
 	overflow-x: none;
-	-webkit-overflow-scrolling: touch;
-	overscroll-behavior: contain;
-
+	flex-direction: column;
 
 	&.active {
 		display: flex;
-		flex-direction: column;
 	}
 
 	&__search {

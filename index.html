@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/main.css?t=1666361515668" />
+    <link rel="stylesheet" href="css/main.css?t=1666616704995" />
 </head>
 
 <body>
@@ -99,13 +99,14 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- TODO Search Page fehlt komplett -->
+                    <!--  News -->
                     <div class="header__search">
                         <input type="text" name="search" class="header__searchInput" placeholder="search...">
                         <a class="header__searchButton" href="#">
                             <svg class="header__searchIcon">
                                 <use xlink:href="img/sprite.svg#search"></use>
                             </svg>
+                            <div class="introText__container"></div>
                         </a>
                     </div>
                 </div>
@@ -251,7 +252,7 @@
     </div>
 
     <!-- Teaser -->
-    <div class="pt0">
+    <div class="pt5">
         <div class="teaser__background">
             <div class="container">
                 <div class="teaser__wrapper">
@@ -297,21 +298,17 @@
         <div class="containerMax">
             <div class="imageContent">
                 <div class="imageContent__imageContainer">
-                    <img src="uploads/platzhalter-5.jpg" alt="" class="teaser__image" />
+                    <img src="uploads/platzhalter-5.jpg" alt="" class="imageContent__image" />
                 </div>
                 <div class="imageContent__teaser">
-                    <div class="colorSecondary">
-                        <h3>ShineWing International</h3>
-                    </div>
+                    <h3 class="imageContent__teaserHeadline colorSecondary">ShineWing International</h3>
                     <div class="introtext">
                         <div class="introText__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                             do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                             ullamco laboris.</div>
                     </div>
-                    <div class="teaser__button">
-                        <a href="#" class="button">Read More</a>
-                    </div>
+                    <a href="#" class="button teaser__button">Read More</a>
                 </div>
             </div>
         </div>
@@ -319,13 +316,13 @@
 
     <div class="pt2">
         <div class="containerMax">
-            <div class="imageContent">
+            <div class="imageContent imageContent--reverse">
                 <div class="imageContent__imageContainer">
                     <img src="uploads/platzhalter.jpg" alt="" class="teaser__image" />
                 </div>
-                <div class="imageContent__teaser imageContent__teaser--reverse js-tab-wrapper">
-                    <div class="colorSecondary">
-                        <h3>What we do</h3>
+                <div class="imageContent__teaser  js-tab-wrapper">
+                    <div>
+                        <h3 class="imageContent__teaserHeadline colorSecondary">What we do</h3>
                     </div>
                     <div class="js-tabs">
                         <ul class="tabs">
@@ -468,9 +465,7 @@
                             and knowledge.
                         </h4>
                     </div>
-                    <div class="news__button">
-                        <a href="#" class="button">View All Insights</a>
-                    </div>
+                    <a href="#" class="news__button button">View All Insights</a>
                 </div>
             </div>
         </div>
@@ -577,7 +572,7 @@
             </div>
         </div>
     </div>
-    <script async src="js/main.min.js?t=1666361515668"></script>
+    <script async src="js/main.min.js?t=1666616704995"></script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	color: #fff;
 	min-height: 520px;
@@ -84,9 +85,9 @@
 		// padding: 0 1em;
 	}
 
-	&__button a {
+	&__button {
 		text-transform: none;
-		width: 100%;
+		width: 100% !important;
 		margin-top: 1em;
 		max-width: unset;
 	}

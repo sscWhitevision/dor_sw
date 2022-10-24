@@ -70,6 +70,7 @@
 	&__headline {
 		padding: 0 40px;
 		margin-bottom: 2.44rem;
+		font-weight: normal;
 
 		@media (max-width:1000px) {
 			display: flex;
@@ -79,10 +80,10 @@
 			text-align: left;
 			align-items: center;
 			justify-content: center;
+			margin-bottom: 0;
 
 			h3 {
 				font-size: 1.2em;
-				margin-bottom: 0;
 			}
 		}
 	}

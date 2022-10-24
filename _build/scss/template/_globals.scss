@@ -93,7 +93,32 @@ a {
 }
 
 .containerMax {
-	margin: 0;
+	margin-left: 0;
+	margin-left: 0;
+}
+
+.wrapperFloat {
+	background-color: #fff;
+	padding: 100px 80px;
+	align-items: center;
+	position: relative;
+	margin-top: -100px;
+	z-index: 10;
+
+	@media (max-width:1200px) {
+		padding: 34px 34px;
+		margin-top: -50px;
+
+	}
+}
+
+.containerFloat {
+	max-width: 1470px;
+	margin: 0 auto;
+
+	@media (max-width:1000px) {
+		padding: 15px;
+	}
 }
 
 // lists
@@ -129,7 +154,8 @@ ul {
 	display: grid;
 	grid-template-columns: 7fr 5fr;
 	grid-gap: 30px;
-	@media (max-width:800px){
-	grid-template-columns: 1fr;	
+
+	@media (max-width:800px) {
+		grid-template-columns: 1fr;
 	}
 }

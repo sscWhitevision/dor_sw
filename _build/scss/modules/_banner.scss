@@ -13,7 +13,7 @@
 		display: block;
 
 		@media (max-width:1000px) {
-			height: 200px;
+			height: 240px;
 		}
 	}
 
@@ -21,13 +21,15 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%);
+		width: 100%;
+		padding: 66px 32px;
 	}
 
 	&__headline {
-		display: inline-flex;
-		align-items: center;
+		display: flex;
 		justify-content: center;
+		text-align: center;
 		margin-bottom: 1em;
 
 		& h1 {
@@ -43,24 +45,32 @@
 
 	&__icon {
 		fill: $colorPrimary;
-		height: 30px;
-		width: 30px;
+		height: 40px;
+		width: 25px;
+		text-align: center;
+		align-items: flex-end;
 		margin-right: 10px;
 
 		@media (max-width:750px) {
 			height: 20px;
-			width: 20px;
+			width: 15px;
 		}
 	}
 
 	&__breadcrump {
 		font-size: 0.7rem;
+		text-align: center;
 
 		ul {
-			display: flex;
+			display: inline-flex;
+			flex-wrap: wrap;
 			justify-content: center;
 
 			li {
+				a:hover {
+					text-decoration: underline;
+				}
+
 				&:not(:last-child) {
 					margin-right: 5px;
 

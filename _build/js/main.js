@@ -131,6 +131,7 @@ $(document).ready(function () {
     $(".js-navbutton").click(function () {
         $(this).toggleClass("active");
         $(".js-nav").toggleClass("active");
+        $("body").toggleClass("freeze");
 
     });
 
