@@ -4,25 +4,25 @@
 /*
 /* --------------------------------------------------------------------------- */
 .squareCard {
-	position: relative;
 	background-color: $colorSecondary;
+	position: relative;
 
 	@media (max-width: 320px) {}
 
 	&:after {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
 		background-color: $colorPrimary;
+		bottom: 0;
 		content: "";
 		height: 10px;
+		left: 0;
+		position: absolute;
+		right: 0;
 	}
 
 	&__container {
+		align-items: center;
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		align-items: center;
 
 		@media (max-width:900px) {
 			grid-template-columns: 1fr;
@@ -34,8 +34,8 @@
 		flex-direction: column;
 		justify-content: center;
 		margin-bottom: 0;
-		text-align: left;
 		padding-right: 30px;
+		text-align: left;
 
 		@media (max-width:900px) {
 			// text-align: center;

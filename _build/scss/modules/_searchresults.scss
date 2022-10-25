@@ -8,10 +8,10 @@
     }
 
     &__title {
-        display: inline-block;
-        color: orange;
-        font-size: 1.25rem;
         align-items: center;
+        color: orange;
+        display: inline-block;
+        font-size: 1.25rem;
 
         &:hover {
             text-decoration: underline;
@@ -19,9 +19,9 @@
     }
 
     &__icon {
-        fill: currentColor;
         display: inline-block;
-        width: 18px;
+        fill: currentColor;
         height: 20px;
+        width: 18px;
     }
 }

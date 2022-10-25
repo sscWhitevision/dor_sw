@@ -10,14 +10,14 @@
 	}
 
 	&:hover &__imageWrapper {
-		transition: all .2s ease;
 		background-color: rgba($colorSecondary, .1);
+		transition: all .2s ease;
 	}
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 30px;
+		grid-template-columns: repeat(4, 1fr);
 
 		@media (max-width: 1200px) {
 			grid-template-columns: repeat(3, 1fr);
@@ -34,17 +34,17 @@
 
 	&__imageWrapper {
 		align-items: center;
+		background-color: #fff;
 		display: flex;
 		justify-content: center;
 		// max-height: 370px;
 		padding: 20px 40px;
-		background-color: #fff;
 	}
 
 	&__image {
-		object-fit: fill;
 		display: block;
 		height: 350px;
+		object-fit: fill;
 		width: auto;
 
 		@media (max-width: 1700px) {
@@ -65,17 +65,17 @@
 	}
 
 	&__bar {
+		align-items: center;
 		background-color: $colorSecondary;
-		padding: 15px;
 		color: #fff;
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
+		padding: 15px;
 	}
 
 	&__text {
-		padding-right: 30px;
 		font-size: 0.9rem;
+		padding-right: 30px;
 
 		@media (max-width:1000px) {
 			font-size: 0.75rem;
@@ -83,13 +83,13 @@
 	}
 
 	&__button {
-		background-color: $colorPrimary;
-		padding: 20px 20px;
-		height: 75px;
-		width: 75px;
-		display: flex;
 		align-items: center;
-		justify-content: center;
+		background-color: $colorPrimary;
+		display: flex;
 		fill: currentColor;
+		height: 75px;
+		justify-content: center;
+		padding: 20px 20px;
+		width: 75px;
 	}
 }

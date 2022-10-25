@@ -4,29 +4,38 @@
 /*
 /* --------------------------------------------------------------------------- */
 .form {
-    padding: 34px 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
     background-color: #fff;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    padding: 34px 30px;
 
     &__headline {
+        align-items: center;
         background-color: $colorPrimary;
         color: #fff;
         display: flex;
-        align-items: center;
         justify-content: center;
         padding: 30px 0;
     }
 
     &__row {
         display: grid;
-        grid-template-columns: 1fr;
         grid-gap: 1rem;
+        grid-template-columns: 1fr;
 
         &--2 {
             grid-template-columns: 1fr 1fr;
-            @media (max-width:1200px){
+
+            @media (max-width:1200px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &--2wide {
+            grid-template-columns: 1fr 1fr;
+
+            @media (max-width:800px) {
                 grid-template-columns: 1fr;
             }
         }
@@ -43,52 +52,56 @@
     }
 
     &__label {
-        margin-bottom: 11px;
         font-size: 0.8rem;
+        margin-bottom: 11px;
 
         &:after {
-            content: '*';
             color: $colorPrimary;
+            content: '*';
         }
     }
 
     &__input {
-        display: block;
-        width: 100%;
         border: 1px #dbdbdb solid;
+        display: block;
         height: 70px;
         padding: 26px;
+        width: 100%;
+
+        @media (max-width:1000px) {
+            height: 60px;
+        }
 
         &:focus {
-            // outline: none;
-            color: #495057;
             background-color: #fff;
             border-color: #80bdff;
-            outline: 0;
             box-shadow: 0 0 0 0.1rem rgb(0 123 255 / 25%);
+            // outline: none;
+            color: #495057;
+            outline: 0;
         }
 
         &--textarea {
+            height: 177px !important;
             resize: none;
-            height: 177px;
         }
     }
 
     &__button {
         background-color: #f37021;
-        color: #fff;
+        border: 0;
         border-radius: 10px;
+        color: #fff;
         font-size: .9rem;
         font-weight: normal;
-        border: 0;
         line-height: 1.12;
+        outline: 0;
         padding: 20px;
         position: relative;
-        outline: 0;
         text-transform: uppercase;
     }
 
-    &__note{
+    &__note {
         font-size: 0.7rem;
     }
 }

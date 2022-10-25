@@ -4,10 +4,10 @@
 /*
 /* --------------------------------------------------------------------------- */
 .bigTabs {
+	background-color: transparent;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 60px;
-	background-color: transparent;
 
 	@media (max-width:1200px) {
 		padding: 0 50px;
@@ -38,29 +38,29 @@
 	}
 
 	&__item {
-		cursor: pointer;
-		position: relative;
-		display: flex;
-		padding: 18px;
-		width: 100%;
 		align-items: center;
-		justify-content: center;
-		text-align: center;
 		background-color: #fff;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		padding: 18px;
+		position: relative;
+		text-align: center;
+		width: 100%;
 
 		@media (max-width:1000px) {
-			padding: 10px;
 			font-size: 0.7rem;
+			padding: 10px;
 		}
 
 		@media (max-width:800px) {}
 
 		&:hover,
 		&.active {
+			background-color: $colorPrimary;
+			color: #fff;
 			font-size: 1rem;
 			font-weight: bold;
-			color: #fff;
-			background-color: $colorPrimary;
 			margin-top: -20px;
 
 			@media (max-width:1000px) {
@@ -75,8 +75,12 @@
 	}
 
 	&__content {
-		padding: 30px;
 		max-width: 83.33%;
+		padding: 30px;
+
+		@media (max-width:1000px) {
+			max-width: unset;
+		}
 
 		&--noWidth {
 			max-width: unset;
@@ -85,28 +89,24 @@
 				padding: 0px;
 			}
 		}
-
-		@media (max-width:1000px) {
-			max-width: unset;
-		}
 	}
 
 	&__contentContainer {
+		align-items: center;
+		background-color: #fff;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
 		position: relative;
-		background-color: #fff;
 
 		&::after {
+			background-color: $colorPrimary;
 			content: "";
-			position: absolute;
+			height: 4px;
 			left: 0;
+			position: absolute;
 			right: 0;
 			top: 0;
-			height: 4px;
-			background-color: $colorPrimary;
 		}
 	}
 
@@ -129,15 +129,15 @@
 
 	&__linkBox {
 		background-color: $colorSecondary;
-		padding: 36px;
 		color: #858BA5;
 		font-size: 0.8rem;
 		margin-right: 60px;
+		padding: 36px;
 		white-space: nowrap;
 
 		@media (max-width:700px) {
-			margin-right: 0;
 			margin-bottom: 1em;
+			margin-right: 0;
 		}
 
 		& li {

@@ -9,9 +9,13 @@
 
 	&__item {
 		cursor: pointer;
+		margin-bottom: 1em;
 		padding-bottom: 1em;
 		position: relative;
-		margin-bottom: 1em;
+
+		@media (max-width:1000px){
+			font-size: 0.7rem;
+		}
 
 		&:not(:last-child) {
 			margin-right: 40px;
@@ -21,18 +25,14 @@
 			font-weight: bold;
 
 			&:after {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				height: 2px;
 				background: $colorPrimary;
+				bottom: 0;
+				content: '';
+				height: 2px;
+				left: 0;
+				position: absolute;
+				right: 0;
 			}
-		}
-
-		@media (max-width:1000px){
-			font-size: 0.7rem;
 		}
 	}
 

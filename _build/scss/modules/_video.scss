@@ -1,0 +1,15 @@
+.video {
+	background-color: #f7f7f7;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding: 30px;
+
+	&__responsive {
+		aspect-ratio: 16 / 9;
+		border: none;
+		height: 100%;
+		max-width: 900px;
+		width: 100%;
+	}
+}

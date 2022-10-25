@@ -4,15 +4,15 @@
 /*
 /* --------------------------------------------------------------------------- */
 .cardMember {
+	background-color: $colorSecondary;
 	color: #fff;
 	min-height: unset;
 	padding: 42px 36px;
-	background-color: $colorSecondary;
 
 	&__button {
+		max-width: unset;
 		text-transform: uppercase;
 		width: 100% !important;
-		max-width: unset;
 	}
 
 	&__text {

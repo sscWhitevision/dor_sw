@@ -7,33 +7,33 @@
     background: #fff;
 
     &__top {
-        display: flex;
         align-items: center;
+        display: flex;
         gap: 2rem;
         padding: 10px 0;
 
         @media (max-width:1000px) {
-            padding: 5px 0;
             gap: 0;
+            padding: 5px 0;
         }
 
         &Logo {
-            display: flex;
             align-items: center;
-            width: 130px;
+            display: flex;
             height: 16px;
             margin-left: 5px;
+            width: 130px;
         }
     }
 
     &__language {
-        display: flex;
         align-items: center;
-        gap: 10px;
-        font-size: 0.85rem;
         color: #fff;
-        position: relative;
+        display: flex;
+        font-size: 0.85rem;
+        gap: 10px;
         margin-left: auto;
+        position: relative;
 
 
         & span {
@@ -43,11 +43,11 @@
         }
 
         &Button {
+            align-items: center;
             cursor: pointer;
             display: flex;
-            justify-content: center;
-            align-items: center;
             fill: currentColor;
+            justify-content: center;
             transition: all 0.2s ease;
 
             & > * {
@@ -61,22 +61,22 @@
 
         &Icon {
             height: 28px;
-            width: 28px;
             margin-right: 10px;
             pointer-events: none;
+            width: 28px;
 
         }
     }
 
     &__dropdown {
-        display: none;
-        position: absolute;
-        bottom: -16px;
-        left: 0px;
-        z-index: 20;
         background-color: #fff;
+        bottom: -16px;
         color: $colorSecondary;
+        display: none;
+        left: 0px;
+        position: absolute;
         transform: translate(-28px, 100%);
+        z-index: 20;
 
         @media (max-width:1000px) {
             bottom: -5px;
@@ -90,11 +90,11 @@
 
     &__dropdownList {
         max-height: 314px;
-        padding: 14px 13px 30px 33px;
-        overflow-y: scroll;
-        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        overflow-y: scroll;
         overscroll-behavior: contain;
+        padding: 14px 13px 30px 33px;
     }
 
     &__dropdownItem {
@@ -116,22 +116,22 @@
     }
 
     &__dropdownSearchIcon {
-        height: 18px;
-        width: 18px;
-        fill: #fff;
         align-self: center;
+        fill: #fff;
+        height: 18px;
         margin-left: -40px;
+        width: 18px;
     }
 
     &__dropdownInput {
-        padding-left: 33px;
-        height: 60px;
-        width: 260px;
         background-color: $colorPrimary;
-        color: #fff;
         border: none;
-        outline: none;
+        color: #fff;
         font-size: 0.7rem;
+        height: 60px;
+        outline: none;
+        padding-left: 33px;
+        width: 260px;
 
         &::placeholder {
             color: #fff;
@@ -139,91 +139,91 @@
     }
 
     &__social {
-        display: flex;
         align-items: center;
-        gap: 10px;
         color: #fff;
+        display: flex;
+        gap: 10px;
 
         &Button {
-            display: flex;
-            justify-content: center;
             align-items: center;
-            height: 28px;
-            width: 28px;
             border: 1px solid currentColor;
             border-radius: 50%;
+            display: flex;
+            height: 28px;
+            justify-content: center;
+            width: 28px;
         }
 
         &Icon {
             display: block;
+            fill: currentColor;
+            height: 15px;
             padding: 1px;
             width: 15px;
-            height: 15px;
-            fill: currentColor;
         }
     }
 
     &__search {
-        display: flex;
         align-items: center;
+        display: flex;
 
         @media (max-width:1000px) {
             display: none;
         }
 
         &Input {
-            outline: none;
-            border: none;
             background: none;
-            width: 40px;
-            float: left;
-            transition: 0.3s;
-            line-height: 40px;
-            display: block;
-            height: 40px;
-            border-radius: 20px;
             background-color: #fff;
+            border: none;
+            border-radius: 20px;
+            display: block;
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            outline: none;
+            transition: 0.3s;
+            width: 40px;
         }
 
         &Button {
-            color: #fff;
-            float: right;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #fff;
-            display: flex;
-            justify-content: center;
             align-items: center;
+            background: #fff;
+            background: #efefef;
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            float: right;
+            height: 40px;
+            justify-content: center;
+            margin-left: -40px;
+            padding: 10px;
             text-decoration: none;
             transition: 0.3s;
-            padding: 10px;
-            margin-left: -40px;
-            background: #efefef;
+            width: 40px;
         }
 
         &:hover > &Input,
         &Input:focus {
-            width: 240px;
             padding: 0 3em 0 1em;
+            width: 240px;
         }
 
         &Field {
-            height: 60px;
             border-radius: 20px;
+            height: 60px;
         }
 
         &Icon {
+            align-self: center;
+            fill: $colorSecondary;
             height: 100%;
             width: 100%;
-            fill: $colorSecondary;
-            align-self: center;
         }
     }
 
     &__bottom {
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: space-between;
 
         @media (max-width:1000px) {
@@ -231,14 +231,14 @@
         }
 
         &Icon {
-            width: 190px;
-            height: 100px;
             display: block;
             fill: $colorSecondary;
+            height: 100px;
+            width: 190px;
 
             @media (max-width:1200px) {
-                width: 120px;
                 height: 52px;
+                width: 120px;
             }
         }
     }
@@ -253,8 +253,8 @@
         }
 
         ul {
-            display: flex;
             align-items: center;
+            display: flex;
             gap: 2em;
 
             @media (max-width:1200px) {
@@ -266,8 +266,8 @@
             }
 
             li {
-                text-transform: uppercase;
                 line-height: 1.15px;
+                text-transform: uppercase;
 
                 &.active a,
                 &:hover {
@@ -276,10 +276,10 @@
             }
 
             a {
-                display: flex;
-                justify-content: center;
                 align-items: center;
+                display: flex;
                 height: 140px;
+                justify-content: center;
                 position: relative;
 
                 @media (max-width:1350px) {
@@ -291,13 +291,13 @@
                 }
 
                 &:after {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    right: 50%;
-                    bottom: 0;
-                    height: 5px;
                     background: $colorPrimary;
+                    bottom: 0;
+                    content: "";
+                    height: 5px;
+                    left: 50%;
+                    position: absolute;
+                    right: 50%;
                     transition: all .2s ease;
                 }
 
@@ -311,35 +311,35 @@
 
     // nav button
     &__navButton {
-        display: none;
         align-items: center;
+        cursor: pointer;
+        display: none;
+        height: 25px;
         justify-content: center;
+        margin-left: auto;
+        position: relative;
+        transition: all 0.2s ease;
         width: 35px;
         z-index: 9;
-        height: 25px;
-        margin-left: auto;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        position: relative;
-
-        &:hover {
-            color: $colorPrimary;
-        }
 
         @media (max-width: 1000px) {
             display: flex;
         }
 
+        &:hover {
+            color: $colorPrimary;
+        }
+
         & > span {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 100%;
             background: currentColor;
-            opacity: 1;
+            display: block;
+            height: 2px;
             left: 0;
+            opacity: 1;
+            position: absolute;
             transform: rotate(0deg);
             transition: all 0.25s ease-in-out;
+            width: 100%;
         }
 
         & > *:nth-child(1) {
@@ -360,9 +360,9 @@
         }
 
         &.active > *:nth-child(1) {
+            left: 50%;
             top: calc(50% - 2px);
             width: 0%;
-            left: 50%;
 
             @media (max-width: 600px) {
                 top: calc(50% - 1px);
@@ -370,20 +370,20 @@
         }
 
         &.active > *:nth-child(2) {
+            left: 0;
             transform: rotate(45deg);
             width: 100%;
-            left: 0;
         }
 
         &.active > *:nth-child(3) {
-            transform: rotate(-45deg);
             opacity: 1;
+            transform: rotate(-45deg);
         }
 
         &.active > *:nth-child(4) {
+            left: 50%;
             top: calc(50% - 2px);
             width: 0%;
-            left: 50%;
 
             @media (max-width: 600px) {
                 top: calc(50% - 1px);

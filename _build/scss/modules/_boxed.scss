@@ -1,0 +1,23 @@
+.boxed {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-bottom: 20px;
+
+	&__item {
+		background-color: #f7f7f7;
+		padding: 15px;
+	}
+
+	&__headline {
+		color: $colorPrimary;
+		font-size: 1.1rem;
+		margin-bottom: 15px;
+	}
+
+	&__content {
+		@media (max-width:1000px) {
+			font-size: .8rem;
+		}
+	}
+}

@@ -10,8 +10,8 @@
 
 	&__headline {
 		color: #fff;
-		font-weight: bold;
 		font-size: 1.22rem;
+		font-weight: bold;
 		margin-right: auto;
 
 		@media (max-width:1000px) {
@@ -20,14 +20,14 @@
 	}
 
 	&__button {
+		align-items: center;
 		background-color: $colorSecondary;
-		height: 85px;
-		width: 100%;
-		outline: none;
 		border: none;
 		display: flex;
-		align-items: center;
+		height: 85px;
+		outline: none;
 		padding: 25px;
+		width: 100%;
 
 		@media (max-width:1000px) {
 			height: 67px;
@@ -37,22 +37,22 @@
 
 	&__icon {
 		fill: $colorPrimary;
-		width: 45px;
 		height: 35px;
 		margin-right: 20px;
 		object-fit: contain;
+		width: 45px;
 
 		@media (max-width:1000px) {
-			width: 25px;
 			height: 21px;
+			width: 25px;
 		}
 	}
 
 	&__angle {
 		fill: #fff;
-		width: 27px;
 		height: 25px;
 		transition: all .2s ease;
+		width: 27px;
 	}
 
 	.active &__angle {
@@ -61,8 +61,8 @@
 
 	&__panel {
 		background-color: $colorBackground;
-		padding: 30px;
 		display: none;
+		padding: 30px;
 
 		@media (max-width:1000px) {
 			font-size: .8rem;

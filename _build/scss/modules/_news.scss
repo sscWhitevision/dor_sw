@@ -4,23 +4,23 @@
 /*
 /* --------------------------------------------------------------------------- */
 .news {
-	position: relative;
+	align-items: center;
+	color: #fff;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	color: #fff;
 	min-height: 520px;
 	padding: 0 2.3em;
-
-	&--member {
-		min-height: unset;
-		padding: 42px 36px;
-	}
+	position: relative;
 
 	@media (max-width:1000px) {
 		min-height: 220px;
 		padding: 0 12px;
+	}
+
+	&--member {
+		min-height: unset;
+		padding: 42px 36px;
 	}
 
 	&:hover &__image {
@@ -43,14 +43,8 @@
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
 		gap: 1.5em 1.5em;
-		&--career{
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			@media (max-width:1400px) {
-				grid-template-columns: 1fr 1fr 1fr;
-			}
-		}
+		grid-template-columns: 1fr 1fr 1fr;
 
 		@media (max-width:1200px) {
 			grid-template-columns: 1fr 1fr;
@@ -59,18 +53,24 @@
 		@media (max-width:800px) {
 			grid-template-columns: 1fr;
 		}
+		&--career{
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			@media (max-width:1400px) {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
 	}
 
 	&__type {
-		position: absolute;
-		top: 0;
-		right: 0;
 		background-color: $colorPrimary;
-		text-transform: uppercase;
-		padding: 10px 20px;
-		font-size: 0.63rem;
-		z-index: 10;
 		color: #fff;
+		font-size: 0.63rem;
+		padding: 10px 20px;
+		position: absolute;
+		right: 0;
+		text-transform: uppercase;
+		top: 0;
+		z-index: 10;
 	}
 
 	&__text {
@@ -80,16 +80,16 @@
 	}
 
 	&__content {
-		display: flex;
 		align-items: center;
+		display: flex;
 		// padding: 0 1em;
 	}
 
 	&__button {
-		text-transform: none;
-		width: 100% !important;
 		margin-top: 1em;
 		max-width: unset;
+		text-transform: none;
+		width: 100% !important;
 	}
 
 	&__headline {

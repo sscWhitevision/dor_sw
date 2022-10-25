@@ -4,11 +4,8 @@
 /*
 /* --------------------------------------------------------------------------- */
 .content {
-
     a {
         text-decoration: underline;
-
-        // long Links break
         overflow-wrap: break-word;
         word-wrap: break-word;
         word-break: break-word;
@@ -16,11 +13,26 @@
     }
 
     ul {
-        list-style: disc;
-        padding-left: 1em;
+        list-style: none;
         margin-bottom: 1em;
+
+        li {
+            position: relative;
+            padding-left: 1.2rem;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: .3rem;
+                width: .45rem;
+                height: .9rem;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAuNDkgMTUuMTgiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IG5vbmU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgY2xpcC1wYXRoOiB1cmwoI2NsaXBwYXRoKTsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZjM3MDIxOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGNsaXBQYXRoIGlkPSJjbGlwcGF0aCI+CiAgICAgIDxwb2x5bGluZSBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTI3LjE4IDE1LjE3IDAgMTUuMTcgMCAwIDEyNy4xOCAwIi8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KICA8ZyBjbGFzcz0iY2xzLTIiPgogICAgPGc+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTS44NCwxMC4yOGMtMS4xMiwxLjEyLTEuMTIsMi45NCwwLDQuMDYsMS4xMiwxLjEyLDIuOTQsMS4xMiw0LjA2LDAsMS4xMi0xLjEyLDEuMTItMi45NCwwLTQuMDYsMCwwLDAsMCwwLDAtMS4xMi0xLjEyLTIuOTQtMS4xMi00LjA2LDAsMCwwLDAsMCwwLDAiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0zIiBkPSJNLjg0LC44NGMtMS4xMiwxLjEyLTEuMTIsMi45NCwwLDQuMDYsMS4xMiwxLjEyLDIuOTQsMS4xMiw0LjA2LDBzMS4xMi0yLjk0LDAtNC4wNmMwLDAsMCwwLDAsMEMzLjc4LS4yOCwxLjk2LS4yOCwuODQsLjg0Ii8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTUuNTksNS41OGMtMS4xMiwxLjEyLTEuMTIsMi45NCwwLDQuMDYsMS4xMiwxLjEyLDIuOTQsMS4xMiw0LjA2LDAsMS4xMi0xLjEyLDEuMTItMi45NCwwLTQuMDYsMCwwLDAsMCwwLDAtMS4xMi0xLjEyLTIuOTQtMS4xMi00LjA2LDBoMCIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+");
+            }
+        }
     }
 
-	// responsive
-	@media (max-width: 320px) {}
+    // responsive
+    @media (max-width: 320px) {}
 }

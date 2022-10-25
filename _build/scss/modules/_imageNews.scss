@@ -4,15 +4,15 @@
 /*
 /* --------------------------------------------------------------------------- */
 .imageNews {
-	position: relative;
-	display: block;
-	color: #fff;
-	min-height: 520px;
 	background-color: $backgroundGrey;
+	color: #fff;
+	display: block;
+	min-height: 520px;
+	position: relative;
 
 	@media (max-width:1000px) {
-		min-height: 220px;
 		display: flex;
+		min-height: 220px;
 	}
 
 	&:hover &__image {
@@ -21,46 +21,46 @@
 	}
 
 	&__type {
-		position: absolute;
-		top: 0;
-		right: 0;
 		background-color: $colorPrimary;
-		text-transform: uppercase;
-		padding: 10px 20px;
 		font-size: 0.63rem;
+		padding: 10px 20px;
+		position: absolute;
+		right: 0;
+		text-transform: uppercase;
+		top: 0;
 		z-index: 10;
 	}
 
 	&__imageContainer {
-		overflow: hidden;
 		margin-bottom: 1em;
+		overflow: hidden;
 		transition: all .6s ease;
 
 		@media (max-width:1000px) {
+			bottom: 0;
+			height: 100%;
+			left: 0;
 			object-fit: cover;
 			position: absolute;
-			height: 100%;
-			top: 0;
-			left: 0;
-			bottom: 0;
 			right: 0;
+			top: 0;
 
 			&:before {
-				content: "";
-				position: absolute;
-				z-index: 2;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
 				background-color: rgba(0, 0, 0, .2);
+				bottom: 0;
+				content: "";
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 2;
 			}
 		}
 	}
 
 	&__image {
-		width: 100%;
 		display: block;
+		width: 100%;
 	}
 
 	&__content &__headline {
@@ -68,19 +68,19 @@
 	}
 
 	&__headline {
-		padding: 0 40px;
-		margin-bottom: 2.44rem;
 		font-weight: normal;
+		margin-bottom: 2.44rem;
+		padding: 0 40px;
 
 		@media (max-width:1000px) {
-			display: flex;
-			position: relative;
-			z-index: 10;
-			padding: 0 12px;
-			text-align: left;
 			align-items: center;
+			display: flex;
 			justify-content: center;
 			margin-bottom: 0;
+			padding: 0 12px;
+			position: relative;
+			text-align: left;
+			z-index: 10;
 
 			h3 {
 				font-size: 1.2em;

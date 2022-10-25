@@ -4,10 +4,10 @@
 /*
 /* --------------------------------------------------------------------------- */
 .imageContent {
+    align-items: center;
+    background-color: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #fff;
-    align-items: center;
 
     @media (max-width:1000px) {
         display: flex;
@@ -25,13 +25,13 @@
             text-align: right;
 
             @media (max-width:1000px) {
-                text-align: left;
                 order: 1;
+                text-align: left;
             }
 
             & .tabs {
-                margin-bottom: 18px;
                 justify-content: end;
+                margin-bottom: 18px;
 
                 @media (max-width:1000px) {
                     justify-content: start;
@@ -65,8 +65,8 @@
     }
 
     &__imageContainer {
-        overflow: hidden;
         height: 100%;
+        overflow: hidden;
 
         @media (max-width:1000px) {
             height: 190px;
@@ -75,10 +75,10 @@
     }
 
     &__image {
-        transition: all .6s ease;
         display: block;
-        object-fit: cover;
         height: 100%;
+        object-fit: cover;
+        transition: all .6s ease;
     }
 
     &__headline--colorPrimary {

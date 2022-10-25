@@ -16,12 +16,12 @@
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 140px;
+        grid-template-columns: 1fr 1fr;
 
         @media (max-width:1000px) {
-            grid-template-columns: 1fr;
             gap: 2em;
+            grid-template-columns: 1fr;
         }
     }
 
@@ -38,10 +38,10 @@
     }
 
     &__imageWrapper {
+        align-items: center;
+        background-color: #fff;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background-color: #fff;
-        align-items: center;
 
         &:hover .teaser__image {
             transform: scale(1.05);
@@ -55,8 +55,8 @@
 
     &__image {
         display: block;
-        transition: all .2s ease;
-        object-fit: cover;
         height: 100%;
+        object-fit: cover;
+        transition: all .2s ease;
     }
 }
