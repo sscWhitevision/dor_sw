@@ -34,7 +34,8 @@
 	&__headline {
 		font-weight: bold;
 		margin-bottom: 0.76em;
-		@media (max-width:500px){
+
+		@media (max-width:500px) {
 			font-size: 2rem;
 		}
 	}
@@ -53,7 +54,7 @@
 		}
 	}
 
-	&__wrapper{
+	&__wrapper {
 		position: relative;
 	}
 
@@ -73,7 +74,7 @@
 	}
 
 	&__nav {
-		bottom: 5%;
+		bottom: 40px;
 		font-size: 0.9rem;
 		left: 0;
 		position: absolute;
@@ -88,10 +89,7 @@
 			position: relative;
 
 			@media (max-width:900px) {
-				display: none; 
-				// display: grid;
-				// grid-template-columns: 1fr 1fr;
-				// gap: 1em 0;
+				display: none;
 			}
 
 			:not(:last-child) {
@@ -103,8 +101,12 @@
 			color: #fff;
 			cursor: pointer;
 			flex: 1 1 0px;
-			padding: 10px 0 20px 15px;
+			padding: 8px 0 8px 12px;
 			position: relative;
+
+			&:active {
+				font-weight: bold;
+			}
 
 			@media (max-width:1000px) {
 				margin-bottom: 20px;

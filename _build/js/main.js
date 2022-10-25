@@ -250,7 +250,7 @@ $(document).ready(function () {
     })
     var uniqueYears = [...new Set(existingYears)].sort();
 
-    uniqueYears.forEach( function(year){
+    uniqueYears.forEach(function (year) {
         $(".js-news-select").append(`<option>${year}</option>`)
     })
 
