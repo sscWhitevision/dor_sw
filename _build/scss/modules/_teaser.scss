@@ -4,6 +4,10 @@
 /*
 /* --------------------------------------------------------------------------- */
 .teaser {
+    padding: 95px 0;
+    @media (max-width:1000px) {
+        padding: 0;
+    }
     &--withImage {
         padding: 95px 80px;
     }
