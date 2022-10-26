@@ -1,0 +1,9 @@
+id: 9
+key: socialTwitter
+label: Twitter
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 10
+value: 'https://twitter.com/ShineWing_Intl'
+group: 3

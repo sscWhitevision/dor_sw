@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '994c42a85f302e13ca75c1d2079401d8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '20d0315964fcf95951c8ea5c73451faa',
+  'native_key' => 'confirm_navigation',
+  'object' => '{"key":"confirm_navigation","value":true,"xtype":"combo-boolean","namespace":"core","area":"manager","editedon":null}',
+);

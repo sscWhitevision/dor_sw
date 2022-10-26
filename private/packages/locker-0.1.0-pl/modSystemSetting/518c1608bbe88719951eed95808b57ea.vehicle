@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'locker',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'fb6f0fa1bb4e412657b58a13e626ac29',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '518c1608bbe88719951eed95808b57ea',
+  'native_key' => 'locker.status_off_on_lock',
+  'object' => '{"key":"locker.status_off_on_lock","value":false,"xtype":"combo-boolean","namespace":"locker","area":"","editedon":null}',
+);

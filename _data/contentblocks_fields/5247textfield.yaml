@@ -1,0 +1,13 @@
+id: 52
+parent: 47
+parent_properties: '{"key":"button","width":"100"}'
+name: Beschriftung
+description: ''
+content_desc: ''
+sortorder: 45
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: null
+settings: '[]'

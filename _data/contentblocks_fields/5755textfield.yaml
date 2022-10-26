@@ -1,0 +1,13 @@
+id: 57
+parent: 55
+parent_properties: '{"key":"name","width":"100"}'
+name: Name
+description: ''
+content_desc: ''
+sortorder: 50
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: null
+settings: '[]'

@@ -1,0 +1,5 @@
+key: consentfriend.log_usage
+value: '0'
+xtype: combo-boolean
+namespace: consentfriend
+area: log

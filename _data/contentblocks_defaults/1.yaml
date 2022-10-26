@@ -1,0 +1,7 @@
+id: 1
+constraint_field: template
+constraint_value: '2'
+default_template: '5'
+target_layout: 6
+target_field: null
+target_column: main

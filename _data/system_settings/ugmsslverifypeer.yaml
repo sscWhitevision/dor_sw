@@ -1,0 +1,5 @@
+key: ugm_ssl_verify_peer
+value: '1'
+xtype: combo-boolean
+namespace: upgrademodx
+area: Download

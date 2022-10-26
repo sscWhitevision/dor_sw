@@ -1,0 +1,16 @@
+id: 2
+set: 2
+icon: 146
+icon_ms: null
+icon_file: null
+text: Konfiguration
+description: 'Globale Einstellungen'
+action_id: 3
+action_key: null
+action_namespace: clientconfig
+action_props: ''
+handler: null
+link: null
+ranking: 0
+iconcls: fa-cogs
+iconpath: ''

@@ -1,0 +1,9 @@
+id: 7
+key: contactFax
+label: Fax
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 21
+value: a
+group: 2

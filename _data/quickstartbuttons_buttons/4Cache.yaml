@@ -1,0 +1,15 @@
+id: 4
+set: 2
+icon: 430
+icon_ms: null
+icon_file: null
+text: Cache
+description: 'Cache-Dateien in allen Kontexten löschen'
+action_id: null
+action_key: null
+action_props: ''
+handler: 'MODx.clearCache(); return false;'
+link: null
+ranking: 2
+iconcls: fa-recycle
+iconpath: ''

@@ -1,0 +1,5 @@
+key: consentfriend.hide_powered_by
+value: '1'
+xtype: combo-boolean
+namespace: consentfriend
+area: consentfriend

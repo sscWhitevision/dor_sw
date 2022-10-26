@@ -1,0 +1,14 @@
+id: 47
+parent_properties: null
+input: repeater
+name: Karten
+description: ''
+content_desc: ''
+sortorder: 40
+category: 12
+icon: chunk_A
+template: "<div class=\"newsBox newsBox--backgroundSecondary\">\n    <div class=\"newsBox__imageContainer\">\n        <picture>\n            <source srcset=\"[[+image:pThumb=`f=webp`]]\" type=\"image/webp\">\n            <source srcset=\"[[+image]]\" type=\"image/jpeg\"> \n            <img class=\"newsBox__image\" src=\"[[+image]]\" alt=\"[[+headline:htmlent]]\" loading=\"lazy\">\n        </picture>\n    </div>\n    <div class=\"newsBox__content\">\n        <h5 class=\"newsBox__headline colorPrimaryLight\">\n            [[+headline]]\n        </h5>\n        <div class=\"newsBox__text\">\n            [[+content:nl2br]]\n        </div>\n        [[+link:notempty=`\n        <div class=\"newsBox__button\">\n            <a href=\"[[+link]]\" class=\"button\">[[+button]]</a>\n        </div>\n        `]]\n    </div>\n</div>"
+properties: '{"wrapper_template":"[[+rows]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"4","layout_style":"default"}'
+availability: '[]'
+layouts: '10'
+settings: '[]'

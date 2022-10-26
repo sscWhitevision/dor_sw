@@ -1,0 +1,72 @@
+.clientsupport .required:before {
+    content: "* ";
+    color: red;
+}
+
+.clientsupport .desc-under {
+    color: #777;
+}
+
+.clientsupport .clientsupport-desc {
+    padding: 15px 0;
+}
+.clientsupport .clientsupport-desc p {
+    width: 450px;
+}
+.clientsupport .clientsupport-desc img {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    max-width: 160px;
+    max-height: 100px;
+}
+
+.clientsupport-icon {
+    padding-top: 15px;
+}
+
+.clientsupport-icon .icon-info-circle:before {
+    content: " ";
+}
+
+.brand-custom > a {
+    padding: 0 20px 0 18px !important;
+}
+
+.brand-custom .clientsupport-icon {
+    padding-top: 6px;
+}
+
+.brand-custom .icon-info-circle:before {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.brand-zendesk .icon-info-circle:before {
+    background-image: url(../img/icon-zendesk-white-v2.svg);
+    background-size: 45px 40px;
+}
+
+.brand-jira .icon-info-circle:before {
+    background-image: url(../img/icon-jira.svg);
+}
+
+.brand-freshdesk .icon-info-circle:before {
+    background-image: url(../img/icon-freshdesk.png);
+    background-size: 20px 20px;
+}
+
+.icon-custom {
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    margin-bottom: 10px !important;
+}
+.icon-custom .icon-info-circle {
+    display: none;
+}

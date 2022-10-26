@@ -1,0 +1,29 @@
+id: 28
+source: 2
+name: newsTeaserTpl
+description: ''
+category: News
+properties: 'a:0:{}'
+
+-----
+
+<a href="[[~[[+id]]]]">
+    <div class="newsBox newsBox--backgroundSecondary">
+        <div class="newsBox__imageContainer">
+            <picture>
+                <source srcset="[[+newsImage:pThumb=`f=webp`]]" type="image/webp">
+                <source srcset="[[+newsImage]]" type="image/jpeg"> 
+                <img class="newsBox__image" src="[[+newsImage]]" alt="[[+pagetitle:htmlent]]" loading="lazy">
+            </picture>
+        </div>
+        <div class="newsBox__content">
+            <time class="newsBox__date js-news-date" datetime="[[+publishedon:date=`%d %B %Y`]]">[[+publishedon:date=`%d %B %Y`]]</time>
+            <h5 class="newsBox__headline">
+                [[+pagetitle]]
+            </h5>
+            <div class="newsBox__text">
+                [[+newsIntro]]
+            </div>
+        </div>
+    </div>
+</a>

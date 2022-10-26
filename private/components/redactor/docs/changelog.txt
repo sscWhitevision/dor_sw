@@ -1,0 +1,106 @@
+Redactor 3.1.2-pl
+------------------
+Released on 2021-10-27
+
+- Further license-related tweaks for MODX 3.0.0-alpha3
+
+Redactor 3.1.1-pl
+------------------
+Released on 2021-10-27
+
+- Allow installation on MODX 3.0.0-alpha3
+- Updated Redactor.js from v3.4.8 to v3.5.2, for details: https://imperavi.com/redactor/log/
+
+Redactor 3.1.0-pl
+------------------
+Released on 2021-02-09
+
+- Adjust z-index for fullscreen Ace editor to prevent navbar issues [F2035-11]
+- Fix z-index for redactor modals hiding behind MIGX and other popups after a Redactor.js update changed modal IDs [#522]
+- Update divider plugin to work more reliably with improved toolbar.addButton behavior in redactor.js
+- Sort button-related plugins by order in which they are used, to improve reliability of positioning [#519, S24844]
+- Update Redactor.js from v3.4.5 to v3.4.8, including improved XSS protections: https://imperavi.com/redactor/log/
+- Patch toolbar.addButton with fix for buttons disappearing if the button before it isn't yet loaded
+- Add ability to customise the font family and color options available in fontfamily and fontcolor dropdowns [#509]
+
+Redactor 3.0.2-pl
+------------------
+Released on 2020-10-27
+
+- Allow installation on PHP 7.1 again
+- Guard against calling MODx.loadRTE/loadRedactorConfigurationSet without an element [#22971]
+- Make sure resources are marked as having changes pending when editing in the RTE [#515]
+- Fix image resize handler not being visible when Redactor is used in a modal popup [#507]
+- Updated Redactor.js from v3.3.3 to 3.4.5, for details: https://imperavi.com/redactor/log/
+
+Redactor 3.0.1-pl
+------------------
+Released on 2020-04-06
+
+- Fix resource-related path placeholders not working [#21971]
+
+Redactor 3.0.0-pl
+------------------
+Released on 2020-02-14
+
+- Fix error in MODX3 due to strict typing
+- Update to redactor.js v3.3.3; this prevents the editor from breaking when unlisting content. [#502]
+- Automatically enable the imported configuration set when upgrading from v2 [#504]
+- Add the .redactor-editor content style class to the set imported from v2 [S21929]
+- Support custom configuration set to use with MIGX TVs, see: https://docs.modmore.com/en/Redactor/v3.x/Usage/MIGX.html [#501]
+
+Changelog for redactor.js v3.3.3:
+- Fixed: When formatting the list, the content is removed if the editor within the list.
+- Fixed: Adding rows and columns to the table is available even if the cursor is not in the table.
+- Improved: XSS sanitize when inserting svg and img.
+- New: Setting source.codemirrorSrc if codemirror is used as a module.
+
+Redactor 3.0.0-rc3
+------------------
+Released on 2020-02-05
+
+- Prevent installation from continuing if server requirements aren't met
+- Fix autocomplete for links only working in the first redactor instance per page (e.g. in ContentBlocks) [#500]
+- Fix CSS scoping issue for CodeMirror, causing conflict with standalone CodeMirror extension [#503]
+
+Redactor 3.0.0-rc2
+------------------
+Released on 2020-01-16
+
+- Don't load English translation file to avoid emptying plugin translation strings (alignment, clips) [S21859]
+- Fix z-index issues with the MODX media browser, by not overriding the z-index to make it appear in front of Redactor-built modals but closing the initiating Redactor modal window instead. [S21859]
+- Add support for shift+tab to outdent within lists [B31]
+- Fix replaced images not being saved [B31]
+- Restore fixed toolbar to normal toolbar when opening full screen mode [#492]
+- Split autoparse options in the configurator to a separate tab
+- Add options for resource links: limit to current context, include introtext [S21862]
+- Make directory depth for the simple browser configurable
+- When adding a link, the resource search will now automatically query for the selected text
+- Fix link styles not working correctly with multiple classnames
+- Fix image styles not preselecting current styles when it has multiple classnames
+
+Redactor 3.0.0-rc1
+------------------
+Released on 2020-01-14
+
+Welcome to Redactor 3. A refreshed and modernised take on the rich text editor.
+
+This is a major release and paid upgrade for users of Redactor 2. Learn more in the release announcement: https://modmore.com/blog/2020/redactor-3/
+
+Some of the highlights in Redactor 3:
+
+- Configuration is now managed with Configuration Sets. After installation, browse to Extras > Redactor Configuration to start. On upgrade, your previous settings will be (as much as possible) migrated to the new format, including context-specific overrides
+- Much simpler media manager is now included by default. You can also use the standard MODX browser, or both!
+- New input type for ContentBlocks allowing you to choose a configuration set per field
+- You can now choose a configuration set per template
+- New `divider` button lets you visually separate toolbar buttons
+- Different themes are now supported, including the new default, a Redactor 2-inspired theme, and one filled with rainbows
+- New properties plugin to set IDs and classes on any block element
+- Improved core editing experience with better cleanup and some long-standing issues resolved
+- redactor.css setting now support a comma separated list of CSS files rather than just one
+- Sanitising file names now supports transliteration
+- New Image Styles option lets you define classes that can be added to an image
+- Experimental support for Fred
+- Redactor plugins from Imperavi, which often do not ship with a translation, can now be translated through the MODX lexicon system
+
+Powered by Imperavi's redactor.js v3.3.2.

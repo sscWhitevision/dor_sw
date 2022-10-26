@@ -1,0 +1,9 @@
+id: 5
+key: contactCity
+label: Stadt
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 12
+value: a
+group: 2

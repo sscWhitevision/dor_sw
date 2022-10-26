@@ -1,0 +1,13 @@
+id: 1
+parent_properties: null
+input: richtext
+name: Inhalt
+description: ''
+content_desc: null
+icon: site-cb-exampleicon
+icon_type: custom
+template: '[[+value]]'
+properties: '[]'
+availability: ''
+layouts: '1'
+settings: '[]'

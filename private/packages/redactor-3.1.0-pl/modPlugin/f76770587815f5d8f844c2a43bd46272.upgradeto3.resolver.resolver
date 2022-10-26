@@ -1,0 +1,344 @@
+<?php
+/**
+ * Redactor WYSIWYG Editor for MODx Revolution
+ *
+ *
+ * @package redactor
+ */
+
+/**
+ * Resolver to set which_editor to Redactor
+ * 
+ * @package redactor
+ * @subpackage build
+ */
+if (!in_array($options[xPDOTransport::PACKAGE_ACTION], [xPDOTransport::ACTION_INSTALL, xPDOTransport::ACTION_UPGRADE], true)) {
+    $modx->log(modX::LOG_LEVEL_INFO, 'Skipping v2 to v3 upgrade resolver for action ' . $options[xPDOTransport::PACKAGE_ACTION]);
+    return true;
+}
+/** @var modX $modx */
+$modx = $object->xpdo;
+
+if (!$modx->getObject('modSystemSetting', ['key' => 'redactor.buttons'])) {
+    $modx->log(modX::LOG_LEVEL_INFO, 'Skipping v2 to v3 upgrade resolver.');
+    return true;
+}
+
+$newConfig = [
+    'minHeight' => (int)$modx->getOption('redactor.minHeight'),
+    'maxHeight' => (int)$modx->getOption('redactor.maxHeight'),
+    'animation' => (bool)$modx->getOption('redactor.animation'),
+    'structure' => (bool)$modx->getOption('redactor.wym'),
+    'counter' => (bool)$modx->getOption('redactor.plugin_counter'),
+    'direction' => (string)$modx->getOption('redactor.direction'),
+    'stylesClass' => 'redactor-styles redactor-editor',
+
+    'cleanOnEnter' => (bool)$modx->getOption('redactor.cleanStyleOnEnter'),
+    'cleanInlineOnEnter' => (bool)$modx->getOption('redactor.cleanStyleOnEnter'),
+    'removeComments' => (bool)$modx->getOption('redactor.removeComments'),
+    'pasteClean' => (bool)$modx->getOption('redactor.cleanup'),
+    'pastePlainText' => (bool)$modx->getOption('redactor.pastePlainText'),
+
+    'markup' => $modx->getOption('redactor.paragraphize') ? 'p' : 'div',
+    'enterKey' => (bool)$modx->getOption('redactor.enterKey'),
+    'breakline' => (bool)$modx->getOption('redactor.linebreaks'),
+    'formatting' => (string)$modx->getOption('redactor.formattingTags'),
+    'formattingAdd' => (string)$modx->getOption('redactor.formattingAdd'),
+    'preSpaces' => (int)$modx->getOption('redactor.preSpaces'),
+    'tabAsSpaces' => (bool)$modx->getOption('redactor.tabAsSpaces'),
+
+    'imagePosition' => (bool)$modx->getOption('redactor.imagePosition'),
+    'imageEditable' => (bool)$modx->getOption('redactor.imageEditable'),
+    'imageResizable' => (bool)$modx->getOption('redactor.imageResizable'),
+    'baseurlsMode' => (string)$modx->getOption('redactor.baseurls_mode'),
+
+    'imageUploadSource' => (int)$modx->getOption('redactor.mediasource'),
+    'imageUploadPath' => (int)$modx->getOption('redactor.image_upload_path'),
+    'fileUploadSource' => (int)$modx->getOption('redactor.file_mediasource'),
+    'fileUploadPath' => (int)$modx->getOption('redactor.file_upload_path'),
+    'uploadCleanFilenames' => (bool)$modx->getOption('redactor.cleanFileNames'),
+    'uploadIncrementFilenames' => (bool)$modx->getOption('redactor.increment_file_names'),
+    'dragUpload' => $modx->getOption('redactor.dragUpload'),
+
+    'imageSimpleBrowser' => (bool)$modx->getOption('redactor.browse_files'),
+    'imageSimpleBrowserSource' => (int)$modx->getOption('redactor.mediasource'),
+    'imageSimpleBrowserPath' => (string)$modx->getOption('redactor.image_browse_path'),
+    'fileSimpleBrowser' => (bool)$modx->getOption('redactor.browse_files'),
+    'fileSimpleBrowserSource' => (int)$modx->getOption('redactor.file_mediasource'),
+    'fileSimpleBrowserPath' => (string)$modx->getOption('redactor.file_browse_path'),
+
+    'imageMODXBrowser' => (bool)$modx->getOption('redactor.plugin_eureka'),
+    'imageMODXBrowserSource' => (int)$modx->getOption('redactor.mediasource'),
+    'imageMODXBrowserPath' => (string)$modx->getOption('redactor.image_browse_path'),
+    'fileMODXBrowser' => (bool)$modx->getOption('redactor.plugin_eureka'),
+    'fileMODXBrowserSource' => (int)$modx->getOption('redactor.file_mediasource'),
+    'fileMODXBrowserPath' => (string)$modx->getOption('redactor.file_browse_path'),
+
+    'linkNofollow' => (bool)$modx->getOption('redactor.linkNofollow'),
+    'definedlinks' => (string)$modx->getOption('redactor.predefinedLinks'),
+
+    'autoparse' => $modx->getOption('redactor.convertImageLinks') || $modx->getOption('redactor.convertVideoLinks') || $modx->getOption('redactor.convertLinks'),
+    'autoparseImages' => (bool)$modx->getOption('redactor.convertImageLinks'),
+    'autoparseVideo' => (bool)$modx->getOption('redactor.convertVideoLinks'),
+    'autoparseLinks' => (bool)$modx->getOption('redactor.convertLinks'),
+    'linkSize' => (int)$modx->getOption('redactor.linkSize'),
+
+    'source' => (bool)$modx->getOption('redactor.codemirror') || (bool)$modx->getOption('redactor.plugin_syntax'),
+    'sourceCodemirror' => (bool)$modx->getOption('redactor.codemirror') || (bool)$modx->getOption('redactor.plugin_syntax'),
+    'showSource' => !(bool)$modx->getOption('redactor.visual'),
+    'limiter' => (bool)$modx->getOption('redactor.plugin_limiter') ? (int)$modx->getOption('redactor.limiter') : 0,
+    'clips' => (string)$modx->getOption('redactor.clipsJson'),
+    'textexpander' => (string)$modx->getOption('redactor.textexpander'),
+    'placeholder' => (string)$modx->getOption('redactor.placeholder'),
+];
+
+$newButtons = array_map('trim', explode(',', $modx->getOption('redactor.buttons')));
+foreach ($newButtons as &$newButton) {
+    switch ($newButton) {
+        case '|':
+            $newButton = 'divider';
+            break;
+        case 'formatting':
+            $newButton = 'format';
+            break;
+        case 'unorderedlist':
+            $newButton = 'ul';
+            break;
+        case 'orderedlist':
+            $newButton = 'ol';
+            break;
+        case 'formatting':
+            $newButton = 'format';
+            break;
+    }
+}
+unset($newButton);
+
+// Convert some settings into buttons - v3 automatically loads relevant plugin
+if ($modx->getOption('redactor.buttonSource') && !in_array('html', $newButtons, true)) {
+    $newButtons[] = 'html';
+}
+if ($modx->getOption('redactor.buttonFullscreen') && !in_array('fullscreen', $newButtons, true)) {
+    $newButtons[] = 'fullscreen';
+}
+if ($modx->getOption('redactor.plugin_fontcolor') && !in_array('fontcolor', $newButtons, true)) {
+    $newButtons[] = 'fontcolor';
+}
+if ($modx->getOption('redactor.plugin_fontfamily') && !in_array('fontfamily', $newButtons, true)) {
+    $newButtons[] = 'fontfamily';
+}
+if ($modx->getOption('redactor.plugin_fontsize') && !in_array('fontsize', $newButtons, true)) {
+    $newButtons[] = 'fontsize';
+}
+if ($modx->getOption('redactor.plugin_table') && !in_array('table', $newButtons, true)) {
+    $newButtons[] = 'table';
+}
+if ($modx->getOption('redactor.plugin_textdirection') && !in_array('textdirection', $newButtons, true)) {
+    $newButtons[] = 'textdirection';
+}
+if ($modx->getOption('redactor.plugin_video') && !in_array('video', $newButtons, true)) {
+    $newButtons[] = 'video';
+}
+if ($modx->getOption('redactor.plugin_download') && !in_array('download', $newButtons, true)) {
+    $newButtons[] = 'download';
+}
+
+// Rebecca option is now a theme
+if ($modx->getOption('redactor.commemorateRebecca')) {
+    $newConfig['theme'] = 'rebeccapurple';
+}
+
+$js = [];
+$plugins = [];
+
+// Convert custom plugins to the js setting and plugins list in config set
+$additionalPlugins = array_filter(array_map('trim', explode(',', $modx->getOption('redactor.additionalPlugins'))));
+foreach ($additionalPlugins as $additionalPlugin) {
+    list($name, $file) = explode(':', $additionalPlugin);
+    $js[] = $file;
+    $plugins[] = $name;
+}
+
+// save js
+if ($s = $modx->getObject('modSystemSetting', ['key' => 'redactor.js'])) {
+    $js = array_filter(array_unique($js));
+    $s->set('value', implode(',', $js));
+    $s->save();
+}
+
+// redactor.loadIntrotext => redactor.introtext
+if ($modx->getOption('redactor.loadIntrotext') && $s = $modx->getObject('modSystemSetting', ['key' => 'redactor.introtext'])) {
+    $s->set('value', true);
+    $s->save();
+}
+
+// store the created options
+$newConfig['buttons'] = implode(',', $newButtons);
+$newConfig['additionalPlugins'] = implode(',', $plugins);
+
+/** @var redConfigurationSet $set */
+$set = $modx->newObject('redConfigurationSet');
+$set->fromArray([
+    'name' => 'Imported from Redactor 2',
+    'description' => 'Automatically created based on Redactor 2 system setting values on ' . date('Y-m-d H:i'),
+    'content' => json_encode($newConfig),
+]);
+if (!$set->save()) {
+    $modx->log(modX::LOG_LEVEL_ERROR, 'Could not save configuration set based on your Redactor 2 configuration.');
+    return false;
+}
+
+// Enable the imported set by default
+$default = $modx->getObject('modSystemSetting', ['key' => 'redactor.configuration_set']);
+if ($default) {
+    $default->set('value', $set->get('id'));
+    $default->save();
+}
+
+$modx->log(modX::LOG_LEVEL_INFO, 'Created new configuration set based on system settings from Redactor 2. Removing old settings...');
+// Old settings from v2 - automatically generated from setting source
+// Commented out any settings that still serve a purpose as a setting in v3, or if the function was not ported to v3 yet but might in the future
+$oldSettings = [
+    0 => 'lang',
+    1 => 'direction',
+    2 => 'buttons',
+    3 => 'activeButtons',
+    4 => 'activeButtonsStates',
+    5 => 'formattingTags',
+    6 => 'buttonSource',
+    7 => 'buttonFullScreen',
+//    8 => 'css', still used
+    9 => 'shortcuts',
+    10 => 'cleanup',
+    11 => 'convertLinks',
+    12 => 'tabindex',
+    13 => 'minHeight',
+//    14 => 'colors', may be reimplemented later in fontcolor plugin
+    15 => 'wym',
+    16 => 'linkProtocol',
+    17 => 'placeholder',
+    18 => 'linebreaks',
+    19 => 'allowedTags',
+    20 => 'deniedTags',
+    21 => 'linkEmail',
+    22 => 'linkAnchor',
+    23 => 'pastePlainText',
+    24 => 'paragraphize',
+    25 => 'removeComments',
+    26 => 'visual',
+    27 => 'marginFloatLeft',
+    28 => 'marginFloatRight',
+    29 => 'mediasource',
+    30 => 'file_mediasource',
+    31 => 'image_upload_path',
+    32 => 'image_browse_path',
+    33 => 'file_upload_path',
+    34 => 'file_browse_path',
+    35 => 'browse_files',
+    36 => 'date_images',
+    37 => 'date_files',
+    38 => 'typeahead.include_introtext',
+    39 => 'prefetch_ttl',
+    40 => 'linkResource',
+    41 => 'cleanFileNames',
+    42 => 'dynamicThumbs',
+    43 => 'clipsJson',
+    44 => 'additionalPlugins',
+    45 => 'dragUpload',
+    46 => 'convertImageLinks',
+    47 => 'convertVideoLinks',
+    48 => 'tabAsSpaces',
+    49 => 'removeEmptyTags',
+//    50 => 'sanitizePattern', still used
+//    51 => 'sanitizeReplace', still used
+    52 => 'linkSize',
+    53 => 'advAttrib',
+    54 => 'linkNofollow',
+    55 => 'typewriter',
+    56 => 'buttonsHideOnMobile',
+    57 => 'toolbarOverflow',
+    58 => 'imageTabLink',
+    59 => 'cleanSpaces',
+    60 => 'predefinedLinks',
+    61 => 'shortcutsAdd',
+    62 => 'commemorateRebecca',
+    63 => 'toolbarFixed',
+    64 => 'focus',
+    65 => 'focusEnd',
+    66 => 'scrollTarget',
+    67 => 'enterKey',
+    68 => 'cleanStyleOnEnter',
+    69 => 'linkTooltip',
+    70 => 'imageEditable',
+    71 => 'imageResizable',
+    72 => 'imageLink',
+    73 => 'imagePosition',
+    74 => 'buttonsHide',
+    75 => 'formattingAdd',
+    76 => 'tabifier',
+    77 => 'replaceTags',
+    78 => 'replaceStyles',
+    79 => 'removeDataAttr',
+    80 => 'removeAttr',
+    81 => 'allowedAttr',
+    82 => 'dragImageUpload',
+    83 => 'dragFileUpload',
+    84 => 'replaceDivs',
+    85 => 'preSpaces',
+    86 => 'parse_parent_path',
+    87 => 'increment_file_names',
+    88 => 'parse_parent_path_height',
+    89 => 'baseurls_mode',
+    90 => 'showDimensionsOnResize',
+    91 => 'plugin_counter',
+    92 => 'plugin_fontcolor',
+    93 => 'plugin_fontfamily',
+    94 => 'plugin_fontsize',
+    95 => 'plugin_limiter',
+    96 => 'plugin_table',
+    97 => 'plugin_textdirection',
+    98 => 'plugin_video',
+    99 => 'plugin_replacer',
+    100 => 'plugin_replacer_button',
+    101 => 'plugin_syntax',
+    102 => 'plugin_speek',
+    103 => 'plugin_contrast',
+    104 => 'plugin_eureka',
+    105 => 'plugin_eureka_shivie9',
+    106 => 'eurekaUpload',
+    107 => 'initial_directory_depth',
+    108 => 'plugin_zoom',
+    109 => 'plugin_download',
+    110 => 'plugin_imagepx',
+    111 => 'plugin_imageurl',
+    112 => 'plugin_breadcrumb',
+    113 => 'plugin_norphan',
+    114 => 'plugin_baseurls',
+    115 => 'textexpander',
+    116 => 'speechPitch',
+    117 => 'speechRate',
+    118 => 'speechVolume',
+    119 => 'speechVoice',
+    120 => 'counterWPM',
+    121 => 'codemirror',
+    122 => 'plugin_uploadcare',
+    123 => 'uploadcare_pub_key',
+    124 => 'uploadcare_locale',
+    125 => 'uploadcare_crop',
+    126 => 'uploadcare_tabs',
+    127 => 'loadIntrotext',
+    128 => 'limiter',
+
+    // Some older ones that may be leftover on ancient sites that ran redactor 1 before
+    129 => 'autoresize',
+    130 => 'convertDivs',
+    131 => 'paragraphy',
+    132 => 'fullpage',
+];
+
+foreach ($oldSettings as $oldKey) {
+    if ($old = $modx->getObject('modSystemSetting', ['key' => 'redactor.' . $oldKey])) {
+        $old->remove();
+    }
+}
+return true;

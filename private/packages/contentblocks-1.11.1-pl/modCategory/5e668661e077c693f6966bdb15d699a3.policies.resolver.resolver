@@ -1,0 +1,91 @@
+<?php
+
+
+/** @var modX $modx */
+$modx =& $object->xpdo;
+
+switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+        $modx->log(xPDO::LOG_LEVEL_INFO, 'Installing User Group access to the ContentBlocks Full Access Policy...');
+
+        /* assign policy to template *//*
+        $policies = array('SimpleCartAdmin', 'SimpleCartUser');
+        foreach($policies as $policyName) {
+            $policy = $transport->xpdo->getObject('modAccessPolicy',array('name' => $policyName));
+            if ($policy) {
+                $template = $transport->xpdo->getObject('modAccessPolicyTemplate',array('name' => 'SimpleCartPolicyTemplate'));
+                if ($template) {
+                    $policy->set('template',$template->get('id'));
+                    $policy->save();
+                } else {
+                    $modx->log(xPDO::LOG_LEVEL_ERROR,'[SimpleCart] Could not find SimpleCartPolicyTemplate Access Policy Template!');
+                }
+            } else {
+                $modx->log(xPDO::LOG_LEVEL_ERROR,'[SimpleCart] Could not find '.$policyName.' Access Policy!');
+            }
+        }*/
+
+        /* assign policy to admin group */
+        $policy = $modx->getObject('modAccessPolicy',array('name' => 'ContentBlocks Full Access'));
+        $adminGroup = $modx->getObject('modUserGroup',array('name' => 'Administrator'));
+        if ($policy && $adminGroup) {
+            /**
+             * Check if we need to apply any default accesses
+             */
+            $access = $modx->getObject('modAccessContext',array(
+                'target' => 'mgr',
+                'principal_class' => 'modUserGroup',
+                'principal' => $adminGroup->get('id'),
+                'authority' => 9999,
+                'policy' => $policy->get('id'),
+            ));
+            if (!$access) {
+                $modx->log(modX::LOG_LEVEL_WARN, 'Administrator user group does not yet have access to the ContentBlocks policy, so we\'ll add provide all usergroups with access to the manager access to ContentBlocks.');
+                /**
+                 * Add the context access to all user groups that also have access to the manager
+                 */
+                $groups = $modx->getCollection('modUserGroup');
+                foreach ($groups as $group) {
+                    $hasMgrAccess = $modx->getCount('modAccessContext', array(
+                        'target' => 'mgr',
+                        'principal_class' => 'modUserGroup',
+                        'principal' => $group->get('id'),
+                    ));
+
+                    if ($hasMgrAccess > 0) {
+                        $access = $modx->newObject('modAccessContext');
+                        $access->fromArray(array(
+                            'target' => 'mgr',
+                            'principal_class' => 'modUserGroup',
+                            'principal' => $group->get('id'),
+                            'authority' => 9999,
+                            'policy' => $policy->get('id'),
+                        ));
+                        if ($access->save()) {
+                            $modx->log(modX::LOG_LEVEL_INFO, '- Added a Context Policy for user group' . $group->get('name') . ' for full ContentBlocks access.');
+                        }
+                    }
+                    else {
+                        $modx->log(modX::LOG_LEVEL_INFO, '- Skipping user group ' . $group->get('name') . '; they don\'t seem to have manager access.');
+                    }
+                }
+            }
+            else {
+                $modx->log(modX::LOG_LEVEL_INFO, 'As the Administrator user group already has access to the ContentBlocks Policy, we will not set up any permissions right now.');
+            }
+        }
+
+        // flush permissions
+        $ctxQuery = $modx->newQuery('modContext');
+        $ctxQuery->select($modx->getSelectColumns('modContext', '', '', array('key')));
+        if ($ctxQuery->prepare() && $ctxQuery->stmt->execute()) {
+            $contexts = $ctxQuery->stmt->fetchAll(PDO::FETCH_COLUMN);
+            if ($contexts) {
+                $serialized = serialize($contexts);
+                $modx->exec("UPDATE {$modx->getTableName('modUser')} SET {$modx->escape('session_stale')} = {$modx->quote($serialized)}");
+            }
+        }
+        break;
+}
+return true;

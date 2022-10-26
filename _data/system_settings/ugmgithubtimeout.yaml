@@ -1,0 +1,4 @@
+key: ugm_github_timeout
+value: '6'
+namespace: upgrademodx
+area: GitHub

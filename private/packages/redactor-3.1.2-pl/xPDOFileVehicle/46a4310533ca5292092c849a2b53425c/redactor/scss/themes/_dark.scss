@@ -1,0 +1,71 @@
+.redactor-theme-dark.redactor-box,
+.redactor-theme-default.redactor-theme__dark {
+  .redactor-toolbar-wrapper {
+    padding: 16px 16px 0 16px;
+    background: #222;
+    border-radius: 2px 2px 0 0;
+
+    .redactor-toolbar {
+      background: rgba(0, 0, 0, .97);
+      padding: 6px 3px 2px 6px;
+      border-radius: 4px;
+
+      a {
+        background: rgba(37, 37, 37, .95);
+        box-shadow: none;
+        color: rgba(255, 255, 255, .9);
+
+        &:hover, &:focus {
+          background: #3d79f2;
+        }
+
+        &.re-html.redactor-button-active {
+          background: #3d79f2;
+        }
+      }
+    }
+  }
+}
+.redactor-theme-dark.redactor-box,
+.redactor-theme__dark {
+  .redactor-styles {
+    color: #ccc;
+    background: #222;
+    border-radius: 0 0 2px 2px;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #2d86b7;
+    }
+
+    blockquote {
+      color: rgba(255,255,255,.5);
+    }
+  }
+
+
+
+  // Make sure structures look decent in dark mode/theme
+  &.redactor-structure__blocks .redactor-styles {
+    h1, h2, h3, h4, h5, h6, div, p, figure, ol, ul, blockquote, pre {
+      background: #101010;
+      border-color: #464646;
+      &::before {
+        background: #101010;
+      }
+    }
+  }
+  &.redactor-structure__gutter .redactor-styles {
+    div, pre {
+      &::before {
+        background: #4b4b4b;
+        color: #e1e0e0;
+      }
+    }
+    p, figure, ol, ul, blockquote {
+      &::before {
+        background: #101010;
+        color: #fff;
+      }
+    }
+  }
+}

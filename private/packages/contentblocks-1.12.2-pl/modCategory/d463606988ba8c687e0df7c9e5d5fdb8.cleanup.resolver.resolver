@@ -1,0 +1,29 @@
+<?php
+
+if ($object->xpdo) {
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            $files = [
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/GdThumb.inc.php',
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/PhpThumb.inc.php',
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/README.md',
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/ThumbBase.inc.php',
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/ThumbLib.inc.php',
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/thumb_plugins/gd_reflection.inc.php',
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/thumb_plugins/',
+                MODX_CORE_PATH . 'components/contentblocks/model/phpthumb/',
+            ];
+
+            foreach ($files as $file) {
+                if (file_exists($file)) {
+                    is_dir($file) ? rmdir($file) : unlink($file);
+                }
+            }
+
+            break;
+        case xPDOTransport::ACTION_UNINSTALL:
+            break;
+    }
+}
+return true;

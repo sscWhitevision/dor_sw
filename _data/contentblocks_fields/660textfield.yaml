@@ -1,0 +1,14 @@
+id: 66
+parent_properties: null
+name: Überschrift
+description: ''
+content_desc: ''
+sortorder: 59
+category: 18
+icon: site-cb-contentheadline
+icon_type: custom
+template: "<div class=\"textLeft__headline2\">\n    [[+value]]\n</div>\n\n\n\n"
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: '16'
+settings: '[]'

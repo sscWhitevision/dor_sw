@@ -1,0 +1,4 @@
+key: ugm_version_list_path
+value: '{core_path}cache/upgrademodx/'
+namespace: upgrademodx
+area: Widget

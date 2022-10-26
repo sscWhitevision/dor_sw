@@ -1,0 +1,13 @@
+id: 53
+parent_properties: null
+name: Überschrift
+description: ''
+content_desc: ''
+sortorder: 46
+category: 13
+icon: paragraph
+template: "<h6 class=\"bigTabs__headline colorPrimary\">\n    [[+value]]                                    \n</h6>"
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: '11'
+settings: '[]'

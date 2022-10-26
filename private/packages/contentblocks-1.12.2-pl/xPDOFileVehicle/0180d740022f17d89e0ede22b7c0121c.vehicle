@@ -1,0 +1,15 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'object' => 
+  array (
+    'source' => 'contentblocks-1.12.2-pl/xPDOFileVehicle/0180d740022f17d89e0ede22b7c0121c/',
+    'target' => 'return MODX_ASSETS_PATH . \'components/\';',
+    'name' => 'contentblocks',
+  ),
+  'vehicle_class' => 'xPDOFileVehicle',
+  'vehicle_package' => 'transport',
+  'guid' => '9dbe836737b0018b23aeb3b0e35f030b',
+  'package' => '',
+  'signature' => '0180d740022f17d89e0ede22b7c0121c',
+  'native_key' => '9dbe836737b0018b23aeb3b0e35f030b',
+);

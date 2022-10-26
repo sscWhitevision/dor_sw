@@ -1,0 +1,14 @@
+id: 72
+parent_properties: null
+input: chunk
+name: Anleser
+description: ''
+content_desc: ''
+sortorder: 65
+category: 19
+icon: chunk_B
+template: '[[+value]]'
+properties: '{"chunk":"31","custom_preview":"<p style=\"text-align:center\">Hier erscheinen die 4 neuesten News.<\/p>"}'
+availability: '[]'
+layouts: '17'
+settings: '[]'

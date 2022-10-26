@@ -1,0 +1,4 @@
+key: redactor.introtext
+xtype: modx-combo-boolean
+namespace: redactor
+area: configuration

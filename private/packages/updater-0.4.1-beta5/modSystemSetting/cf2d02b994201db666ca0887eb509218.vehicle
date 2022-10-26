@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f512dec79697206d8d2203af7c6342fc',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cf2d02b994201db666ca0887eb509218',
+  'native_key' => 'updater.mui_enable',
+  'object' => '{"key":"updater.mui_enable","value":true,"xtype":"combo-boolean","namespace":"updater","area":"(9) Managed Update Information","editedon":null}',
+);

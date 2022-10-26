@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'clientsupport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f7ab08e5aa2bc814ff9f7c76bf5ae29c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cb6db48658d271248ca991bb4f5747cb',
+  'native_key' => 'clientsupport.custom_icon',
+  'object' => '{"key":"clientsupport.custom_icon","value":"","xtype":"textfield","namespace":"clientsupport","area":"general","editedon":null}',
+);

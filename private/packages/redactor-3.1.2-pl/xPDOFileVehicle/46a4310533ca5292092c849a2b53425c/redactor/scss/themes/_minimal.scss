@@ -1,0 +1,94 @@
+$tinyBorderColor: rgba(0, 0, 0, .075);
+$tinyDarkBorderColor: rgba(255, 255, 255, .4);
+
+.redactor-theme-minimal.redactor-box {
+  border-radius: 0 0 3px 3px;
+
+  .redactor-toolbar-wrapper {
+    background: #fff;
+    border-bottom: 1px solid $tinyBorderColor;
+  }
+  .redactor-toolbar, .redactor-air {
+    padding: 0;
+    background-image: linear-gradient($tinyBorderColor 1px, transparent 1px);
+    background-size: 100% 36px;
+
+    a {
+      margin: 2px;
+      border-radius: 3px;
+      box-shadow: none;
+      padding: 9px;
+      
+      &:hover, &:focus {
+        background: #dee0e2;
+        color: #222f3e;
+      }
+
+      &.re-button-icon {
+        // button icons have font-size 16 instead of 14 for text buttons; needs padding adjustment
+        padding: 7px 9px 7px 9px;
+      }
+
+      @for $i from 1 through 20 {
+        &.re-divider#{$i} {
+          opacity: 1;
+          border-left: 1px solid $tinyBorderColor;
+          padding: 11px 0;
+          width: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .redactor-toolbar__fixed {
+    padding: 0 !important;
+    border-radius: 0;
+
+    // Make sure background css pattern (lines) and dividers line up
+    background-position: 0 1px;
+    //background-size: 100% 36px;
+    @for $i from 1 through 20 {
+      a.re-divider#{$i} {
+        margin-top: 1px !important;
+      }
+    }
+  }
+
+
+  // dark mode toggle
+  &.redactor-theme__dark {
+    .redactor-toolbar-wrapper {
+      background: #000;
+      border-bottom: 1px solid $tinyDarkBorderColor;
+    }
+
+    .redactor-toolbar, .redactor-air {
+      background-color: #000;
+      background-image: linear-gradient($tinyDarkBorderColor 1px, transparent 1px);
+
+      a {
+        background: #000;
+        color: rgba(255, 255, 255, .9);
+
+        &:hover, &:focus {
+          background: #151515;
+        }
+
+        &.re-html.redactor-button-active {
+          background: #3d79f2;
+        }
+
+
+        @for $i from 1 through 20 {
+          &.re-divider#{$i} {
+            border-left-color: $tinyDarkBorderColor;
+          }
+        }
+      }
+    }
+    .redactor-toolbar__fixed {
+      border-left: 1px solid $tinyDarkBorderColor;
+      border-right: 1px solid $tinyDarkBorderColor;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="consentfriend" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="consentfriend" phpdoc-subpackage="model" version="1.1">
+    <object class="ConsentfriendServices" table="consentfriend_services" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="100" phptype="string" null="true"/>
+        <field key="title" dbtype="varchar" precision="100" phptype="string" null="true"/>
+        <field key="description" dbtype="text" phptype="string" null="true"/>
+        <field key="code" dbtype="text" phptype="string" null="true"/>
+        <field key="code_section" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" default="1"/>
+        <field key="callback" dbtype="text" phptype="string" null="true"/>
+        <field key="on_accept" dbtype="text" phptype="string" null="true"/>
+        <field key="on_init" dbtype="text" phptype="string" null="true"/>
+        <field key="on_decline" dbtype="text" phptype="string" null="true"/>
+        <field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0"/>
+        <field key="default" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0"/>
+        <field key="required" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0"/>
+        <field key="opt_out" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0"/>
+        <field key="only_once" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0"/>
+        <field key="contextual_consent_only" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0"/>
+        <field key="cookies" dbtype="text" phptype="string" null="true"/>
+        <field key="sortindex" dbtype="int" precision="10" phptype="integer" null="false" default="0"/>
+
+        <composite alias="ServicePurposes" class="ConsentfriendServicePurposes" local="id" foreign="service_id" cardinality="many" owner="local"/>
+        <composite alias="ServiceContexts" class="ConsentfriendServiceContexts" local="id" foreign="service_id" cardinality="many" owner="local"/>
+    </object>
+
+    <object class="ConsentfriendServicePurposes" table="consentfriend_servicepurposes" extends="xPDOSimpleObject">
+        <field key="service_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0"/>
+        <field key="purpose_id" dbtype="varchar" precision="10" phptype="string" null="true"/>
+
+        <index alias="service_id" name="service_id" primary="false" unique="false" type="BTREE">
+            <column key="service_id" length="" collation="A" null="false"/>
+        </index>
+        <index alias="purpose_id" name="purpose_id" primary="false" unique="false" type="BTREE">
+            <column key="purpose_id" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Service" class="ConsentfriendServices" local="service_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Purpose" class="ConsentfriendPurposes" local="purpose_id" foreign="id" cardinality="one" owner="foreign"/>
+    </object>
+
+    <object class="ConsentfriendPurposes" table="consentfriend_purposes" extends="xPDOSimpleObject">
+        <field key="key" dbtype="varchar" precision="100" phptype="string" null="true"/>
+        <field key="title" dbtype="varchar" precision="100" phptype="string" null="true"/>
+        <field key="description" dbtype="text" phptype="string" null="true"/>
+        <field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false" default="0"/>
+        <field key="sortindex" dbtype="int" precision="10" phptype="integer" null="false" default="0"/>
+
+        <composite alias="ServicePurposes" class="ConsentfriendServicePurposes" local="id" foreign="purpose_id" cardinality="many" owner="local"/>
+    </object>
+
+    <object class="ConsentfriendServiceContexts" table="consentfriend_servicecontexts" extends="xPDOSimpleObject">
+        <field key="service_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0"/>
+        <field key="context_key" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <index alias="service_id" name="service_id" primary="false" unique="false" type="BTREE">
+            <column key="service_id" length="" collation="A" null="false"/>
+        </index>
+        <index alias="context_id" name="context_id" primary="false" unique="false" type="BTREE">
+            <column key="context_key" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Service" class="ConsentfriendServices" local="service_id" foreign="id" cardinality="one" owner="foreign"/>
+        <aggregate alias="Context" class="modContext" local="context_key" foreign="key" cardinality="one" owner="foreign"/>
+    </object>
+
+    <object class="ConsentfriendLogs" table="consentfriend_logs" extends="xPDOSimpleObject">
+        <field key="session_key" dbtype="varchar" precision="50" phptype="string" null="true"/>
+        <field key="user_ip" dbtype="varchar" precision="50" phptype="string" null="true"/>
+        <field key="user_agent" dbtype="text" phptype="string" null="true"/>
+        <field key="services" dbtype="text" phptype="string" null="true"/>
+        <field key="first_visit" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="0"/>
+        <field key="last_visit" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="0"/>
+
+        <index alias="session_key" name="session_key" primary="false" unique="false" type="BTREE">
+            <column key="session_key" length="" collation="A" null="false"/>
+        </index>
+        <index alias="user_ip" name="user_ip" primary="false" unique="false" type="BTREE">
+            <column key="user_ip" length="" collation="A" null="false"/>
+        </index>
+    </object>
+</model>

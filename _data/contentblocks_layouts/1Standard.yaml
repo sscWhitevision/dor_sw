@@ -1,0 +1,12 @@
+id: 1
+name: Standard
+description: ''
+sortorder: 1
+icon: site-cb-exampleicon
+icon_type: custom
+columns: '[{"reference":"main","width":"100"}]'
+template: "<div class=\"pt[[+paddingTop]] pb[[+paddingBottom]]\" [[+anchor:setModuleId]]>\n    <div class=\"container\">\n        [[+main]]\n    </div>\n</div>"
+availability: '[{"field":"context","value":"hidden"}]'
+times_per_page: 0
+layout_only_nested: '0'
+settings: '[{"reference":"paddingTop","title":"Abstand Oben","fieldtype":"select","default_value":"5","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"0==kein Abstand\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10","field_is_exposed":"modal"},{"reference":"paddingBottom","title":"Abstand Unten","fieldtype":"select","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"0==kein Abstand\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10","field_is_exposed":"modal"},{"reference":"anchor","title":"Menü-Titel / Modul-ID","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"}]'

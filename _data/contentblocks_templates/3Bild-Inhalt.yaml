@@ -1,0 +1,8 @@
+id: 3
+name: Bild-Inhalt
+description: ''
+category: 1
+icon: site-cb-imagecontent
+icon_type: custom
+content: '[{"layout":4,"content":{"image":[{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"field":20,"settings":{}}],"main":[{"value":"","field":21,"settings":{}},{"value":"","field":22,"settings":{}},{"link":"","linkType":"link","field":23,"settings":{"button":"READ MORE"}}]},"settings":{"paddingTop":"2","paddingBottom":"0","anchor":"","reverse":""},"parent":0,"title":""}]'
+availability: '[]'

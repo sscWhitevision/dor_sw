@@ -1,0 +1,14 @@
+id: 36
+parent_properties: null
+input: repeater
+name: Karten
+description: ''
+content_desc: ''
+sortorder: 12
+category: 9
+icon: chunk_A
+template: "<div class=\"squareCard\">\n    [[+image]]\n</div>"
+properties: '{"wrapper_template":"[[+rows]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"2","layout_style":"default"}'
+availability: '[]'
+layouts: '7'
+settings: '[]'

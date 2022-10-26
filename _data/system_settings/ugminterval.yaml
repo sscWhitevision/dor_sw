@@ -1,0 +1,4 @@
+key: ugm_interval
+value: '1 day'
+namespace: upgrademodx
+area: Widget

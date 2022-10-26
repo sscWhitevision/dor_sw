@@ -1,0 +1,106 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'e11428d26f405cec9e49af2d03ee7781' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'dc0a27aadaf2734fcd4d18f9227b687f' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerLogin","priority":0,"propertyset":0}',
+              'guid' => 'c6571edbff27035c68232d4bda6f3200',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerLogin',
+              ),
+              'signature' => '2a64c42730e39c5ee0024a2508ed2587',
+            ),
+            'b255ce94dc6d108915a8b8cfc3697199' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerLoginFormRender","priority":0,"propertyset":0}',
+              'guid' => '415835a359e713710d7ae21da7cd796e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerLoginFormRender',
+              ),
+              'signature' => '1666907c66e0cde0d67dc8f93ca50173',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"Manager Locker","description":"Handle manager locking state.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * Plugin to prevent access to modX manager if in maintenance mode\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\n * @event OnManagerLogin, OnManagerLoginFormRender\\n *\\/\\n\\n\\n$path = $modx->getOption(\\n    \'locker.core_path\',\\n    null,\\n    $modx->getOption(\'core_path\') . \'components\\/locker\\/\'\\n);\\n\\n$lockerPath = $modx->getOption(\'locker.class_path\', null, $path);\\n$lockerClass = $modx->getOption(\'locker.class_name\', null, \'services.Locker\');\\n\\n\\/** @var iLocker $locker *\\/\\n$locker = $modx->getService(\'locker\', $lockerClass, $lockerPath);\\n\\n\\/\\/ Check locked state\\n$locked = $locker->isLocked();\\n\\nswitch ($modx->event->name) {\\n    case \'OnManagerLoginFormRender\':\\n        if ($locked) {\\n            \\/\\/ Display a warning in the login form\\n            $msg = $modx->getOption(\'locker.manager_locked_message\', null, $modx->lexicon(\'locker.manager_locked_message\'));\\n            $modx->getParser()->processElementTags(\'\', $msg);\\n\\n            $modx->event->output($msg);\\n        }\\n        return \'\';\\n        break;\\n\\n    case \'OnManagerLogin\':\\n        if (!$locked) {\\n            return \'\';\\n        }\\n\\n        \\/\\/ Make sure the user is allowed to use the manager\\n        if (!$locker->isUserAllowed()) {\\n            return $locker->displayDenied();\\n        }\\n\\n        break;\\n}\\n\\nreturn \'\';","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * Plugin to prevent access to modX manager if in maintenance mode\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\n * @event OnManagerLogin, OnManagerLoginFormRender\\n *\\/\\n\\n\\n$path = $modx->getOption(\\n    \'locker.core_path\',\\n    null,\\n    $modx->getOption(\'core_path\') . \'components\\/locker\\/\'\\n);\\n\\n$lockerPath = $modx->getOption(\'locker.class_path\', null, $path);\\n$lockerClass = $modx->getOption(\'locker.class_name\', null, \'services.Locker\');\\n\\n\\/** @var iLocker $locker *\\/\\n$locker = $modx->getService(\'locker\', $lockerClass, $lockerPath);\\n\\n\\/\\/ Check locked state\\n$locked = $locker->isLocked();\\n\\nswitch ($modx->event->name) {\\n    case \'OnManagerLoginFormRender\':\\n        if ($locked) {\\n            \\/\\/ Display a warning in the login form\\n            $msg = $modx->getOption(\'locker.manager_locked_message\', null, $modx->lexicon(\'locker.manager_locked_message\'));\\n            $modx->getParser()->processElementTags(\'\', $msg);\\n\\n            $modx->event->output($msg);\\n        }\\n        return \'\';\\n        break;\\n\\n    case \'OnManagerLogin\':\\n        if (!$locked) {\\n            return \'\';\\n        }\\n\\n        \\/\\/ Make sure the user is allowed to use the manager\\n        if (!$locker->isUserAllowed()) {\\n            return $locker->displayDenied();\\n        }\\n\\n        break;\\n}\\n\\nreturn \'\';"}',
+        'guid' => 'dd5a9a3155459a901cb0e481d98a958f',
+        'native_key' => NULL,
+        'signature' => '7f9f1c08769ba22b67c435fccbee7199',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'locker',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"locker-0.1.0-pl\\/modCategory\\/bb81849e120e8aeceaf03699074f413c\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"locker"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4c37497e69e499da3f449242ed8149a7',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'bb81849e120e8aeceaf03699074f413c',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Locker"}',
+);

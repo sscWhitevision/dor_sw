@@ -1,0 +1,40 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	consentFriend
+/*
+/* --------------------------------------------------------------------------- */
+
+.klaro {
+
+    .cm-link {}
+
+    .cm-btn {
+    }
+
+    .cookie-notice .cm-btn.cm-btn-success,
+    .cookie-modal .cm-btn.cm-btn-success {
+        background: $colorPrimary !important;
+    }
+
+    .cookie-modal .cm-btn.cm-btn-info {
+        background: $colorSecondary !important;
+    }
+
+    .context-notice a,
+    .cookie-modal a,
+    .cookie-notice a {
+        color: $colorPrimary !important;
+    }
+
+    .cookie-modal .cm-list-input.required:checked+.cm-list-label .slider {
+        background: $colorPrimary !important;
+    }
+
+    .cookie-modal .cm-list-input.only-required+.cm-list-label .slider {
+        background: lighten($colorPrimary,20%) !important;
+    }
+
+    h1 {
+        text-transform: none !important;
+    }
+}

@@ -1,0 +1,112 @@
+.contentblocks-exposed-fields-wrapper {
+  clear: both;
+  margin-top: 10px;
+  width: 100%;
+  /* new clearfix */
+  &:after {
+  	visibility: hidden;
+  	display: block;
+  	font-size: 0;
+  	content: " ";
+  	clear: both;
+  	height: 0;
+  	}
+  &.contentblocks-exposed-fields-as-setting-wrapper {
+    color: #999;
+    & label {
+      color: inherit;
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}
+.contentblocks-options {
+  float: left;
+
+  label.value-label {
+    width:auto;
+    float: none;
+    line-height: 1.2;
+
+    .contentblocks-modal-field & {
+      line-height: 1.6;
+    }
+  }
+}
+
+.contentblocks-region-settings {
+  background: #fcfcfc;
+  border-bottom: 1px solid #CBCBCB;
+  padding: 10px 15px;
+}
+
+.contentblocks-setting-checkbox, .contentblocks-setting-radio {
+  label:hover {
+    cursor: pointer;
+  }
+}
+.contentblocks-setting-image {
+  position: relative;
+}
+.contentblocks-modal-layout-setting-richtext-container {
+  clear: both;
+}
+
+.contentblocks-setting-color_picker {
+  .field-label {
+    display: block;
+  }
+  .setting-color-picker-button {
+    display: inline-block;
+    margin: 0;
+    border-radius: 2px;
+    width: 70%;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    span {
+      background: #ffffff;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-size: 11px;
+    }
+  }
+}
+
+// Fix label alignments #535 thx Sebastian
+.contentblocks-field label, .contentblocks-field .label,
+.contentblocks-modal-field label, .contentblocks-modal-field .label,
+.contentblocks-exposed-fields-wrapper label, .contentblocks-exposed-fields-wrapper .label {
+  line-height: 1.35;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-right: 0.75em;
+  word-break: break-word;
+}
+
+.contentblocks-exposed-fields-wrapper.contentblocks-exposed-fields-as-setting-wrapper > label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contentblocks-exposed-fields-wrapper.contentblocks-exposed-fields-as-setting-wrapper label {
+ margin-bottom: 10px
+}
+.contentblocks-modal-layout-setting-richtext-container {
+  padding-top: 10px;
+}
+
+.contentblocks-setting-description {
+  width: 70%;
+  margin-left: 30%;
+  padding: 3px 0 5px 0;
+  float: left;
+}
+.contentblocks-setting-description.contentblocks-setting-full-width {
+  width: 100%;
+  margin-left: 0;
+}
+.contentblocks-exposed-fields-as-field-wrapper .contentblocks-setting-description,
+.contentblocks-modal-field .contentblocks-setting-description {
+  color: #999;
+}

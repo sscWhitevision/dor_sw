@@ -1,0 +1,14 @@
+id: 23
+parent_properties: null
+input: link
+name: Button
+description: ''
+content_desc: ''
+sortorder: 6
+category: 6
+icon: link
+template: "<div class=\"teaser__button\">\n    <a href=\"[[+link]]\" class=\"button [[+style:notempty=`button--secondary`]]\">[[+button]]</a>\n</div>"
+properties: '{"link_detection_pattern_override":"","limit_to_current_context":"1"}'
+availability: '[]'
+layouts: '4'
+settings: '[{"reference":"button","title":"Beschriftung","description":"","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","separator":"","type_ahead":"Nein","field_is_exposed":"asField","template":"[[+value]]"},{"reference":"style","title":"Stil","description":"","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"==Orange\n1==Weiß","separator":"","type_ahead":"Nein","field_is_exposed":"asField","template":"[[+value]]"}]'

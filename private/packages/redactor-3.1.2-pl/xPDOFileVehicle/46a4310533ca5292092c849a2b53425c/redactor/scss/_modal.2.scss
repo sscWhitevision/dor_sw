@@ -1,0 +1,40 @@
+.redactor-modal-header {
+  background-color: #F0F0F0;
+  border-bottom: 1px solid #DCDCDC;
+  border-radius: 3px 3px 0 0;
+  color: #555555;
+  font: bold 13px "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+}
+
+.redactor-modal-tabs {
+  a {
+    color: #3697cd;
+
+
+    &.active {
+      color: #1A7FB8;
+      box-shadow: 0 -3px 0 #3697cd, -1px 0 0 transparent;
+    }
+  }
+}
+
+.redactor-modal button {
+  background-color: #32AB9A;
+  background-image: linear-gradient(#32AB9A, #00948E);
+  box-shadow: none;
+  color: #FFF;
+
+  &:hover, &:focus {
+    background-color: #2b9385;
+    background-image: linear-gradient(#2b9385, #007571);
+    box-shadow: none;
+    color: #FFF;
+  }
+
+  &.redactor-button-unstyled {
+    &:hover, &:focus {
+      background: #3697cd;
+      color: #FFF;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+id: 61
+parent_properties: null
+input: redactor
+name: Inhalt
+description: ''
+content_desc: ''
+sortorder: 54
+category: 16
+icon: richtext
+template: '[[+value]]'
+properties: '{"configuration_set":"4"}'
+availability: '[]'
+layouts: '14'
+settings: '[]'

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'clientsupport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c3756252f0a98e855046729ad5662662',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '182ca52db0e5466fc212010b63c2a2df',
+  'native_key' => 'clientsupport.email_to',
+  'object' => '{"key":"clientsupport.email_to","value":"","xtype":"textfield","namespace":"clientsupport","area":"general","editedon":null}',
+);

@@ -1,0 +1,3 @@
+name: upgrademodx
+path: '{core_path}components/upgrademodx/'
+assets_path: '{assets_path}components/upgrademodx/'

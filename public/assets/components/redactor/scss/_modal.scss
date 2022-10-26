@@ -1,0 +1,185 @@
+.redactor-modal .redactor-close {
+  top: 0px;
+  right: 4px;
+}
+.redactor-modal-header {
+  font-weight: bold;
+  padding: 8px;
+  text-align: center;
+}
+
+.redactor-modal-body {
+  background: #FBFBFB;
+  padding: 0;
+
+  // Clearfix
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  > form {
+    background: #fff;
+    padding: 1em;
+  }
+
+  // Make modals without a form or tabs (like clips) look somewhat decent
+  >:not(form):not(.redactor-modal-tabs):not(.redactor-modal-tab) {
+    &:first-child {
+      padding: 1em 1em 0 1em;
+    }
+    &:last-child {
+      padding: 0 1em 1em 1em;
+    }
+    &:first-child:last-child {
+      padding: 1em;
+    }
+  }
+}
+
+.redactor-modal-tabs {
+  padding: 1em 0 0;
+  margin: 0 1em;
+  a {
+    background-color: transparent;
+    cursor: pointer;
+    font: 14px "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+    line-height: 2.2;
+    padding: 3px 12px;
+    border-bottom: none;
+
+    &:hover, &:focus {
+      font-weight: normal;
+      text-decoration: underline;
+    }
+
+    &.active {
+      background: #fff;
+      cursor: default;
+      font-weight: normal;
+      position: relative;
+      text-decoration: none;
+
+      &:after {
+        border-radius: 3px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        content: '';
+        display: block;
+        position: absolute;
+        top: -3px;
+        right: 0;
+        bottom: 1px;
+        left: 0;
+      }
+      &:before {
+        background: #FFF;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 90%;
+        right: 0;
+        bottom: -4px;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+.redactor-modal-tab {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 1em;
+  margin: 0 1em 1em 1em;
+
+  // If a tab is the first child, that means the tabs section is hidden, so change styling to take full modal
+  // An example of this is the insert image view, when simple browser is off.
+  &:first-child {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+.redactor-modal-footer {
+  background-color: #F0F0F0;
+  border-top: 1px solid #DCDCDC;
+  border-radius: 0 0 3px 3px;
+  padding: 5px 7px 5px 5px;
+  text-align: right; // all buttons on the right is more consistent with MODX
+}
+
+// Requires additional specificity
+.redactor-modx3, .redactor-modx2 {
+  .redactor-modal button {
+    border: 0;
+    border-radius: 3px;
+    padding: 10px 15px 10px 15px;
+    font: normal 13px "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+
+    &.redactor-button-danger {
+      color: #555555;
+      box-shadow: 0 0 0 1px #E4E4E4;
+      background: #FFF;
+
+      &:hover, &:focus {
+        background: #b40505;
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
+
+    &.redactor-button-unstyled {
+      color: #555555;
+      box-shadow: 0 0 0 1px #E4E4E4;
+      background: #FFF;
+
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.redactor-modal input, .redactor-modal select, .redactor-modal textarea {
+  background-color: #FBFBFB;
+  border-radius: 3px;
+  border: 1px solid #E4E4E4;
+  position: relative;
+  transition: border-color 0.25s;
+  font: normal 13px/1.4 "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+  line-height: 20px;
+  min-height: 20px;
+  padding: 5px;
+  height: auto;
+
+  &:focus {
+    border-color: #2d86b7;
+    box-shadow: none;
+  }
+}
+.redactor-modal label {
+  color: #555;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 0;
+
+  // Requires higher specificity due to Redactor.js default styles
+  &.checkbox {
+    font-size: 13px;
+    color: #555;
+  }
+}
+
+.redactor-modal .form-item {
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// Overrides for specific MODX versions
+.redactor-modx2 {
+  @import "modal.2";
+}
+.redactor-modx3 {
+  @import "modal.3";
+}

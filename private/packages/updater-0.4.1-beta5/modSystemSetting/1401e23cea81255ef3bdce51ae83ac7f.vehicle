@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '44566b00c0b0c93a1d425231acb1e955',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1401e23cea81255ef3bdce51ae83ac7f',
+  'native_key' => 'updater.last_send_core_notification',
+  'object' => '{"key":"updater.last_send_core_notification","value":"","xtype":"textfield","namespace":"updater","area":"(6) Persistance","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '59d63be8b79676509a82a5e994427d5d',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f9153e9a9ec2887f2e68ab5a846701b3',
+  'native_key' => 'updater.check_core_release_level',
+  'object' => '{"key":"updater.check_core_release_level","value":"3","xtype":"textfield","namespace":"updater","area":"(5) Check Levels","editedon":null}',
+);

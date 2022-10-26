@@ -1,0 +1,14 @@
+id: 58
+parent: 55
+parent_properties: '{"key":"download","width":"100"}'
+input: file
+name: Datei
+description: ''
+content_desc: ''
+sortorder: 51
+icon: attachment
+template: '[[+url]]'
+properties: '{"wrapper_template":"[[+files]]","max_files":"1","source":"0","directory":"dateien\/","file_types":"pdf,doc,docx,xls,xlsx,txt,ppt,pptx"}'
+availability: '[]'
+layouts: null
+settings: '[]'

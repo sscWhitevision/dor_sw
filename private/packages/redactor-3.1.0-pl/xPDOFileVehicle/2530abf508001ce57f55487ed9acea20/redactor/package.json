@@ -1,0 +1,28 @@
+{
+  "name": "@modmore/redactor",
+  "description": "Redactor for MODX",
+  "version": "3.0.0",
+  "dependencies": {
+    "autocomplete.js": "^0.37.1",
+    "autoprefixer": "^8.6.5",
+    "concat": "^1.0.3",
+    "js-beautify": "^1.11.0",
+    "node-sass": "^4.14.1",
+    "parallelshell": "^3.0.2",
+    "uglify-js": "^3.10.1",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "build": "parallelshell \"npm run build:js\" \"npm run build:css\"",
+    "build:js": "parallelshell \"npm run build:js:main\" \"npm run build:js:plugins\" \"npm run build:js:redactor\" \"npm run build:js:codemirror\"",
+    "build:js:plugins": "uglifyjs js/plugins/baseurls.js js/plugins/better_filemanager.js js/plugins/better_links.js js/plugins/better_mediamanager.js js/plugins/divider.js  js/plugins/download.js js/plugins/errors.js js/plugins/imagestyle.js js/plugins/linkstyle.js js/plugins/markdirty.js js/plugins/fixed_toolbar.js js/plugins/fredactor.js js/plugins/theme.js js/plugins/source_beautify.js js/plugins/noname.js js/plugins/shifttab.js --compress --mangle --source-map \"root='../',url=plugins.min.js.map\" --output dist/plugins.min.js && timestamp=$(date \"+%c\") && echo \"Completed build:js:plugins on $timestamp\";",
+    "build:js:main": "uglifyjs js/polyfills.js node_modules/autocomplete.js/dist/autocomplete.js node_modules/js-beautify/js/lib/beautify-html.js js/redactor.loadrte.js --compress --mangle --source-map --output dist/modxredactor.min.js && timestamp=$(date \"+%c\") && echo \"Completed build:js:main on $timestamp\";",
+    "build:js:redactor": "uglifyjs vendor/imperavi/redactor/redactor.js vendor/imperavi/redactor/_plugins/alignment/alignment.js vendor/imperavi/redactor/_plugins/beyondgrammar/beyondgrammar.js vendor/imperavi/redactor/_plugins/clips/clips.js vendor/imperavi/redactor/_plugins/counter/counter.js vendor/imperavi/redactor/_plugins/definedlinks/definedlinks.js vendor/imperavi/redactor/_plugins/filemanager/filemanager.js vendor/imperavi/redactor/_plugins/fontcolor/fontcolor.js vendor/imperavi/redactor/_plugins/fontfamily/fontfamily.js vendor/imperavi/redactor/_plugins/fontsize/fontsize.js vendor/imperavi/redactor/_plugins/fullscreen/fullscreen.js vendor/imperavi/redactor/_plugins/handle/handle.js vendor/imperavi/redactor/_plugins/imagemanager/imagemanager.js vendor/imperavi/redactor/_plugins/inlinestyle/inlinestyle.js vendor/imperavi/redactor/_plugins/limiter/limiter.js vendor/imperavi/redactor/_plugins/properties/properties.js vendor/imperavi/redactor/_plugins/specialchars/specialchars.js vendor/imperavi/redactor/_plugins/table/table.js vendor/imperavi/redactor/_plugins/textdirection/textdirection.js vendor/imperavi/redactor/_plugins/textexpander/textexpander.js vendor/imperavi/redactor/_plugins/variable/variable.js vendor/imperavi/redactor/_plugins/video/video.js vendor/imperavi/redactor/_plugins/widget/widget.js --compress --mangle --source-map \"root='../../',url=redactor.min.js.map\" --output dist/imperavi/redactor.min.js && timestamp=$(date \"+%c\") && echo \"Completed build:js:redactor on $timestamp\";",
+    "build:js:codemirror": "uglifyjs vendor/codemirror/codemirror.js vendor/codemirror/modes/css/css.js vendor/codemirror/modes/javascript/javascript.js vendor/codemirror/modes/xml/xml.js vendor/codemirror/modes/htmlmixed/htmlmixed.js --compress --mangle --source-map \"root='../',url=codemirror.min.js.map\" --output dist/codemirror.min.js && timestamp=$(date \"+%c\") && echo \"Completed build:js:codemirror on $timestamp\";",
+    "build:css": "node-sass --source-map dist/ --output-style compressed scss/redactor.manager.scss dist/modxredactor.min.css && timestamp=$(date \"+%c\") && echo \"Completed build:css on $timestamp\";",
+    "watch": "parallelshell \"npm run watch:js:plugins\" \"npm run watch:css\"",
+    "watch:js": "watch \"npm run build:js\" js",
+    "watch:js:plugins": "watch \"npm run build:js:plugins\" js/plugins",
+    "watch:css": "watch \"npm run build:css\" scss"
+  }
+}

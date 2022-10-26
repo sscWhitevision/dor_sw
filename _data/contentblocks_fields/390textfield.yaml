@@ -1,0 +1,13 @@
+id: 39
+parent_properties: null
+name: 'Kleine Überschrift'
+description: ''
+content_desc: ''
+sortorder: 14
+category: 10
+icon: paragraph
+template: "<div class=\"textLeft__description\">\n    [[+value]]\n</div>"
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: '8'
+settings: '[]'

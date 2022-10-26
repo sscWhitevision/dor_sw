@@ -1,0 +1,27 @@
+<?php
+$_lang['consentfriend.acceptAll'] = 'Tillad alle';
+$_lang['consentfriend.acceptSelected'] = 'Tillad udvalgte';
+$_lang['consentfriend.service.disableAll.description'] = 'Brug denne kontakt til at aktivere/deaktivere alle apps.';
+$_lang['consentfriend.service.disableAll.title'] = 'Aktiver/deaktiver alle applikatione';
+$_lang['consentfriend.service.optOut.description'] = 'Denne applikation indlæses som standard (men du kan deaktivere den)';
+$_lang['consentfriend.service.optOut.title'] = 'Opt-Out';
+$_lang['consentfriend.service.purpose'] = 'Formål';
+$_lang['consentfriend.service.purposes'] = 'Formål';
+$_lang['consentfriend.service.required.description'] = 'Denne applikation er altid nødvendig';
+$_lang['consentfriend.service.required.title'] = '(Altid nødvendig)';
+$_lang['consentfriend.close'] = 'Luk';
+$_lang['consentfriend.consentModal.description'] = 'Her kan du se og ændre, hvilke informationer vi gemmer om dig.';
+$_lang['consentfriend.consentModal.privacyPolicy.name'] = 'Flere informationer finde du under {privacyPolicy}';
+$_lang['consentfriend.consentModal.privacyPolicy.text'] = 'databeskyttelseserklæring.';
+$_lang['consentfriend.consentModal.title'] = 'Informationer, som vi gemmer';
+$_lang['consentfriend.consentNotice.changeDescription'] = 'Der har været ændringer siden dit sidste besøg. Opdater dit valg.';
+$_lang['consentfriend.consentNotice.description'] = 'Vi gemmer og behandler dine personlige oplysninger til følgende formål: {purposes}.';
+$_lang['consentfriend.consentNotice.imprint.name'] = '';
+$_lang['consentfriend.consentNotice.learnMore'] = 'Læs mere';
+$_lang['consentfriend.consentNotice.privacyPolicy.name'] = 'Datenschutzerklärung';
+$_lang['consentfriend.decline'] = 'Afvis';
+$_lang['consentfriend.ok'] = 'Ok';
+$_lang['consentfriend.poweredBy'] = 'Realiseret med Klaro!';
+$_lang['consentfriend.purposeItem.service'] = '';
+$_lang['consentfriend.purposeItem.services'] = '';
+$_lang['consentfriend.save'] = 'Gem';

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a605a49a42572cf3949dabd903fa3dfe',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'fb09f7f32ae1d8b2da6df19b7895b618',
+  'native_key' => 'updater.last_send_version_digest',
+  'object' => '{"key":"updater.last_send_version_digest","value":"","xtype":"textfield","namespace":"updater","area":"(6) Persistance","editedon":null}',
+);

@@ -1,0 +1,5 @@
+key: ugm_show_modx3
+value: '0'
+xtype: combo-boolean
+namespace: upgrademodx
+area: Form

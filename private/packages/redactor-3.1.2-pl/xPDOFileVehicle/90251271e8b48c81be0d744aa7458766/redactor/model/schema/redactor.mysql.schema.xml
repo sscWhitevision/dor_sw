@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="redactor" baseClass="xPDOSimpleObject" platform="mysql" defaultEngine="InnoDB" version="1.1">
+    <object class="redConfigurationSet" table="redactor_set" inherit="single">
+        <field key="class_key" dbtype="varchar" precision="190" phptype="string" null="false" default="redConfigurationSet" />
+        <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
+        <field key="description" dbtype="varchar" precision="1024" phptype="string" null="true" />
+        <field key="content" dbtype="text" phptype="string" null="true" />
+        <!--<field key="sortorder" dbtype="int" precision="5" phptype="integer" null="false" default="0" />-->
+
+        <index alias="class_key" name="class_key" primary="false" unique="false" type="BTREE">
+            <column key="class_key" length="" collation="A" null="false" />
+        </index>
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false" />
+        </index>
+    </object>
+    <object class="redAdvancedConfigurationSet" extends="redConfigurationSet" />
+</model>

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'namespace' => 'quickstartbuttons',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9b89b1131f0dfc427ce8ea631a527b12',
+  'package' => 'modx',
+  'class' => 'modDashboardWidget',
+  'signature' => 'f210bb6d05fd8d0e078f8a491dc2f7e9',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"quickstartbuttons.widget","description":"quickstartbuttons.widget_desc","type":"file","content":"[[++core_path]]components\\/quickstartbuttons\\/model\\/quickstartbuttons\\/dashboardwidget.class.php","namespace":"quickstartbuttons","lexicon":"quickstartbuttons:dashboards","size":"full","name_trans":"quickstartbuttons.widget","description_trans":"quickstartbuttons.widget_desc"}',
+);

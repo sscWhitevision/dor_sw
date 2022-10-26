@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '89a6d3948176fb83dfa89982e707e9c9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '6a3cfddeead4a76c25959ef054f79910',
+  'native_key' => 'updater.debug',
+  'object' => '{"key":"updater.debug","value":false,"xtype":"combo-boolean","namespace":"updater","area":"(8) Debug","editedon":null}',
+);

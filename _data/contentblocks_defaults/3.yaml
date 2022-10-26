@@ -1,0 +1,8 @@
+id: 3
+constraint_field: template
+constraint_value: '7'
+default_template: '13'
+target_layout: 6
+target_field: null
+target_column: main
+sortorder: 2

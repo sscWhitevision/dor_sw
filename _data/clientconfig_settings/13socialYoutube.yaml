@@ -1,0 +1,9 @@
+id: 13
+key: socialYoutube
+label: YouTube
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 50
+value: 'https://www.youtube.com/channel/UCbyrgAC_SRNXGp_WW6ukpGg'
+group: 3

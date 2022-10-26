@@ -1,0 +1,9 @@
+id: 2
+key: contactName
+label: Name/Firma
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 1
+value: a
+group: 2

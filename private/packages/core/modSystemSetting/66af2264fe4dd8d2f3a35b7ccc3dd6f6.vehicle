@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cbc77aa00a02db14f15a8e73c81f54bd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '66af2264fe4dd8d2f3a35b7ccc3dd6f6',
+  'native_key' => 'anonymous_sessions',
+  'object' => '{"key":"anonymous_sessions","value":true,"xtype":"combo-boolean","namespace":"core","area":"session","editedon":null}',
+);

@@ -1,0 +1,20 @@
+id: 32
+source: 2
+name: newsBoxTpl
+description: ''
+category: News
+properties: 'a:0:{}'
+
+-----
+
+<a href="[[~[[+id]]]]">
+    <div class="imageNews">
+        <div class="imageNews__type"><span>news</span></div>
+        <div class="imageNews__imageContainer">
+            <img src="[[+newsImage]]" alt="[[+pagetitle:htmlent]]" class="imageNews__image">
+        </div>
+        <h4 class="imageNews__headline">
+            [[+pagetitle]]
+        </h4>
+    </div>
+</a>

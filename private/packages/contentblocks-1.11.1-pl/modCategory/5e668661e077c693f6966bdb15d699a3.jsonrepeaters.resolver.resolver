@@ -1,0 +1,98 @@
+<?php
+/* @var modX $modx */
+if (!function_exists('cb_migrate_repeater')) {
+    function cb_migrate_repeater(modX $modx, cbField $field) {
+        // Only migrate fields that have not yet been migrated
+        $hasSubfields = $modx->getCount('cbField', array('parent' => $field->get('id')));
+        if ($hasSubfields > 0) {
+            $modx->log(modX::LOG_LEVEL_INFO, 'Skipping migrating repeater ' . $field->get('name') . ' (#' . $field->get('id') . '); already has subfields.');
+            return;
+        }
+        $modx->log(modX::LOG_LEVEL_INFO, 'Migrating repeater ' . $field->get('name') . ' (#' . $field->get('id') . ') to use real subfields (v1.3+)');
+
+        $properties = $field->get('properties');
+        $properties = $modx->fromJSON($properties);
+        $group = $modx->fromJSON($properties['group']);
+
+        $i = 0;
+        foreach ($group as $idx => $subFieldArray) {
+            $i++;
+            $modx->log(modX::LOG_LEVEL_INFO, 'Migrating ' . $field->get('name') . ' > ' . $subFieldArray['name'] . ' to a real subfield...');
+
+            /** @var cbField $subField */
+            $subField = $modx->newObject('cbField');
+
+            // First prepare the properties, cleaning up the array a bit
+            $properties = (isset($subFieldArray['properties']) && is_array($subFieldArray['properties'])) ? $subFieldArray['properties'] : array();
+            foreach ($subFieldArray as $key => $value) {
+                if (substr($key, 0, strlen('properties_')) === 'properties_') {
+                    unset($subFieldArray[$key]);
+                    $key = substr($key, strlen('properties_'));
+                    if (!isset($properties[$key]) || empty($properties[$key])) {
+                        $properties[$key] = $value;
+                    }
+                }
+            }
+            $properties = $modx->toJSON($properties);
+
+            // Add the values to the new field
+            $subField->fromArray($subFieldArray);
+            $subField->set('properties', $properties);
+
+            // Set parent related values
+            $subField->set('parent', $field->get('id'));
+            $parentProperties = array(
+                'key' => $subFieldArray['key'],
+                'width' => $subFieldArray['width']
+            );
+            $parentProperties = $modx->toJSON($parentProperties);
+            $subField->set('parent_properties', $parentProperties);
+
+            // Some misc stuff
+            $subField->set('sortorder', $i);
+            $subField->set('settings', '[]');
+
+            $subField->save();
+
+            // If the subfield was a repeater, then do this trick again on the subfield
+            if ($subField->get('input') == 'repeater') {
+                cb_migrate_repeater($modx, $subField);
+            }
+
+        }
+        $modx->log(modX::LOG_LEVEL_INFO, 'Done with migrating repeater ' . $field->get('name') . ' (#' . $field->get('id') . ')');
+    }
+}
+
+if ($object->xpdo) {
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_UPGRADE:
+        case xPDOTransport::ACTION_INSTALL:
+            $modx =& $object->xpdo;
+
+            $modelPath = $modx->getOption('contentblocks.core_path', null, $modx->getOption('core_path').'components/contentblocks/');
+            $cb = $modx->getService('contentblocks', 'ContentBlocks', $modelPath . 'model/contentblocks/');
+
+            $logLevel = $modx->setLogLevel(modX::LOG_LEVEL_INFO);
+
+            $fields = $modx->getCollection('cbField', array('input' => 'repeater', 'parent' => 0));
+            if (!empty($fields)) {
+                $modx->log(modX::LOG_LEVEL_INFO, 'Creating backup of your fields...');
+                $response = $modx->runProcessor('mgr/fields/export', array(
+                    'save' => 1,
+                ), array(
+                    'processors_path' => $cb->config['processors_path']
+                ));
+            }
+            foreach ($fields as $field) {
+                cb_migrate_repeater($modx, $field);
+            }
+
+            // Return log level to normal.
+            $modx->setLogLevel($logLevel);
+        break;
+    }
+
+}
+return true;
+

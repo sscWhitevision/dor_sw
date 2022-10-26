@@ -1,0 +1,13 @@
+id: 3
+parent: 2
+parent_properties: '{"key":"image","width":"100"}'
+input: image_with_title
+name: Bild
+description: ''
+content_desc: ''
+icon: image
+template: "<picture>\n    <source srcset=\"[[+crops.standard.url:pThumb=`f=webp`]] 1600w,\n                    [[+crops.standard.url:pThumb=`w=1600&f=webp`]] 1000w,\n                    [[+crops.standard.url:pThumb=`w=1000&f=webp`]] 500w,\n                    [[+crops.standard.url:pThumb=`w=500&f=webp`]] 320w\" type=\"image/webp\" sizes=\"100vw\">\n    <source srcset=\"[[+crops.standard.url]] 2200w\"  type=\"image/jpeg\" sizes=\"100vw\"> \n    <img [[+idx:is=`1`:then=``:else=`loading=\"lazy\"`]] class=\"slider__image\" width=\"[[+width]]\" height=\"[[+height]]\" src=\"[[+crops.standard.url]]\" alt=\"[[+title:htmlent]]\">\n</picture>"
+properties: '{"source":"0","directory":"bilder\/","crop_directory":"crops\/","crops":"standard:width=2200,aspect=2.18","open_crops_automatically":"1","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"standard","use_tinyrte":"0"}'
+availability: '[]'
+layouts: null
+settings: '[]'

@@ -1,0 +1,30 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'clientsupport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5ce43bab183ca276dff1456d23dc3214',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => 'cdb4d38df3e573c2f8c94b8bb5e02555',
+  'native_key' => 'clientsupport.menu',
+  'object' => '{"text":"clientsupport.menu","parent":"usernav","action":"","description":"clientsupport.menu_desc","icon":"<i class=\\"icon-info-circle icon icon-2x clientsupport-icon\\"><\\/i>","menuindex":0,"params":"","handler":"ClientSupport.supportWindow(); return false;","permissions":"","namespace":"clientsupport"}',
+);

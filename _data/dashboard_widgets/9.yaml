@@ -1,0 +1,9 @@
+id: 9
+name: 'Upgrade MODX'
+description: 'Upgrade MODX Widget'
+type: snippet
+content: UpgradeMODXWidget
+namespace: upgrademodx
+lexicon: 'upgrademodx:default'
+name_trans: 'Upgrade MODX'
+description_trans: 'Upgrade MODX Widget'

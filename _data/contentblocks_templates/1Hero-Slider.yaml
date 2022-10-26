@@ -1,0 +1,8 @@
+id: 1
+name: Hero-Slider
+description: ''
+category: 1
+icon: site-cb-slider
+icon_type: custom
+content: '[{"layout":2,"content":{"main":[{"rows":[{"image":{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"fieldId":"contentblocks-field-2"},"headline":{"value":"","fieldId":"contentblocks-field-3"},"buttons":{"rows":[{"link":{"link":"","linkType":"link","fieldId":"contentblocks-field-5"},"button":{"value":"","fieldId":"contentblocks-field-6"}}],"fieldId":"contentblocks-field-4"},"subTitle":{"value":"","fieldId":"contentblocks-field-7"}}],"field":2,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

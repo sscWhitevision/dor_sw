@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'contentblocks',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1d01ac17f39a5beae94a8253a7f02cb9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3e6daca2adec044e85f50c482de3bfe1',
+  'native_key' => 'contentblocks.image.max_upload_height',
+  'object' => '{"key":"contentblocks.image.max_upload_height","value":4096,"xtype":"numberfield","namespace":"contentblocks","area":"Input: Image","editedon":1666254306}',
+);

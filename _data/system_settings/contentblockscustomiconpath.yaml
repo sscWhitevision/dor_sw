@@ -1,0 +1,4 @@
+key: contentblocks.custom_icon_path
+value: '{assets_path}components/site/contentblocks/icons/'
+namespace: contentblocks
+area: Core

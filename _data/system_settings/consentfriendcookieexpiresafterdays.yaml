@@ -1,0 +1,5 @@
+key: consentfriend.cookie_expires_after_days
+value: '365'
+xtype: numberfield
+namespace: consentfriend
+area: consentfriend

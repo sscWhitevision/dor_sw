@@ -1,0 +1,63 @@
+<?php
+
+// resolve the policy template to the policy.
+// unfortunately this can only be done with a resolver, because the template id
+// is known only at installation time.
+
+if ($object->xpdo) {
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            $modx =& $object->xpdo;
+            /*$modelPath = $modx->getOption('quip.core_path',null,$modx->getOption('core_path').'components/quip/').'model/';
+            $modx->addPackage('quip',$modelPath);
+            $modx->setLogLevel(modX::LOG_LEVEL_INFO);
+            */
+
+            /* assign policy to template */
+            $policy = $transport->xpdo->getObject('modAccessPolicy',array(
+                'name' => 'Updater_SystemMaintenancePolicy'
+            ));
+            if ($policy) {
+                $template = $transport->xpdo->getObject('modAccessPolicyTemplate',array('name' => 'Updater_SystemMaintenancePolicyTemplate'));
+                if ($template) {
+                    $policy->set('template',$template->get('id'));
+                    $policy->save();
+                } else {
+                    $modx->log(xPDO::LOG_LEVEL_ERROR,'[Updater] Could not find Updater_SystemMaintenancePolicyTemplate Access Policy Template!');
+                }
+            } else {
+                $modx->log(xPDO::LOG_LEVEL_ERROR,'[Updater] Could not find Updater_SystemMaintenancePolicy Access Policy!');
+            }
+
+            $modx->log(xPDO::LOG_LEVEL_INFO,'[Updater] added Updater_SystemMaintenancePolicy and template');
+
+            /* assign policy to admin group */
+            /*
+            $policy = $modx->getObject('modAccessPolicy',array('name' => 'QuipModeratorPolicy'));
+            $adminGroup = $modx->getObject('modUserGroup',array('name' => 'Administrator'));
+            if ($policy && $adminGroup) {
+                $access = $modx->getObject('modAccessContext',array(
+                    'target' => 'mgr',
+                    'principal_class' => 'modUserGroup',
+                    'principal' => $adminGroup->get('id'),
+                    'authority' => 9999,
+                    'policy' => $policy->get('id'),
+                ));
+                if (!$access) {
+                    $access = $modx->newObject('modAccessContext');
+                    $access->fromArray(array(
+                        'target' => 'mgr',
+                        'principal_class' => 'modUserGroup',
+                        'principal' => $adminGroup->get('id'),
+                        'authority' => 9999,
+                        'policy' => $policy->get('id'),
+                    ));
+                    $access->save();
+                }
+            }
+            */
+            break;
+    }
+}
+return true;

@@ -1,0 +1,14 @@
+id: 2
+source: 2
+type: imageplus
+name: newsImage
+caption: Vorschaubild
+category: News
+elements: ''
+rank: 10
+display: imageplus
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:7:{s:11:"targetWidth";s:0:"";s:12:"targetHeight";s:0:"";s:11:"targetRatio";s:4:"1.75";s:14:"thumbnailWidth";s:0:"";s:11:"allowAltTag";s:5:"false";s:12:"allowCaption";s:5:"false";s:12:"allowCredits";s:5:"false";}'
+output_properties: 'a:3:{s:14:"phpThumbParams";s:5:"w=800";s:11:"outputChunk";s:0:"";s:11:"generateUrl";s:4:"true";}'
+content: ''

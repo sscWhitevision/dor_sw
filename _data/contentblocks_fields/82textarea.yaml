@@ -1,0 +1,14 @@
+id: 8
+parent: 2
+parent_properties: '{"key":"subTitle","width":"100"}'
+input: textarea
+name: Nav-Beschriftung
+description: ''
+content_desc: ''
+sortorder: 6
+icon: paragraph
+template: '[[+value:nl2br]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: null
+settings: '[]'

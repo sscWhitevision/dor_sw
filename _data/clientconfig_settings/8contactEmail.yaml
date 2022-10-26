@@ -1,0 +1,9 @@
+id: 8
+key: contactEmail
+label: E-mail
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 22
+value: a
+group: 2

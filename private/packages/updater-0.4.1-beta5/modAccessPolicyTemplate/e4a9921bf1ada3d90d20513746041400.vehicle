@@ -1,0 +1,83 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Permissions' => 
+    array (
+      '1021945ebd8ca1ec7b3f5bdcd639991e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"updater.system_perform_maintenance_tasks","description":"updater.perm.system_perform_maintenance_tasks","value":1}',
+        'guid' => 'c90892773b260344e904697d303e1a80',
+        'native_key' => NULL,
+        'signature' => 'fb63517603209522c918b0389127cd02',
+      ),
+      '44476f120c40933280573c3fab7f2903' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"updater.system_receive_core_notifications","description":"updater.perm.system_receive_core_notifications","value":1}',
+        'guid' => '60f309316c7c4eeeaff19ea75f9981bb',
+        'native_key' => NULL,
+        'signature' => 'fdb55755c7a6e501057d78df6c5ad1c3',
+      ),
+      'f5432f9c8d13c32d99639ca73694dae7' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"updater.system_receive_package_notifications","description":"updater.perm.system_receive_package_notifications","value":1}',
+        'guid' => '2ebdbc7c48cc533236f0eed44fd98285',
+        'native_key' => NULL,
+        'signature' => 'cf64692a9bce1ca47ab4d78e04e880f6',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Permissions' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+  ),
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1db2d4c80675e633ee3e5c8e38534675',
+  'package' => 'modx',
+  'class' => 'modAccessPolicyTemplate',
+  'signature' => 'e4a9921bf1ada3d90d20513746041400',
+  'native_key' => NULL,
+  'object' => '{"id":null,"template_group":1,"name":"Updater_SystemMaintenancePolicyTemplate","description":"Policy template for system maintenance related tasks.","lexicon":"updater:permissions"}',
+);

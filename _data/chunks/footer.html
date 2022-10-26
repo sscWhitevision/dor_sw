@@ -1,0 +1,79 @@
+id: 21
+source: 2
+name: footer
+description: ''
+category: Template
+properties: 'a:0:{}'
+
+-----
+
+<!-- footerSocial -->
+<footer class="footer">
+    <div class="footerTop__container">
+        <div class="container">
+            <div class="footerTop">
+                <div class="footerTop__text">Follow Us</div>
+                <div class="footerTop__wrapper">
+                    <a href="[[++socialLinkedin]]" target="_blank" class="footerTop__button">
+                        <svg class="footerTop__Icon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#linkedin`]]"></use>
+                        </svg>
+                    </a>
+                    <a href="[[++socialYoutube]]" target="_blank" class="footerTop__button">
+                        <svg class="footerTop__Icon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#youtube`]]"></use>
+                        </svg>
+                    </a>
+                    <a href="[[++socialFacebook]]" target="_blank" class="footerTop__button">
+                        <svg class="footerTop__Icon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#facebook`]]"></use>
+                        </svg>
+                    </a>
+                    <a href="[[++socialTwitter]]" target="_blank" class="footerTop__button">
+                        <svg class="footerTop__Icon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#twitter`]]"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerCenter__container">
+        <div class="container">
+            <nav class="footerCenter">
+                [[pdoMenu?
+                    &parents=`0`
+                    &level=`1`
+                ]]
+            </nav>
+        </div>
+    </div>
+    <div class="footerBottom__container">
+        <div class="container">
+            <div class="footerBottom">
+                <ul>
+                    <li>
+                        <a href="[[++socialPraxity]]" target="_blank">
+                            <img class="footerBottom__logo" src="[[++checksumfile.assets_path]]img/praxity-logo.webp" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="[[++socialFof]]" target="_blank">
+                            <img class="footerBottom__foflogo" src="[[++checksumfile.assets_path]]img/fof-logo.png" alt="">
+                        </a>
+                    </li>
+                    [[pdoMenu?
+                        &resources=`22,23`
+                        &parents=`0`
+                        &showHidden=`1`
+                        &outerTpl=`@INLINE [[+wrapper]]`
+                    ]]
+                    <li><a onclick="klaro.show();return false;">Cookies</a></li>
+                </ul>
+                <div class="footerBottom__copyright">
+                    Copyright &copy; [[!copyrightYear]] SW
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

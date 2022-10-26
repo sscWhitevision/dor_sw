@@ -1,0 +1,8 @@
+id: 16
+name: News-Anleser
+description: ''
+category: 2
+icon: site-cb-newsteaser
+icon_type: custom
+content: '[{"layout":17,"content":{"main":[{"chunk_properties":{},"field":72,"settings":{}}]},"settings":{"paddingTop":"2","paddingBottom":"0","anchor":"","link1":"","category1":"","headline1":"","link2":"","category2":"","headline2":"","button2":""},"parent":0,"title":""}]'
+availability: '[]'

@@ -1,0 +1,14 @@
+id: 13
+parent_properties: null
+input: repeater
+name: Anleser
+description: ''
+content_desc: ''
+sortorder: 2
+category: 5
+icon: chunk_A
+template: "<div class=\"teaser\">\n    <h3 class=\"colorSecondary\">[[+headline]]</h3>\n    <div class=\"introText__paragraph\">\n        [[+intro:nl2br]]\n    </div>\n    [[+link1:notempty=`\n    <div class=\"teaser__button\">\n        <a class=\"buttonText\" href=\"[[+link1]]\">\n            <svg class=\"buttonText__icon\">\n                <use xlink:href=\"[[checksumFile? &file=`img/sprite.svg#brand-icon`]]\"></use>\n            </svg>\n            <span>[[+button1]]</span>\n        </a>\n    </div>\n    `]]\n    [[+link2:notempty=`<a href=\"[[+link2]]\" class=\"button\">[[+button2]]</a>`]]\n</div>"
+properties: '{"wrapper_template":"[[+rows]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"2","layout_style":"default"}'
+availability: '[]'
+layouts: '3'
+settings: '[]'

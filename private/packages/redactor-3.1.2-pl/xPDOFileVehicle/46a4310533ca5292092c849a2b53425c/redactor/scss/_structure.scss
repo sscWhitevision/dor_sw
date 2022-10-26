@@ -1,0 +1,57 @@
+.redactor-structure.redactor-styles {
+  // Fix the opacity on standard structures
+  h1, h2, h3, h4, h5, h6, div {
+    &:before {
+      opacity: 1;
+      color: #8d8d8d;
+    }
+  }
+
+  // Add some extra elements
+  p, figure, ol, ul, blockquote, pre {
+    position: relative;
+
+    &:before {
+      width: 24px;
+      position: absolute;
+      font-size: 10px;
+      font-weight: normal;
+      opacity: 1;
+      color: #8d8d8d;
+      left: -26px;
+      top: 50%;
+      margin-top: -7px;
+      text-align: right;
+    }
+  }
+
+  // Make sure we use padding instead of margin for list indentation to fix label positioning
+  ol, ul {
+    margin-left: 0;
+    padding-left: 1.6em !important;
+  }
+
+  h1:before  { content: "h1";  }
+  h2:before  { content: "h2";  }
+  h3:before  { content: "h3";  }
+  h4:before  { content: "h4";  }
+  h5:before  { content: "h5";  }
+  h6:before  { content: "h6";  }
+  div:before { content: "div"; }
+  p::before { content: 'p'; }
+  //figure::before { content: 'figure'; }
+  ol::before { content: 'ol'; }
+  ul::before { content: 'ul'; }
+  blockquote::before { content: '>'; }
+  pre::before { content: '<>'; }
+
+  // Redactor adds divs within table cells for editing; make sure we don't highlight those separately.
+  td > div {
+    padding: 0;
+    &:before {
+      display: none;
+    }
+  }
+}
+@import "structure.blocks";
+@import "structure.gutter";

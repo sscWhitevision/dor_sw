@@ -1,0 +1,30 @@
+id: 6
+source: 2
+name: htmlHeader
+description: ''
+category: Template
+properties: 'a:0:{}'
+
+-----
+
+<!doctype html>
+<html lang="[[++cultureKey]]">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>[[+seoPro.title:htmlspecial]]</title>
+        
+        [[*description:notempty=`<meta name="description" content="[[*description:htmlspecial]]">`]]
+        <meta name="robots" content="[[+seoTab.robotsTag]]">
+            
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        
+        <base href="[[++site_url]]" />
+        
+        <link rel="stylesheet" type="text/css" href="[[checksumFile? &file=`css/main.css`]]">
+    </head>
+    <body>

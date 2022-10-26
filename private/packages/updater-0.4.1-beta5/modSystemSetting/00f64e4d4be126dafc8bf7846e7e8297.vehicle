@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1243c9599adb0396e85d5902e4c08fba',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '00f64e4d4be126dafc8bf7846e7e8297',
+  'native_key' => 'updater.send_version_digest_user',
+  'object' => '{"key":"updater.send_version_digest_user","value":false,"xtype":"combo-boolean","namespace":"updater","area":"(4) Notifications Digest","editedon":null}',
+);

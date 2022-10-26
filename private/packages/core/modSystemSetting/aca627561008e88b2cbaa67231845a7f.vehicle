@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a00c79a51e159f359ebcedfa8749c6ad',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'aca627561008e88b2cbaa67231845a7f',
+  'native_key' => 'default_per_page',
+  'object' => '{"key":"default_per_page","value":"20","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'locker',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1338822ab80edcb2c3c10ea5d84666f0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '28092e0601751d477e8bfd883dd700c9',
+  'native_key' => 'locker.flush_sessions_on_lock',
+  'object' => '{"key":"locker.flush_sessions_on_lock","value":false,"xtype":"combo-boolean","namespace":"locker","area":"","editedon":null}',
+);

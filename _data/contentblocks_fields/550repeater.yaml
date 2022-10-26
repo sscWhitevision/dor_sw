@@ -1,0 +1,14 @@
+id: 55
+parent_properties: null
+input: repeater
+name: Downloads
+description: ''
+content_desc: ''
+sortorder: 48
+category: 14
+icon: chunk_A
+template: "<li>\n    <a download class=\"magazin\" href=\"[[+download]]\">\n        <figure class=\"magazin__imageWrapper\">\n            <picture>\n                <source srcset=\"[[+image:pThumb=`f=webp`]]\" type=\"image/webp\">\n                <source srcset=\"[[+image]]\" type=\"image/jpeg\"> \n                <img class=\"magazin__image\" src=\"[[+image]]\" alt=\"[[+name:htmlent]]\" loading=\"lazy\">\n            </picture>\n        </figure>\n        <div class=\"magazin__bar\">\n            <div class=\"magazin__text\">[[+name]]</div>\n            <div class=\"magazin__button\">\n                <svg>\n                    <use xlink:href=\"[[checksumFile? &file=`img/sprite.svg#download-solid`]]\"></use>\n                </svg>\n            </div>\n        </div>\n    </a>\n</li>"
+properties: '{"wrapper_template":"[[+rows]]","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"4","layout_style":"default"}'
+availability: '[]'
+layouts: '12'
+settings: '[]'

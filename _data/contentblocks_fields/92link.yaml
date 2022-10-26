@@ -1,0 +1,14 @@
+id: 9
+parent: 2
+parent_properties: '{"key":"link1","width":"50"}'
+input: link
+name: Button
+description: ''
+content_desc: ''
+sortorder: 2
+icon: link
+template: '[[+link]]'
+properties: '{"link_detection_pattern_override":"","limit_to_current_context":"1"}'
+availability: '[]'
+layouts: null
+settings: '[]'

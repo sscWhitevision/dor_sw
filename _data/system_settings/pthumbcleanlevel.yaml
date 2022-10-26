@@ -1,0 +1,4 @@
+key: pthumb.clean_level
+value: '2'
+namespace: phpthumbof
+area: 'Cache [common]'

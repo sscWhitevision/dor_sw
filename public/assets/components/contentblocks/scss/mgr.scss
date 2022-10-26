@@ -1,0 +1,116 @@
+.contentblocks-progress {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  height: 30px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+  .contentblocks-progress-bar {
+    height: 30px;
+    background-color: #00bf00;
+    width: 1px;
+
+    transition: all 0.5s ease;
+  }
+}
+
+.cb-window-vtabs {
+  .x-panel-ml {
+    padding: 0 !important;
+  }
+
+  .x-panel-mc {
+    padding: 0 !important;
+  }
+
+  .vertical-tabs-panel {
+    width: 100% !important;
+  }
+
+  .x-panel-mc .x-panel-tbar .x-toolbar {
+    background-color: transparent;
+  }
+
+  .x-panel.panel-desc {
+    border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .x-tab-panel-bwrap {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    .x-tab-panel-body {
+      overflow-x: hidden !important;
+      overflow-y: auto;
+    }
+  }
+
+  &.x-window-body {
+    padding: 0;
+  }
+}
+
+.contentblocks-icon {
+  width: 40px;
+  height: 40px;
+  margin: -10px 5px -10px 0;
+  vertical-align: middle;
+}
+
+.contentblocks-id {
+  color: #aaa;
+}
+
+
+.contentblocks-credits {
+  display: flex;
+  align-items: center;
+}
+.contentblocks-credits__version {
+  margin: 0 0 0 auto;
+  color: rgba(0,0,0,.6);
+}
+.contentblocks-credits__logo {
+  margin-left: 1rem;
+  display: flex;
+  opacity: 0.6;
+  transition: opacity 0.5s;
+}
+.contentblocks-credits__logo:hover, .contentblocks-credits__logo:focus {
+  opacity: 1.0;
+}
+.contentblocks-credits__logo img {
+  height: 2.5rem;
+}
+
+.contentblocks-rebuild-menu {
+  .x-menu-list li a.x-menu-item {
+    padding: 5px 15px;
+  }
+
+  .x-menu-item-icon {
+    display: none;
+  }
+
+  .rebuild-ctx-row {
+    display: flex;
+    justify-content: space-between;
+
+    .ctx-key {
+      opacity: .6;
+    }
+  }
+}
+
+textarea.cb-field-content-desc {
+  font: normal 13px/1.4 "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif;
+}
+
+#contentblocks-page-home-tabs__contentblocks-tb-fill {
+  pointer-events: none;
+}

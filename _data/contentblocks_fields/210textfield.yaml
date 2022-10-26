@@ -1,0 +1,13 @@
+id: 21
+parent_properties: null
+name: Überschrift
+description: ''
+content_desc: ''
+sortorder: 4
+category: 6
+icon: paragraph
+template: '<h3 class="imageContent__teaserHeadline [[+color:is=``:then=`colorSecondary`:else=`colorPrimary`]]">[[+value]]</h3>'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: '4'
+settings: '[{"reference":"color","title":"Farbe","description":"","fieldtype":"select","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"==Dunkelblau\n1==Orange","separator":"","type_ahead":"Nein","field_is_exposed":"asField","template":"[[+value]]"}]'

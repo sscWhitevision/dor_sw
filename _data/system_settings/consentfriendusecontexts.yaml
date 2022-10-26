@@ -1,0 +1,5 @@
+key: consentfriend.use_contexts
+value: '0'
+xtype: combo-boolean
+namespace: consentfriend
+area: system

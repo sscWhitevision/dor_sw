@@ -1,0 +1,59 @@
+<?php
+
+if (isset($object) && isset($object->xpdo)) {
+    $modx = $object->xpdo;
+}
+/*
+if (!isset($modx)) {
+    require_once dirname(dirname(dirname(dirname(dirname(__FILE__))))) . '/revolution/config.core.php';
+    require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
+    $modx= new modX();
+    $modx->initialize('web');
+    $modx->setLogLevel(modX::LOG_LEVEL_INFO);
+    $modx->setLogTarget('ECHO');
+}
+*/
+switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_UPGRADE:
+    case xPDOTransport::ACTION_INSTALL:
+
+        $featureTest = $modx->loadClass('modDashboardWidget');
+        if (!$featureTest) {
+            $modx->log(modX::LOG_LEVEL_WARN,'The main Updater component is a dashboard widget. Please install at a MODX instance with support for widgets.');
+            return true;
+        }
+
+        $widget = $modx->getObject('modDashboardWidget',array('name' => 'updater.widget'));
+        if (!$widget) {
+            $widget = $modx->newObject('modDashboardWidget');
+            $widget->fromArray(array (
+              'name' => 'updater.widget',
+              'description' => 'updater.widget.desc',
+              'type' => 'file',
+              'size' => 'half',
+              'content' => '[[++core_path]]components/updater/elements/widgets/updater.dashboardwidget.php',
+              'namespace' => 'updater',
+              'lexicon' => 'updater:default',
+            ), '', true, true);
+            if (!$widget->save()) {
+                $modx->log(modX::LOG_LEVEL_ERROR,'Error creating the Updater dashboard widget.');
+            } else {
+                $modx->log(modX::LOG_LEVEL_WARN,'Added Updater dashboard widget to your MODX installation. To use it, add the "Update status" widget to your dashboard.');
+            }
+        } else {
+            $modx->log(modX::LOG_LEVEL_INFO, 'Updater dashboard widget is already installed.');
+        }
+
+        break;
+    case xPDOTransport::ACTION_UNINSTALL:
+        $widget = $modx->getObject('modDashboardWidget',array('name' => 'updater.widget'));
+        if ($widget) {
+            if ($widget->remove())
+                $modx->log(modX::LOG_LEVEL_WARN,'Removed Updater Dashboard Widget.');
+            else
+                $modx->log(modX::LOG_LEVEL_ERROR, 'Error removing Updater Dashboard Widget.');
+        }
+        break;
+}
+
+return true;

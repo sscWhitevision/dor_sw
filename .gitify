@@ -1,0 +1,230 @@
+data_directory: _data/
+backup_directory: _backup/
+data:
+    contexts:
+        class: modContext
+        primary: key
+    context_settings:
+        class: modContextSetting
+        primary:
+            - context_key
+            - key
+        exclude_keys:
+            - editedon
+        where:
+            - 'key:!=': http_host
+            - 'key:!=': site_url
+            - 'key:!=': base_url
+            - 'key:!=': server_protocol
+            - 'key:!=': http_host_aliases
+    template_variables:
+        class: modTemplateVar
+        primary: name
+    template_variables_access:
+        class: modTemplateVarTemplate
+        primary:
+            - tmplvarid
+            - templateid
+    categories:
+        class: modCategory
+        primary: category
+        truncate_on_force:
+            - modCategoryClosure
+    templates:
+        class: modTemplate
+        primary: templatename
+        extension: .html
+    chunks:
+        class: modChunk
+        primary: name
+        extension: .html
+    snippets:
+        class: modSnippet
+        primary: name
+        extension: .php
+    plugins:
+        class: modPlugin
+        primary: name
+        extension: .php
+    plugin_events:
+        class: modPluginEvent
+        primary:
+            - pluginid
+            - event
+    events:
+        class: modEvent
+        primary: name
+    namespaces:
+        class: modNamespace
+        primary: name
+    system_settings:
+        class: modSystemSetting
+        primary: key
+        exclude_keys:
+            - editedon
+        where:
+            - 'key:!=': ugm_last_check
+            - 'key:!=': ugm_latest_version
+            - 'key:!=': ugm_file_version
+    extension_packages:
+        class: modExtensionPackage
+        primary: namespace
+        exclude_keys:
+            - created_at
+            - updated_at
+    fc_sets:
+        class: modFormCustomizationSet
+        primary: id
+    fc_profiles:
+        class: modFormCustomizationProfile
+        primary: id
+    fc_profile_usergroups:
+        class: modFormCustomizationProfileUserGroup
+        primary:
+            - usergroup
+            - profile
+    fc_action_dom:
+        class: modActionDom
+        primary:
+            - set
+            - name
+    mediasources:
+        class: modMediaSource
+        primary: id
+    mediasource_elements:
+        class: sources.modMediaSourceElement
+        primary:
+            - source
+            - object_class
+            - object
+            - context_key
+    dashboards:
+        class: modDashboard
+        primary:
+            - id
+            - name
+    dashboard_widgets:
+        class: modDashboardWidget
+        primary: id
+    dashboard_widget_placement:
+        class: modDashboardWidgetPlacement
+        primary:
+            - dashboard
+            - widget
+
+
+    contentblocks_categories:
+        package: contentblocks
+        class: cbCategory
+        primary: [id,name]
+    contentblocks_fields:
+        class: cbField
+        primary: [id,parent,input]
+    contentblocks_layouts:
+        class: cbLayout
+        primary: [id,name]
+    contentblocks_templates:
+        class: cbTemplate
+        primary: [id,name]
+    contentblocks_defaults:
+        class: cbDefault
+        primary: id
+
+
+    clientconfig_groups:
+        class: cgGroup
+        primary: [id,label]
+        package: clientconfig
+    clientconfig_settings:
+        class: cgSetting
+        primary: [id,key]
+
+
+    quickstartbuttons_sets:
+        class: qsbSet
+        primary: [id, name]
+        package: quickstartbuttons
+    quickstartbuttons_set_usergroups:
+        class: qsbSetUserGroup
+        primary: [usergroup, set]
+    quickstartbuttons_icons:
+        class: qsbIcon
+        primary: name
+    quickstartbuttons_buttons:
+        class: qsbButton
+        primary: [id, text]
+
+
+#    collections_settings:
+#        class: CollectionSetting
+#        primary: id
+#        package: collections
+#    collections_templates:
+#        class: CollectionTemplate
+#        primary: [id, name]
+#    collections_templatecolumns:
+#        class: CollectionTemplateColumn
+#        primary: id
+#    collections_resourcetemplates:
+#        class: CollectionResourceTemplate
+#        primary: [resource_template, collection_template]
+#    collections_selections:
+#        class: CollectionSelection
+#        primary: [resource, collection]
+
+
+
+#    migx_formtabs:
+#        class: migxFormtab
+#        primary: id
+#        package: migx
+#    migx_formtab_fields:
+#        class: migxFormtabField
+#        primary: id
+#    migx_config_elements:
+#        class: migxConfigElement
+#        primary: id
+#    migx_elements:
+#        class: migxElement
+#        primary: id
+#    migx_configs:
+#        class: migxConfig
+#        primary: id
+
+
+packages:
+    modx.com:
+        service_url: 'https://rest.modx.com/extras/'
+        description: 'The official MODX transport provider for 3rd party components.'
+        packages:
+            - ace-1.6.5-pl
+            - babel-3.0.0-pl
+            - backupmodx-1.0.5-beta
+            - bigbrother-1.3.0-pl
+            - calltoactiontv-1.0.0-pl
+            - crosscontextssettings-1.0.5-pl
+            - filesluggy-1.3-pl
+            - imageplus-2.7.0-pl
+            - imageoptimonupload-1.0.1-beta1
+            - locker-0.1.0-pl
+            - migx-2.12.0-pl
+            - pdotools-2.11.0-pl
+            - pthumb-2.3.3-pl
+            - resizer-1.0.1-pl
+            - seopro-1.0.4-pl
+            - stercseo-2.0.4-pl
+            - translit-1.0.0-beta
+            - updater-0.3.10-beta
+            - upgrademodx-1.5.1-pl
+            - versionx-2.1.3-pl
+            - xrouting-1.4.1-pl
+    modmore.com:
+        service_url: 'https://rest.modmore.com/'
+        description: 'Kickstart MODX Website'
+        username: jdaehne_kickstart
+        api_key: .modmore.com.key
+        packages:
+            - clientconfig-1.3.2-pl
+            - contentblocks-1.7.5-pl
+            - quickstartbuttons-1.3.0-rc1
+            - redactor-2.1.1-pl

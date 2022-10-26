@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ae76aec6aa670243aaaa1dd6df1511e8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '91ff7969de49e268ca5d4521cdaf6cb2',
+  'native_key' => 'updater.last_version_crosschecked',
+  'object' => '{"key":"updater.last_version_crosschecked","value":"","xtype":"textfield","namespace":"updater","area":"(7) Cache","editedon":null}',
+);

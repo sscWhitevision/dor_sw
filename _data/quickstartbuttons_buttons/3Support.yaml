@@ -1,0 +1,15 @@
+id: 3
+set: 2
+icon: 303
+icon_ms: null
+icon_file: null
+text: Support
+description: 'Quadro Supportnachricht senden'
+action_id: null
+action_key: null
+action_props: ''
+handler: 'ClientSupport.supportWindow(); return false;'
+link: null
+newwindow: 1
+iconcls: fa-info-circle
+iconpath: ''

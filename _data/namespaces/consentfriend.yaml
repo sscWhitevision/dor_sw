@@ -1,0 +1,3 @@
+name: consentfriend
+path: '{core_path}components/consentfriend/'
+assets_path: '{assets_path}components/consentfriend/'

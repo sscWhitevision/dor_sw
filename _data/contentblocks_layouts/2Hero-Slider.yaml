@@ -1,0 +1,13 @@
+id: 2
+name: Hero-Slider
+description: ''
+sortorder: 2
+category: 4
+icon: site-cb-slider
+icon_type: custom
+columns: '[{"reference":"main","width":"100"}]'
+template: "<!-- heroSlider -->\n<div class=\"pt[[+paddingTop]] pb[[+paddingBottom]]\" [[+anchor:setModuleId]]>\n    <div class=\"slider__wrapper\">\n        <div class=\"slider\">\n            <div class=\"js-slider\">\n                [[+main:templatingJSON=`sliderImageTpl`]]\n            </div>\n        </div>\n        <div class=\"slider__nav\">\n            <div class=\"container\">\n                <ul class=\"slider__navList\">\n                    [[+main:templatingJSON=`sliderNavTpl`]]\n                </ul>\n            </div>\n        </div>\n    </div>\n</div>"
+availability: '[{"field":"context","value":"hidden"}]'
+times_per_page: 0
+layout_only_nested: '0'
+settings: '[{"reference":"paddingTop","title":"Abstand Oben","fieldtype":"select","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"0==kein Abstand\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10","field_is_exposed":"modal"},{"reference":"paddingBottom","title":"Abstand Unten","fieldtype":"select","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"0==kein Abstand\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10","field_is_exposed":"modal"},{"reference":"anchor","title":"Menü-Titel / Modul-ID","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"}]'

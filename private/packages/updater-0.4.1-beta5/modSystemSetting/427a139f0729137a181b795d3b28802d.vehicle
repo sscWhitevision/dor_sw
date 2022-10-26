@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5b261eae89e61c03b1ba7811c3eeed5c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '427a139f0729137a181b795d3b28802d',
+  'native_key' => 'updater.send_notification_hours',
+  'object' => '{"key":"updater.send_notification_hours","value":"8","xtype":"textfield","namespace":"updater","area":"(1) Notifications: General","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'clientsupport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '81b2e02c28bf4ffc9369fe0a99ecaa43',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e442332f4f7c22afef0a250f5d17f1b3',
+  'native_key' => 'clientsupport.ticket_system',
+  'object' => '{"key":"clientsupport.ticket_system","value":"","xtype":"clientsupport-combo-ticket-systems","namespace":"clientsupport","area":"general","editedon":null}',
+);

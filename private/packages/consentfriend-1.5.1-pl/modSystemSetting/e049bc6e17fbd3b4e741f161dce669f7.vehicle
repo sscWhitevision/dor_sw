@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'consentfriend',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1f1925ba1628c9e5c93fa0c353d88768',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e049bc6e17fbd3b4e741f161dce669f7',
+  'native_key' => 'consentfriend.cookie_name',
+  'object' => '{"key":"consentfriend.cookie_name","value":"consentfriend","xtype":"textfield","namespace":"consentfriend","area":"cookie","editedon":null}',
+);

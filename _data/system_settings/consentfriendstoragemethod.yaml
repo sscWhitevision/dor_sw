@@ -1,0 +1,4 @@
+key: consentfriend.storage_method
+value: cookie
+namespace: consentfriend
+area: consentfriend

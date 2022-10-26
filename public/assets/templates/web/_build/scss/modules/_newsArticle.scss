@@ -1,0 +1,31 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	newsArticle
+/*
+/* --------------------------------------------------------------------------- */
+.newsArticle {
+	&__headline {
+		font-size: 1.8rem;
+		margin-bottom: 1.1em;
+		text-align: center;
+	}
+
+	&__date {
+		margin-bottom: 0.9em;
+		text-align: right;
+		display: block;
+
+		@media (max-width:1000px) {
+			font-size: 0.8rem;
+		}
+	}
+
+	&__image {
+		margin: 0 auto 2rem;
+		max-width: 800px;
+	}
+
+	&__paragraph {
+		margin-bottom: 20px;
+	}
+}

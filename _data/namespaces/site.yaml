@@ -1,0 +1,3 @@
+name: site
+path: '{core_path}components/site/'
+assets_path: '{assets_path}components/site/'

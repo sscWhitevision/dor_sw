@@ -1,0 +1,24 @@
+id: 30
+source: 2
+name: cardProfileTpl
+description: ''
+category: Profil
+properties: 'a:0:{}'
+
+-----
+
+<li class="cardProfile">
+    <a href="[[~[[+id]]]]">
+        <img src="[[+profileImage]]" alt="[[+pagetitle:htmlent]]" class="cardProfile__image">
+        <div class="cardProfile__info">
+            <div class="cardProfile__name">[[+pagetitle]]</div>
+            <div class="cardProfile__position">[[+profilePositionPreview]]</div>
+        </div>
+        <div class="cardProfile__overlay">
+            <svg class="cardProfile__overlayIcon">
+                <use xlink:href="[[checksumFile? &file=`img/sprite.svg#search`]]"></use>
+            </svg>
+            <div class="cardProfile__overlayText">View Profile</div>
+        </div>
+    </a>
+</li>

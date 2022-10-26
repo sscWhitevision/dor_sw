@@ -1,0 +1,57 @@
+<?php
+
+$modx = 0;
+if (isset($object) && isset($object->xpdo)) {
+    $modx = $object->xpdo;
+} else {
+    return false;
+}
+
+switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_UPGRADE:
+    case xPDOTransport::ACTION_INSTALL:
+        $modx->log(modX::LOG_LEVEL_INFO, "[Updater] upgrade & install: checking events");
+        $installEvents = array( 'OnUpdaterCron', 'OnUpdaterNotify', 'OnUpdaterCoreRefresh', 'OnUpdaterPackagesRefresh' );
+        foreach ($installEvents as $e) {
+            $event = $modx->getObject('modEvent', array('name' => $e));
+            if (is_null($event)) {
+                /* this event has not been installed. need to create one here! */
+                $new = $modx->newObject('modEvent');
+
+                if (!(is_null($new))) {
+                    $new->set('name',$e);
+                    $new->set('service',6);
+                    $new->set('groupname', 'Updater');
+
+                    if ($new->save() == false) {
+                        $modx->log(modX::LOG_LEVEL_ERROR, "[Updater] install: error saving newevent ".$e);
+                    } else {
+                        $modx->log(modX::LOG_LEVEL_INFO, "[Updater] install: created new event '" . $e . "'");
+                    }
+                } else {
+                    $modx->log(modX::LOG_LEVEL_ERROR, "[Updater] install: error creating new event '" . $e . "'");
+                }
+                unset ($new);
+            }
+        }
+        break;
+    case xPDOTransport::ACTION_UNINSTALL:
+
+        $removeEvents = array( 'OnUpdaterCron', 'OnUpdaterNotify', 'OnUpdaterCoreRefresh', 'OnUpdaterPackagesRefresh' );
+
+        /* clean up on uninstall - removing the event for cron */
+        foreach ($removeEvents as $e) {
+            $event = $modx->getObject('modEvent', array('name' => $e));
+            if (!is_null($event)) {
+                if ($event->remove()) {
+                    $modx->log(modX::LOG_LEVEL_INFO, "[Updater] cleanup: removing event '".$e."'");
+                } else {
+                    $modx->log(modX::LOG_LEVEL_ERROR, "[Updater] cleanup: could not remove event '".$e."'");
+                }
+            }
+        }
+
+        break;
+}
+
+return true;

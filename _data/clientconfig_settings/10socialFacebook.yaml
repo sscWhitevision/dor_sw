@@ -1,0 +1,9 @@
+id: 10
+key: socialFacebook
+label: Facebook
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 20
+value: 'https://www.facebook.com/shinewinginternational'
+group: 3

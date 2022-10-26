@@ -1,0 +1,35 @@
+<?php
+/**
+ * Redactor WYSIWYG Editor for MODx Revolution
+ *
+ *
+ * @package redactor
+ */
+
+/**
+ * Resolver to set which_editor to Redactor
+ * 
+ * @package redactor
+ * @subpackage build
+ */
+
+switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+        if ($object->xpdo->getOption('which_editor') !== 'Redactor') {
+            $object->xpdo->log(xPDO::LOG_LEVEL_INFO, 'Updating which_editor system setting to enable Redactor...');
+            // set Redactor as default element editor
+            $setting = $object->xpdo->getObject('modSystemSetting',array('key' => 'which_editor'));
+            if ($setting instanceof modSystemSetting) {
+                $setting->set('value','Redactor');
+                $setting->save();
+            }
+        }
+
+        if (!$object->xpdo->getOption('use_editor')) {
+            $object->xpdo->log(xPDO::LOG_LEVEL_WARN, 'Note: the use_editor system setting is disabled. Redactor wont be loaded until you enable the setting. If desirable, you can enable use_editor per context rather than system-wide.');
+        }
+        break;
+}
+
+return true;

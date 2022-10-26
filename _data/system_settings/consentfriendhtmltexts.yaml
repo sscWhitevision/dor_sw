@@ -1,0 +1,5 @@
+key: consentfriend.html_texts
+value: '0'
+xtype: combo-boolean
+namespace: consentfriend
+area: consentfriend

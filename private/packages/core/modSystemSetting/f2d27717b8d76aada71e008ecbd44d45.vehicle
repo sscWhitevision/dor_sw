@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0a5f11c5a52b7fb88f5f8aa41a366621',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'f2d27717b8d76aada71e008ecbd44d45',
+  'native_key' => 'emailsubject',
+  'object' => '{"key":"emailsubject","value":"Your login details","xtype":"textfield","namespace":"core","area":"authentication","editedon":null}',
+);

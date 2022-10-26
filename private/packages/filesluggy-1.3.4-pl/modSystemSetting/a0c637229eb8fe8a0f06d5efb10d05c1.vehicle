@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'filesluggy',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '54fde7df274fb1e935992020ec841b9e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a0c637229eb8fe8a0f06d5efb10d05c1',
+  'native_key' => 'filesluggy.allowed_file_types',
+  'object' => '{"key":"filesluggy.allowed_file_types","value":"jpg,jpeg,png,gif,psd,ico,bmp,svg,doc,docx,pdf","xtype":"textfield","namespace":"filesluggy","area":"fs_type","editedon":null}',
+);

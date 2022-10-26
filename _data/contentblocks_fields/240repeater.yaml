@@ -1,0 +1,14 @@
+id: 24
+parent_properties: null
+input: repeater
+name: Tabs
+description: ''
+content_desc: ''
+sortorder: 8
+category: 7
+icon: chunk_A
+template: "{\n\t\"tab\": [[+tab:jsonEncode]],\n\t\"content\": [[+content:jsonEncode]],\n\t\"link\": [[+link:jsonEncode]]\n}"
+properties: '{"wrapper_template":"[ [[+rows]] ]","row_separator":",","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"3","layout_style":"default"}'
+availability: '[]'
+layouts: '5'
+settings: '[]'

@@ -1,0 +1,20 @@
+User-agent: *
+
+
+Sitemap: http://www.ihre-domain.de/sitemap.xml
+
+
+Allow: /*.htm$
+Allow: /index.php
+
+Disallow: /assets/components/
+
+Disallow: /.cgi$
+Disallow: /.scss$
+Disallow: /.gz$
+Disallow: /.inc$
+Disallow: /.php$
+Disallow: /.php*
+Disallow: /.tpl$
+Disallow: /.wmv$
+Disallow: /*.xhtml$

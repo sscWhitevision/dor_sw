@@ -1,0 +1,13 @@
+.redactor-toolbar {
+  transition: .2s background, .2s border, .2s linear top;
+  top: 0;
+}
+.redactor-toolbar__fixed {
+  background: #fefefe;
+  box-shadow: inset 0 1px 0 #82b7ec,
+              0 1px 3px hsla(0, 0%, 0%, .2);
+  position: fixed;
+  padding: 8px 8px 4px 8px !important;
+  margin: 9px 8px !important;
+  border-radius: 3px;
+}

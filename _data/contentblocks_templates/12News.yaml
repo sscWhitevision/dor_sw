@@ -1,0 +1,8 @@
+id: 12
+name: News
+description: ''
+sortorder: 99
+category: 1
+icon: layout_1
+content: '[{"layout":6,"content":{"main":[{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":[],"field":33,"settings":[]}]},"settings":[],"parent":0,"title":""},{"layout":13,"content":{"main":[{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"field":59,"settings":{}},{"value":"","field":60,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[{"field":"context","value":"hidden"}]'

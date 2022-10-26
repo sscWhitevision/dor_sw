@@ -1,0 +1,4 @@
+key: ugm_modx_timeout
+value: '6'
+namespace: upgrademodx
+area: Download

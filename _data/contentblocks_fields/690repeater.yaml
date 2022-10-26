@@ -1,0 +1,15 @@
+id: 69
+parent_properties: null
+input: repeater
+name: Highlight-Liste
+description: ''
+content_desc: ''
+sortorder: 62
+category: 18
+icon: site-cb-contentlist
+icon_type: custom
+template: "<li class=\"boxed__item\">\n    <div class=\"boxed__headline\">[[+headline]]</div>\n    <div class=\"boxed__content\">[[+intro:nl2br]]</div>\n</li>"
+properties: '{"wrapper_template":"<ul class=\"boxed\">\n    [[+rows]]\n<\/ul>\n","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"1","layout_style":"default"}'
+availability: '[]'
+layouts: '16'
+settings: '[]'

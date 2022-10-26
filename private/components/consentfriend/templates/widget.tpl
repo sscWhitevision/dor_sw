@@ -1,0 +1,1 @@
+<div id="consentfriend-panel-widget"></div>

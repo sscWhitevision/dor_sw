@@ -1,0 +1,8 @@
+id: 14
+name: Personen
+description: ''
+category: 2
+icon: site-cb-people
+icon_type: custom
+content: '[{"layout":15,"content":{"intro":[{"value":"","field":62,"settings":{}},{"value":"","field":63,"settings":{}},{"value":"","field":65,"settings":{}}],"main":[{"chunk_properties":{},"field":64,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

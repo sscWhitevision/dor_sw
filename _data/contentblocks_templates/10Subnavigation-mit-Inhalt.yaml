@@ -1,0 +1,8 @@
+id: 10
+name: 'Subnavigation mit Inhalt'
+description: ''
+category: 1
+icon: site-cb-bigtabs
+icon_type: custom
+content: '[{"layout":11,"content":{"main":[{"value":"","field":53,"settings":{}},{"value":"","field":54,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

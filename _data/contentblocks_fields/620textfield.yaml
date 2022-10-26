@@ -1,0 +1,13 @@
+id: 62
+parent_properties: null
+name: Überschrift
+description: ''
+content_desc: ''
+sortorder: 55
+category: 17
+icon: paragraph
+template: '<h3 class="colorPrimary">[[+value]]</h3>'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: '15'
+settings: '[]'

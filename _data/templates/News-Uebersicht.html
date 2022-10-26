@@ -1,0 +1,73 @@
+id: 6
+templatename: News-Übersicht
+description: ''
+category: Admin
+icon: icon-newspaper-o
+properties: 'a:0:{}'
+
+-----
+
+[[$htmlHeader]]
+
+        [[$header]]
+        
+        [[*content]]
+        
+        <!-- filter -->
+        <div class="pt1 pb1">
+            <div class="containerBig">
+                <div class="filter">
+                    <select name="year" class="filter__select js-news-select">
+                        <option value="0" class="js-news-default-option">All News</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    
+        <!-- news -->
+        <div class="pt2 pb2">
+            <div class="containerBig">
+                <div class="news__wrapper js-news-result-wrapper">
+                    [[pdoResources?
+                        &depth=`0`
+                        &tpl=`newsTeaserTpl`
+                        &includeTVs=`newsImage,newsIntro`
+                        &processTVs=`1`
+                        &tvPrefix=``
+                        &limit=`0`
+                    ]]
+                </div>
+            </div>
+        </div>
+    
+        <!-- paginationButtons -->
+        <div class="pt0 pb4">
+            <div class="container">
+                <div class="pagination">
+                    <a class="pagination__button">
+                        «
+                    </a>
+                    <a class="pagination__button">
+                        1
+                    </a>
+                    <a class="pagination__button">
+                        2
+                    </a>
+                    <a class="pagination__button">
+                        3
+                    </a>
+                    <a class="pagination__button active">
+                        4
+                    </a>
+                    <a class="pagination__button">
+                        »
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        [[$footer]]
+        
+        [[$scripts]]
+
+[[$htmlFooter]]

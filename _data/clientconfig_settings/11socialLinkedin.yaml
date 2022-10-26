@@ -1,0 +1,9 @@
+id: 11
+key: socialLinkedin
+label: Linkedin
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 30
+value: 'https://www.linkedin.com/company/swinternational/'
+group: 3

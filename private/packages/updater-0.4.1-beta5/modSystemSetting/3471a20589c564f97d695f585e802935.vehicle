@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '807a575ef456952d7da5b300b3090e3c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3471a20589c564f97d695f585e802935',
+  'native_key' => 'updater.mui_url',
+  'object' => '{"key":"updater.mui_url","value":"https:\\/\\/updater.modx.seda.digital\\/modx.mui.json","xtype":"textfield","namespace":"updater","area":"(9) Managed Update Information","editedon":null}',
+);

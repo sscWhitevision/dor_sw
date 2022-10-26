@@ -1,0 +1,14 @@
+id: 20
+parent_properties: null
+input: image_with_title
+name: Bild
+description: ''
+content_desc: ''
+sortorder: 3
+category: 6
+icon: image
+template: "<picture>\n    <source srcset=\"[[+crops.standard.url:pThumb=`f=webp`]]\" type=\"image/webp\">\n    <source srcset=\"[[+crops.standard.url]]\" type=\"image/jpeg\"> \n    <img class=\"teaser__image\" width=\"[[+width]]\" height=\"[[+height]]\" src=\"[[+crops.standard.url]]\" alt=\"[[+pagetitle:htmlent]]\" loading=\"lazy\">\n</picture>"
+properties: '{"source":"0","directory":"bilder\/","crop_directory":"crops\/","crops":"standard:width=1200","open_crops_automatically":"1","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"standard","use_tinyrte":"0"}'
+availability: '[]'
+layouts: '4'
+settings: '[]'

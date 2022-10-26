@@ -1,0 +1,14 @@
+id: 56
+parent: 55
+parent_properties: '{"key":"image","width":"70"}'
+input: image
+name: Bild
+description: ''
+content_desc: ''
+sortorder: 49
+icon: heading
+template: '[[+crops.standard.url]]'
+properties: '{"source":"0","directory":"bilder\/","crop_directory":"crops\/","crops":"standard:width=600","open_crops_automatically":"1","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"standard"}'
+availability: '[]'
+layouts: null
+settings: '[]'

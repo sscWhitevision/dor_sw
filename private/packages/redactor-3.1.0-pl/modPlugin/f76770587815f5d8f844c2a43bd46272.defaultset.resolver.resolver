@@ -1,0 +1,31 @@
+<?php
+/** @var modX $modx */
+$modx =& $object->xpdo;
+switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+    case xPDOTransport::ACTION_INSTALL:
+    case xPDOTransport::ACTION_UPGRADE:
+
+        if (0 === $modx->getCount('redConfigurationSet')) {
+            $modx->log(modX::LOG_LEVEL_INFO, 'Creating some default configuration sets to get you started...');
+            $standard = $options['standard-set'];
+
+            $xml = simplexml_load_string($standard, 'SimpleXMLElement', LIBXML_NOCDATA);
+
+            $data = array();
+            foreach ($xml->redConfigurationSet as $setXml) {
+                $set = $modx->newObject('redConfigurationSet');
+                foreach ($setXml as $key => $value) {
+                    $set->set((string)$key, (string)$value);
+                }
+                if ($set->save()) {
+                    $modx->log(modX::LOG_LEVEL_INFO, '- Created default configuration set "' . $set->get('name') . '"');
+                }
+            }
+        }
+        else {
+            $modx->log(modX::LOG_LEVEL_INFO, 'Skipping creating default sets. If you wish to reset to the default sets, remove all configuration sets or contact support for the default exports.');
+        }
+        break;
+}
+
+return true;

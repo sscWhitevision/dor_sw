@@ -1,0 +1,8 @@
+id: 15
+name: Inhalt
+description: ''
+category: 1
+icon: site-cb-content
+icon_type: custom
+content: '[{"layout":16,"content":{"main":[{"value":"","field":66,"settings":{}},{"value":"","field":67,"settings":{}},{"rows":[{"headline":{"value":"","fieldId":"contentblocks-field-4"},"intro":{"value":"","fieldId":"contentblocks-field-5"}}],"field":69,"settings":{}},{"value":"","lang":"html","field":68,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

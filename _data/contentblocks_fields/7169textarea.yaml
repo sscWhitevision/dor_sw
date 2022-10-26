@@ -1,0 +1,14 @@
+id: 71
+parent: 69
+parent_properties: '{"key":"intro","width":"100"}'
+input: textarea
+name: Inhalt
+description: ''
+content_desc: ''
+sortorder: 64
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: null
+settings: '[]'

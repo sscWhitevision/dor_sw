@@ -1,0 +1,10 @@
+id: 167
+set: 1
+action: 'resource/*'
+name: longtitle
+description: null
+container: modx-panel-resource
+rule: fieldTitle
+value: 'Titel für Suchmaschinen'
+constraint_class: modResource
+rank: 4

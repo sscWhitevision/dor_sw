@@ -1,0 +1,8 @@
+id: 13
+name: Profil
+description: ''
+sortorder: 99
+category: 1
+icon: layout_1
+content: '[{"layout":6,"content":{"main":[{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":[],"field":33,"settings":[]}]},"settings":[],"parent":0,"title":""},{"layout":14,"content":{"main":[{"value":"<h6>Profile</h6>\n<p></p>\n<h6>Achievements and Qualifications</h6>\n<ul>\n    <li></li>\n</ul>\n<h6>Language</h6>\n<p></p>","field":61,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[{"field":"context","value":"hidden"}]'

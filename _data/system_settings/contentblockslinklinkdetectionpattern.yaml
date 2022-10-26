@@ -1,0 +1,4 @@
+key: contentblocks.link.link_detection_pattern
+value: '^((?:tel:|https?:|mailto:|\#|\[\[(\+\+|~).*\]\]).*?)$'
+namespace: contentblocks
+area: 'Input: Link'

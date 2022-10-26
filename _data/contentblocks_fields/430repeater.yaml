@@ -1,0 +1,14 @@
+id: 43
+parent_properties: null
+input: repeater
+name: Akkordeon
+description: ''
+content_desc: ''
+sortorder: 36
+category: 11
+icon: chunk_A
+template: "<li class=\"accordion js-accordion\">\n    <button class=\"accordion__button js-accordion-button\">\n        <img src=\"[[+image]]\" class=\"accordion__icon\" alt=\"[[+headline:htmlent]]\">\n        <div class=\"accordion__headline\">[[+headline]]</div>\n        <svg class=\"accordion__angle\">\n            <use xlink:href=\"[[checksumFile? &file=`img/sprite.svg#angle-down`]]\"></use>\n        </svg>\n    </button>\n    <div class=\"accordion__panel js-accordion-panel\">\n        [[+content:nl2br]]\n    </div>\n</li>"
+properties: '{"wrapper_template":"<ul class=\"js-accordion-wrapper\">\n    [[+rows]]\n<\/ul>","row_separator":"","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"1","layout_style":"default"}'
+availability: '[]'
+layouts: '9'
+settings: '[]'

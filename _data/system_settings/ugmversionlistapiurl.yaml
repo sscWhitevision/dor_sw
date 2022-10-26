@@ -1,0 +1,4 @@
+key: ugm_versionlist_api_url
+value: //api.github.com/repos/modxcms/revolution/tags
+namespace: upgrademodx
+area: Widget

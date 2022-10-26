@@ -1,0 +1,10 @@
+// Divider "button"
+@for $i from 1 through 20 {
+  a.re-divider#{$i} {
+    color: transparent !important;
+    background: transparent !important;
+    padding: 10px 7px 9px;
+    box-shadow: none;
+    user-select: none;
+  }
+}

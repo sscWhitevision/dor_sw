@@ -1,0 +1,4 @@
+key: clientsupport.ticket_system
+xtype: clientsupport-combo-ticket-systems
+namespace: clientsupport
+area: general

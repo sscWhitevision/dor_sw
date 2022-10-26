@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'contentblocks',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0abdad5e6d89fee9c863a65344168008',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '08505f7dbbe42fb6bb6a1ed0b7779aea',
+  'native_key' => 'contentblocks.defaults_allowed_inputs',
+  'object' => '{"key":"contentblocks.defaults_allowed_inputs","value":"textarea,richtext,redactor,code,blockdown","xtype":"textfield","namespace":"contentblocks","area":"Defaults","editedon":1626959559}',
+);

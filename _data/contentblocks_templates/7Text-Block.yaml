@@ -1,0 +1,8 @@
+id: 7
+name: Text-Block
+description: ''
+category: 1
+icon: site-cb-textleft
+icon_type: custom
+content: '[{"layout":8,"content":{"main":[{"value":"","field":38,"settings":{}},{"value":"","field":39,"settings":{}},{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"field":41,"settings":{}},{"value":"","field":40,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

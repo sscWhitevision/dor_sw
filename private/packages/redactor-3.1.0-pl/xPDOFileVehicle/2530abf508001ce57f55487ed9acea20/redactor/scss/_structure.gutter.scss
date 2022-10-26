@@ -1,0 +1,36 @@
+/**
+ * Blocks structure theme to separate content into distinct sections, bit like redactor v1
+ */
+.redactor-structure__gutter .redactor-styles {
+  h1, h2, h3, h4, h5, h6, div, p, figure, ol, ul, blockquote, pre {
+    padding-left: 10px;
+    &::before {
+      background: #ebebeb;
+      margin-top: 0;
+      top: -0.25rem;
+      bottom: -0.75rem;
+      left: -18px;
+      width: 20px;
+      padding: 0.5em 4px;
+      white-space: nowrap;
+    }
+  }
+
+  // Different color for some elements
+  h1, h2, h3, h4, h5, h6 {
+    &::before {
+      background: #2d86b7;
+      color: #fff;
+    }
+  }
+  div, pre {
+    &::before {
+      background: #cce2ef;
+      color: #5f5f5f;
+    }
+  }
+
+  ol, ul {
+    padding-left: 2em !important; // fix the fix as we need some more margin here
+  }
+}

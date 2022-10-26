@@ -1,0 +1,19 @@
+.redactor-option-description {
+  font-size: 0.9em;
+  color: #555;
+  padding-top: 0.5em;
+  padding-bottom: 0 !important;
+}
+
+#redactor-basic-content-container .x-form-cb-label {
+  font-weight: bold;
+}
+#redactor-configuration-sets-grid {
+  .x-grid3-cell-inner.x-grid3-col-2,
+  .x-grid3-cell-inner.x-grid3-col-3 {
+    white-space: normal;
+  }
+}
+.redactor-inline-note {
+  color: #767676;
+}

@@ -1,0 +1,15 @@
+id: 67
+parent_properties: null
+input: redactor
+name: Text-Block
+description: ''
+content_desc: ''
+sortorder: 60
+category: 18
+icon: site-cb-contenttext
+icon_type: custom
+template: "<div class=\"textLeft__paragraph\">\n    <div class=\"content\">\n        [[+value]]\n    </div>\n</div>"
+properties: '{"configuration_set":"4"}'
+availability: '[]'
+layouts: '16'
+settings: '[]'

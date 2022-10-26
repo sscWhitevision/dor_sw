@@ -1,0 +1,14 @@
+id: 64
+parent_properties: null
+input: chunk
+name: Personen
+description: ''
+content_desc: ''
+sortorder: 57
+category: 17
+icon: chunk_B
+template: '[[+value]]'
+properties: '{"chunk":"29","custom_preview":"<p style=\"text-align:center\">Hier erscheinen die Profilkarten (Pflege: People).<\/p>"}'
+availability: '[]'
+layouts: '15'
+settings: '[]'

@@ -1,0 +1,8 @@
+id: 16
+key: socialFof
+label: 'Forum of Firms'
+xtype: textfield
+description: ''
+sortorder: 70
+value: 'https://www.forumoffirms.org/'
+group: 3

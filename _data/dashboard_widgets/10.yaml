@@ -1,0 +1,10 @@
+id: 10
+name: versionx.widget.resources
+description: versionx.widget.resources.desc
+type: file
+content: '[[++core_path]]components/versionx/elements/widgets/resources.dashboardwidget.php'
+namespace: versionx
+lexicon: 'versionx:default'
+size: full
+name_trans: 'Kürzliche Ressourcenveränderungen'
+description_trans: '(Teil von VersionX) Zeigt eine Tabelle mit den letzten Änderungen aller User.'

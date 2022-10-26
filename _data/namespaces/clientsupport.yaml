@@ -1,0 +1,3 @@
+name: clientsupport
+path: '{core_path}components/clientsupport/'
+assets_path: '{assets_path}components/clientsupport/'

@@ -1,0 +1,9 @@
+id: 4
+key: contactZip
+label: Postleitzahl
+xtype: textfield
+description: ''
+is_required: 1
+sortorder: 11
+value: a
+group: 2

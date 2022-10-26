@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3ad04b1cf31f2e4f87d578cebf69c7c0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3d7c2f27c584094eb649a4a7c824c702',
+  'native_key' => 'updater.github_timeout',
+  'object' => '{"key":"updater.github_timeout","value":1500,"xtype":"textfield","namespace":"updater","area":"(7) Cache","editedon":null}',
+);

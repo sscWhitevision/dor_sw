@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'contentblocks',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '818f41d8a595a73f0e1d83154a49f1fb',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '71a83e7eb06a3fe7348065f6c78e9d6b',
+  'native_key' => 'contentblocks.color_picker_defaults',
+  'object' => '{"key":"contentblocks.color_picker_defaults","value":"#ffffff,#5f2cdd,#752c53,#3b8456,#a0563d,#5f5850,#c3c3c6,#edf1ff,#da3855,#eda541,#f5ea5a,#75b85b,#66a5d7,#817799,#e17ea5,#f4cdaf","xtype":"textfield","namespace":"contentblocks","area":"Input: Color Picker","editedon":1659513767}',
+);

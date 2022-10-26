@@ -1,0 +1,5 @@
+key: consentfriend.privacy_policy_id
+value: '23'
+xtype: numberfield
+namespace: consentfriend
+area: site

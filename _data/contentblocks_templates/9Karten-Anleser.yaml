@@ -1,0 +1,8 @@
+id: 9
+name: Karten-Anleser
+description: ''
+category: 1
+icon: site-cb-cardteaser
+icon_type: custom
+content: '[{"layout":10,"content":{"main":[{"rows":[{"image":{"url":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"fieldId":"contentblocks-field-2"},"headline":{"value":"","fieldId":"contentblocks-field-3"},"content":{"value":"","fieldId":"contentblocks-field-4"},"link":{"link":"","linkType":"link","fieldId":"contentblocks-field-5"},"button":{"value":"","fieldId":"contentblocks-field-6"}}],"field":47,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

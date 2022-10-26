@@ -1,0 +1,36 @@
+/* --------------------------------------------------------------------------- */
+/*
+/*	textLeft
+/*
+/* --------------------------------------------------------------------------- */
+.textLeft {
+	&__headline {
+		font-size: 1.77rem;
+		padding-bottom: 22px;
+	}
+
+	&__headline2 {
+		font-size: 1.20rem;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+
+	&__description {
+		font-weight: bold;
+		margin-bottom: 2em;
+	}
+
+	&__image {
+		height: 133px;
+		margin-bottom: 2em;
+		width: 323px;
+	}
+
+	&__paragraph {
+		margin-bottom: 20px;
+
+		@media (max-width:1000px) {
+			font-size: 0.8rem;
+		}
+	}
+}

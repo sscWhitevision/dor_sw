@@ -1,0 +1,71 @@
+.color-picker-modal {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:15px;
+
+  .half {
+    width: 50%;
+  }
+  .flex {
+    display:flex;
+  }
+  .column {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .selected-color {
+    width:60px;
+    height:60px;
+    border-radius:4px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.20);
+  }
+  .readout {
+    padding-left: 16px;
+  }
+  .values-wrap {
+    margin-top: 2em;
+    font-family: monospace;
+  }
+  .swatchGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 28px);
+    grid-template-rows: repeat(2, 28px);
+    grid-gap: 6px;
+    margin-bottom: 2em;
+
+    .swatch {
+      border-radius: 4px;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+  }
+  .color-picker-modal-buttons {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+
+    button.select {
+      padding: 6px 12px;
+      color: #000;
+      background-color: #fff;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+

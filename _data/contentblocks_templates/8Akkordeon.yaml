@@ -1,0 +1,8 @@
+id: 8
+name: Akkordeon
+description: ''
+category: 1
+icon: site-cb-accordion
+icon_type: custom
+content: '[{"layout":9,"content":{"main":[{"value":"","field":42,"settings":{}},{"rows":[{"image":{"url":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"fieldId":"contentblocks-field-10"},"headline":{"value":"","fieldId":"contentblocks-field-11"},"content":{"value":"","fieldId":"contentblocks-field-12"}}],"field":43,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

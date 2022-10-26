@@ -1,0 +1,13 @@
+id: 70
+parent: 69
+parent_properties: '{"key":"headline","width":"100"}'
+name: Überschrift
+description: ''
+content_desc: ''
+sortorder: 63
+icon: paragraph
+template: '[[+value]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: null
+settings: '[]'

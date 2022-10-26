@@ -1,0 +1,4 @@
+key: phpthumbof.cache_url
+value: /
+namespace: phpthumbof
+area: 'Cache [common]'

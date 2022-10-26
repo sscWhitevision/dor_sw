@@ -1,0 +1,14 @@
+id: 2
+parent_properties: null
+input: repeater
+name: Slides
+description: ''
+content_desc: ''
+sortorder: 1
+category: 4
+icon: chunk_A
+template: "{\n\t\"image\": [[+image:jsonEncode]],\n\t\"headline\": [[+headline:jsonEncode]],\n\t\"link1\": [[+link1:jsonEncode]],\n\t\"button1\": [[+button1:jsonEncode]],\n\t\"link2\": [[+link2:jsonEncode]],\n\t\"button2\": [[+button2:jsonEncode]],\n\t\"subTitle\": [[+subTitle:jsonEncode]]\n}"
+properties: '{"wrapper_template":"[ [[+rows]] ]","row_separator":",","max_items":"0","min_items":"0","add_first_item":"true","manager_columns":"3","layout_style":"default"}'
+availability: '[]'
+layouts: '2'
+settings: '[]'

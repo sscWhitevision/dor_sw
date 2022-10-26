@@ -1,0 +1,149 @@
+id: 9
+source: 2
+name: header
+description: ''
+category: Template
+properties: 'a:0:{}'
+
+-----
+
+<!-- header -->
+<header class="header">
+    <div class="background--secondary">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__social">
+                    <a href="[[++socialLinkedin]]" class="header__socialButton">
+                        <svg class="header__socialIcon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#linkedin`]]"></use>
+                        </svg>
+                    </a>
+                    <a href="[[++socialYoutube]]" target="_blank" class="header__socialButton">
+                        <svg class="header__socialIcon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#youtube`]]"></use>
+                        </svg>
+                    </a>
+                    <a href="[[++socialFacebook]]" target="_blank" class="header__socialButton">
+                        <svg class="header__socialIcon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#facebook`]]"></use>
+                        </svg>
+                    </a>
+                    <a href="[[++socialTwitter]]" target="_blank" class="header__socialButton">
+                        <svg class="header__socialIcon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#twitter`]]"></use>
+                        </svg>
+                    </a>
+                    <div>
+                        <svg class="header__topLogo">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#catalyst-for-success`]]"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__language js-header-language-wrapper">
+                    <div class="header__languageButton ">
+                        <svg class="header__languageIcon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#globe-icon`]]"></use>
+                        </svg>
+                        <span>International</span>
+                    </div>
+                    <div class="header__dropdown">
+                        <div class="header__dropdownSearch">
+                            <input type="input" class="header__dropdownInput js-header-language-input"
+                                placeholder="Type location">
+                            <a class="header__dropdownSearchButton" href="#">
+                                <svg class="header__dropdownSearchIcon">
+                                    <use xlink:href="[[checksumFile? &file=`img/sprite.svg#search`]]"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="header__dropdownList js-header-language-list">
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">International</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Australia</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Chile</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">China</a>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Egypt</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Germany</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Hong Kong</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">India </a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Indonesia</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Japan</a>
+                            </li>
+                            <li class="header__dropdownItem js-header-language-listitem">
+                                <a href="">Taiwan</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__search">
+                    <input type="text" name="search" class="header__searchInput" placeholder="search...">
+                    <a class="header__searchButton" href="#">
+                        <svg class="header__searchIcon">
+                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#search`]]"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header__bottom">
+            <div class="header__bottomLogo">
+                <a href="[[~[[++site_start]]]]">
+                    <svg class="header__bottomIcon">
+                        <use xlink:href="[[checksumFile? &file=`img/sprite.svg#logo`]]"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="header__nav">
+                [[pdoMenu?
+                    &parents=`0`
+                    &level=`1`
+                ]]
+            </nav>
+            <div class="header__navButton js-navbutton">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="js-nav nav">
+            <div class="nav__search">
+                <input type="text" name="search" class="nav__input" placeholder="Search">
+                <a class="nav__button" href="#">
+                    <svg class="nav__searchIcon">
+                        <use xlink:href="[[checksumFile? &file=`img/sprite.svg#search`]]"></use>
+                    </svg>
+                </a>
+            </div>
+            [[pdoMenu?
+                &parents=`0`
+                &level=`1`
+            ]]
+            <a class="buttonText" href="">
+                <svg class="buttonText__icon">
+                    <use xlink:href="[[checksumFile? &file=`img/sprite.svg#brand-icon`]]"></use>
+                </svg>
+                <span>Catalyst for succes</span>
+            </a>
+        </nav>
+    </div>
+</header>

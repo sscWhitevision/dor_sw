@@ -1,0 +1,143 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'c8fe6772517497ec559e02205cf3d091' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '296c2cd9879a066bf4793ab631f38a54' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => '90310aaa3fe995ec28cd6cd4a15fc570',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => '40d265af2bccdd50bb9ad05bfae7574b',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"ClientSupport","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch ($modx->event->name) {\\n    case \'OnManagerPageBeforeRender\':\\n        $clientsupport = $modx->getService(\'clientsupport\', \'ClientSupport\', $modx->getOption(\'clientsupport.core_path\', null, $modx->getOption(\'core_path\').\'components\\/clientsupport\\/\').\'model\\/clientsupport\\/\', array());\\n        if (!($clientsupport instanceof ClientSupport)) {\\n            return;\\n        }\\n        $assetsUrl = $modx->getOption(\'clientsupport.assets_url\', null, $modx->getOption(\'assets_url\', null, MODX_ASSETS_URL).\'components\\/clientsupport\\/\');\\n\\n        if ($modx->user) {\\n            $name = $modx->user->get(\'username\');\\n            $email = \'\';\\n            $profile = $modx->user->getOne(\'Profile\');\\n            if ($profile) {\\n                $name = $profile->get(\'fullname\');\\n                $email = $profile->get(\'email\');\\n            }\\n        }\\n        $modx->regClientStartupHTMLBlock(\'<script type=\\"text\\/javascript\\">\\n        Ext.onReady(function() {\\n            ClientSupport.config = \'.$modx->toJSON($clientsupport->options).\';\\n            ClientSupport.config.user_name = \\"\'.$name.\'\\";\\n            ClientSupport.config.user_email = \\"\'.$email.\'\\";\\n            ClientSupport.config.connector_url = \\"\'.$clientsupport->options[\'connectorUrl\'].\'\\";\\n            ClientSupport.config.ticket_system = \\"\'.$modx->getOption(\'clientsupport.ticket_system\', null, \'\').\'\\";\\n            ClientSupport.config.custom_icon = \\"\'.$modx->getOption(\'clientsupport.custom_icon\', null, \'\').\'\\";\\n            \\n            if (ClientSupport.config.ticket_system.length) {\\n                Ext.get(\\"limenu-clientsupport.menu\\")\\n                    .addClass(\\"brand-custom brand-\\" + ClientSupport.config.ticket_system)\\n            } else if (ClientSupport.config.custom_icon.length) {\\n                Ext.get(\\"limenu-clientsupport.menu\\")\\n                    .addClass(\\"icon-custom\\")\\n                    .setStyle(\\"background-image\\", \\"url(\\"+MODx.config.base_url+ClientSupport.config.custom_icon+\\")\\");\\n            } else {\\n                Ext.get(\\"limenu-clientsupport.menu\\").addClass(\\"brand-default\\");\\n            }\\n        });\\n        <\\/script>\');\\n        $modx->regClientCSS($assetsUrl.\'css\\/mgr.css\');\\n        \\/\\/ Add custom styling for modx3\\n        $version = $modx->getVersionData();\\n        if ($version[\'version\'] == 3) {\\n            $modx->regClientCSS($assetsUrl.\'css\\/mgr-modx3.css\');\\n        }\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/mgr\\/clientsupport.js\');\\n\\n        $modx->controller->addLexiconTopic(\'clientsupport:default\');\\n        break;\\n}\\nreturn;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"switch ($modx->event->name) {\\n    case \'OnManagerPageBeforeRender\':\\n        $clientsupport = $modx->getService(\'clientsupport\', \'ClientSupport\', $modx->getOption(\'clientsupport.core_path\', null, $modx->getOption(\'core_path\').\'components\\/clientsupport\\/\').\'model\\/clientsupport\\/\', array());\\n        if (!($clientsupport instanceof ClientSupport)) {\\n            return;\\n        }\\n        $assetsUrl = $modx->getOption(\'clientsupport.assets_url\', null, $modx->getOption(\'assets_url\', null, MODX_ASSETS_URL).\'components\\/clientsupport\\/\');\\n\\n        if ($modx->user) {\\n            $name = $modx->user->get(\'username\');\\n            $email = \'\';\\n            $profile = $modx->user->getOne(\'Profile\');\\n            if ($profile) {\\n                $name = $profile->get(\'fullname\');\\n                $email = $profile->get(\'email\');\\n            }\\n        }\\n        $modx->regClientStartupHTMLBlock(\'<script type=\\"text\\/javascript\\">\\n        Ext.onReady(function() {\\n            ClientSupport.config = \'.$modx->toJSON($clientsupport->options).\';\\n            ClientSupport.config.user_name = \\"\'.$name.\'\\";\\n            ClientSupport.config.user_email = \\"\'.$email.\'\\";\\n            ClientSupport.config.connector_url = \\"\'.$clientsupport->options[\'connectorUrl\'].\'\\";\\n            ClientSupport.config.ticket_system = \\"\'.$modx->getOption(\'clientsupport.ticket_system\', null, \'\').\'\\";\\n            ClientSupport.config.custom_icon = \\"\'.$modx->getOption(\'clientsupport.custom_icon\', null, \'\').\'\\";\\n            \\n            if (ClientSupport.config.ticket_system.length) {\\n                Ext.get(\\"limenu-clientsupport.menu\\")\\n                    .addClass(\\"brand-custom brand-\\" + ClientSupport.config.ticket_system)\\n            } else if (ClientSupport.config.custom_icon.length) {\\n                Ext.get(\\"limenu-clientsupport.menu\\")\\n                    .addClass(\\"icon-custom\\")\\n                    .setStyle(\\"background-image\\", \\"url(\\"+MODx.config.base_url+ClientSupport.config.custom_icon+\\")\\");\\n            } else {\\n                Ext.get(\\"limenu-clientsupport.menu\\").addClass(\\"brand-default\\");\\n            }\\n        });\\n        <\\/script>\');\\n        $modx->regClientCSS($assetsUrl.\'css\\/mgr.css\');\\n        \\/\\/ Add custom styling for modx3\\n        $version = $modx->getVersionData();\\n        if ($version[\'version\'] == 3) {\\n            $modx->regClientCSS($assetsUrl.\'css\\/mgr-modx3.css\');\\n        }\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/mgr\\/clientsupport.js\');\\n\\n        $modx->controller->addLexiconTopic(\'clientsupport:default\');\\n        break;\\n}\\nreturn;"}',
+        'guid' => 'fb0c14bedb25403af4cf8656e8f03533',
+        'native_key' => NULL,
+        'signature' => '12a46a9dd737c767afdb6374ee84dbf9',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'clientsupport',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"clientsupport-1.1.0-pl\\/modCategory\\/cc3bb78296ca0cb4017dfad575f57345\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"clientsupport"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"clientsupport-1.1.0-pl\\/modCategory\\/cc3bb78296ca0cb4017dfad575f57345\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"clientsupport"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"clientsupport-1.1.0-pl\\/modCategory\\/cc3bb78296ca0cb4017dfad575f57345.setupoptions.resolver.resolver","type":"php","name":"setupoptions.resolver"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"clientsupport-1.1.0-pl\\/modCategory\\/cc3bb78296ca0cb4017dfad575f57345.stercextra.resolver.resolver","type":"php","name":"stercextra.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '11a5ce52f5e8e7758fd57627842cee88',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'cc3bb78296ca0cb4017dfad575f57345',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"ClientSupport","rank":0}',
+);

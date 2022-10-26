@@ -1,0 +1,23 @@
+id: 22
+source: 2
+name: sliderImageTpl
+description: ''
+category: Hero-Slider
+properties: 'a:0:{}'
+
+-----
+
+<div class="slider__hero">
+    [[+image]]
+    <div class="container">
+        <div class="slider__content">
+            <h2 class="slider__headline">
+                [[+headline]]
+            </h2>
+            <div class="slider__buttons">
+                [[+link1:notempty=`<a href="[[+link1]]" class="button">[[+button1]]</a>`]]
+                [[+link2:notempty=`<a href="[[+link2]]" class="button">[[+button2]]</a>`]]
+            </div>
+        </div>
+    </div>
+</div>

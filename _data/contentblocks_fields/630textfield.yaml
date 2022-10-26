@@ -1,0 +1,13 @@
+id: 63
+parent_properties: null
+name: 'Kleine Überschrift'
+description: ''
+content_desc: ''
+sortorder: 56
+category: 17
+icon: paragraph
+template: '<h4 class="colorSecondary">[[+value]]</h4>'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: '15'
+settings: '[]'

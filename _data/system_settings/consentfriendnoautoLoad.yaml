@@ -1,0 +1,5 @@
+key: consentfriend.no_autoLoad
+value: '0'
+xtype: combo-boolean
+namespace: consentfriend
+area: consentfriend

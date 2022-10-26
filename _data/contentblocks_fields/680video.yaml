@@ -1,0 +1,15 @@
+id: 68
+parent_properties: null
+input: video
+name: Video
+description: ''
+content_desc: ''
+sortorder: 61
+category: 18
+icon: site-cb-contentvideo
+icon_type: custom
+template: "<div class=\"video\">\n    <iframe class=\"video__responsive\"\n        src=\"//www.youtube.com/embed/[[+value]]\">\n    </iframe>\n</div>\n"
+properties: '{"available_languages":"html=HTML,javascript=JavaScript,css=CSS,php=PHP","default_language":"html","entities":"0"}'
+availability: '[]'
+layouts: '16'
+settings: '[]'

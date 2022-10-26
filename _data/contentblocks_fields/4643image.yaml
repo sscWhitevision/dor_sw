@@ -1,0 +1,14 @@
+id: 46
+parent: 43
+parent_properties: '{"key":"image","width":"15"}'
+input: image
+name: Icon
+description: ''
+content_desc: ''
+sortorder: 36
+icon: heading
+template: '[[+url]]'
+properties: '{"source":"0","directory":"bilder\/","crop_directory":"crops\/","crops":"","open_crops_automatically":"false","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":""}'
+availability: '[]'
+layouts: null
+settings: '[]'

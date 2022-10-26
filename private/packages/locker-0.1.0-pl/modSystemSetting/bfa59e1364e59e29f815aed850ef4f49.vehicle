@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'locker',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1e450fdc732fb3bd7da41515049159c8',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'bfa59e1364e59e29f815aed850ef4f49',
+  'native_key' => 'locker.locked',
+  'object' => '{"key":"locker.locked","value":false,"xtype":"combo-boolean","namespace":"locker","area":"","editedon":null}',
+);

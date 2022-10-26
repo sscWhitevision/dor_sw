@@ -1,0 +1,14 @@
+id: 31
+parent: 24
+parent_properties: '{"key":"content","width":"100"}'
+input: textarea
+name: Introtext
+description: ''
+content_desc: ''
+sortorder: 2
+icon: paragraph
+template: '[[+value:nl2br]]'
+properties: '{"use_tinyrte":"false"}'
+availability: '[]'
+layouts: null
+settings: '[]'

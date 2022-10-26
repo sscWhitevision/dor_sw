@@ -1,0 +1,5 @@
+key: ugm_force_pcl_zip
+value: '0'
+xtype: combo-boolean
+namespace: upgrademodx
+area: Download

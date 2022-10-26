@@ -1,0 +1,5 @@
+key: ugm_hide_when_no_upgrade
+value: '0'
+xtype: combo-boolean
+namespace: upgrademodx
+area: Widget

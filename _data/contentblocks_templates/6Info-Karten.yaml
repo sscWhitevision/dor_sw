@@ -1,0 +1,8 @@
+id: 6
+name: Info-Karten
+description: ''
+category: 1
+icon: site-cb-squarecards
+icon_type: custom
+content: '[{"layout":7,"content":{"main":[{"value":"","field":34,"settings":{}},{"value":"","field":35,"settings":{}}],"cards":[{"rows":[{"image":{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"fieldId":"contentblocks-field-8"}},{"image":{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"fieldId":"contentblocks-field-9"}}],"field":36,"settings":{}}]},"settings":[],"parent":0,"title":""}]'
+availability: '[]'

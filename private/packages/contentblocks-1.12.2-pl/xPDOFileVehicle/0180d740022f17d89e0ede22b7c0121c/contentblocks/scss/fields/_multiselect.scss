@@ -1,0 +1,48 @@
+.contentblocks-field-multi-select, .contentblocks-setting-multi_select {
+  .select2-container {
+    .select2-selection--multiple {
+      border-radius: 2px;
+      background: #fbfbfb url("../img/trigger.png") no-repeat center right;
+      border: 1px solid #ccc;
+      min-height: 33px;
+      height: inherit;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .contentblocks-multi-select .select2-search__field {
+      min-height: 18px;
+    }
+  }
+
+  .select2-container--default.select2-container--focus {
+    .contentblocks-multi-select.select2-selection--multiple {
+      border-color: rgb(63, 142, 185) !important;
+    }
+  }
+
+  .select2-container--default {
+    color: #000;
+    .contentblocks-multi-select {
+      padding-bottom: 0;
+    }
+    .select2-selection__choice {
+      background-color: #fff;
+      line-height: 22px;
+      height: 22px;
+      .select2-selection__choice__display {
+        padding-left: 5px;
+      }
+    }
+    .select2-results__option--highlighted.select2-results__option--selectable {
+      background-color: #3f8eb9 !important;
+    }
+  }
+}
+
+// This needs to be outside wrapper ContentBlocks selectors, as it's attached to the page "body".
+.select2-container.select2-container--default.select2-container--open {
+  .contentblocks-multi-select-dropdown.select2-dropdown.select2-dropdown--below,
+  .contentblocks-multi-select-dropdown.select2-dropdown.select2-dropdown--above {
+    z-index: 10301 !important;
+  }
+}

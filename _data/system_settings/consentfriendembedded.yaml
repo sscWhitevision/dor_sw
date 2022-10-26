@@ -1,0 +1,5 @@
+key: consentfriend.embedded
+value: '0'
+xtype: combo-boolean
+namespace: consentfriend
+area: consentfriend

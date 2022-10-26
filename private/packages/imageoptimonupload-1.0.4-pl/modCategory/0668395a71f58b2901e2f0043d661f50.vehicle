@@ -1,0 +1,133 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '3b8e8bce515fe8ce7ab15f83e389acb1' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'e408030fd0d53e997351326f9b6ba320' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnFileManagerUpload","priority":0,"propertyset":0}',
+              'guid' => '6cc667dab86e26cd7c085bed10656666',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnFileManagerUpload',
+              ),
+              'signature' => '442810635378495c892ceb17c9890362',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"imageOptimOnUpload","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/*\\n * imageoptimonupload\\n *\\n *\\n * @author Jan D\\u00e4hne, Quadro <jan.daehne@quadro-system.de>\\n *\\/\\n\\nif ($modx->event->name != \'OnFileManagerUpload\') return;\\n\\n\\/\\/ load Class\\n$path = $modx->getOption(\'imageoptimonupload.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/imageoptimonupload\\/\');\\n$path .= \'model\\/imageoptimonupload\\/\';\\n$clientConfig = $modx->getService(\'imageoptimonupload\',\'ImageOptimOnUpload\', $path);\\n\\n\\/\\/ configs \\/ settings\\n$fileTypeArray = explode(\\",\\", $modx->getOption(\'imageoptimonupload.filetypes\'));\\n\\n\\/\\/ prefix fileTypeArray values with \\"image\\/\\" to \\"image\\/jpg etc.\\"\\narray_walk($fileTypeArray, function(&$value, $key) { $value = \'image\\/\' . $value; } );\\n\\n\\/\\/ get the file\\n$file = reset($files);\\n\\n\\/\\/ abort on error\\nif ($file[\'error\']  !=  0) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'imageOptimOnUpload: $file[\\"error\\"] occured.\');\\n    return;\\n}\\n\\n\\/\\/ get upload directory from OnFileManagerUpload event\\n$directory = ltrim($modx->event->params[\'directory\'], \'\\/\');\\n\\n\\/\\/ get filename\\n$fileName = $file[\'name\'];\\n\\n\\/\\/ get modMediaSource baseUrl\\n$mediaSourceBaseUrl = ltrim($source->getBaseUrl(), \'\\/\');\\n$mediaSourceBasePath = $source->getBasePath();\\n\\n\\/\\/ create Full-size master image URL\\n$sourceImageUrl = MODX_SITE_URL . $mediaSourceBaseUrl . $directory . $fileName;\\n$sourceImagePath = $mediaSourceBasePath . $directory . $fileName;\\n\\n\\/\\/ create target image path\\n$targetImagePath = $mediaSourceBasePath . $directory . $fileName;\\n\\n\\/\\/ upload image if filetype is in list\\nif (in_array($file[\'type\'], $fileTypeArray)) {\\n\\n    \\/\\/ optimize image\\n    $image = new ImageOptimOnUpload($modx);\\n    $image->optim($sourceImageUrl, $sourceImagePath, $targetImagePath);\\n}\\n\\nreturn true;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/*\\n * imageoptimonupload\\n *\\n *\\n * @author Jan D\\u00e4hne, Quadro <jan.daehne@quadro-system.de>\\n *\\/\\n\\nif ($modx->event->name != \'OnFileManagerUpload\') return;\\n\\n\\/\\/ load Class\\n$path = $modx->getOption(\'imageoptimonupload.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/imageoptimonupload\\/\');\\n$path .= \'model\\/imageoptimonupload\\/\';\\n$clientConfig = $modx->getService(\'imageoptimonupload\',\'ImageOptimOnUpload\', $path);\\n\\n\\/\\/ configs \\/ settings\\n$fileTypeArray = explode(\\",\\", $modx->getOption(\'imageoptimonupload.filetypes\'));\\n\\n\\/\\/ prefix fileTypeArray values with \\"image\\/\\" to \\"image\\/jpg etc.\\"\\narray_walk($fileTypeArray, function(&$value, $key) { $value = \'image\\/\' . $value; } );\\n\\n\\/\\/ get the file\\n$file = reset($files);\\n\\n\\/\\/ abort on error\\nif ($file[\'error\']  !=  0) {\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'imageOptimOnUpload: $file[\\"error\\"] occured.\');\\n    return;\\n}\\n\\n\\/\\/ get upload directory from OnFileManagerUpload event\\n$directory = ltrim($modx->event->params[\'directory\'], \'\\/\');\\n\\n\\/\\/ get filename\\n$fileName = $file[\'name\'];\\n\\n\\/\\/ get modMediaSource baseUrl\\n$mediaSourceBaseUrl = ltrim($source->getBaseUrl(), \'\\/\');\\n$mediaSourceBasePath = $source->getBasePath();\\n\\n\\/\\/ create Full-size master image URL\\n$sourceImageUrl = MODX_SITE_URL . $mediaSourceBaseUrl . $directory . $fileName;\\n$sourceImagePath = $mediaSourceBasePath . $directory . $fileName;\\n\\n\\/\\/ create target image path\\n$targetImagePath = $mediaSourceBasePath . $directory . $fileName;\\n\\n\\/\\/ upload image if filetype is in list\\nif (in_array($file[\'type\'], $fileTypeArray)) {\\n\\n    \\/\\/ optimize image\\n    $image = new ImageOptimOnUpload($modx);\\n    $image->optim($sourceImageUrl, $sourceImagePath, $targetImagePath);\\n}\\n\\nreturn true;"}',
+        'guid' => '4cc7e43e6244da7dff81a907bfafe520',
+        'native_key' => NULL,
+        'signature' => 'ecd4b3cbcace8b2d93d1e71ec2497fd4',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'imageoptimonupload',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"imageoptimonupload-1.0.4-pl\\/modCategory\\/0668395a71f58b2901e2f0043d661f50\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"imageoptimonupload"}',
+    ),
+    1 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"imageoptimonupload-1.0.4-pl\\/modCategory\\/0668395a71f58b2901e2f0043d661f50.resolve.setupoptions.resolver","type":"php","name":"resolve.setupoptions"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '52b84ff924c0aca4ac6da14e33e6b745',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '0668395a71f58b2901e2f0043d661f50',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"ImageOptimOnUpload","rank":0}',
+);

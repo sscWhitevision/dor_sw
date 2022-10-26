@@ -1,0 +1,13 @@
+id: 11
+name: 'Subnavigation mit Inhalt'
+description: ''
+sortorder: 11
+category: 13
+icon: site-cb-bigtabs
+icon_type: custom
+columns: '[{"reference":"main","width":"100"}]'
+template: "<!-- bigTabs -->\n<div class=\"pt[[+paddingTop]] pb[[+paddingBottom]]\" [[+anchor:setModuleId]]>\n    <div class=\"bigTabs__container\">\n        [[pdoMenu?\n            &parents=`[[UltimateParent]]`\n            &level=`1`\n            &tplOuter=`@INLINE <ul class=\"bigTabs\">[[+wrapper]]</ul>`\n        ]]\n        \n        [[pdoField? &id=`[[*parent]]` &field=`template` &toPlaceholder=`parentTemplate`]]\n\n        [[pdoMenu?\n            &parents=`[[+parentTemplate:is=`4`:then=`[[*id]]`:else=`[[*parent]]`]]`\n            &tplOuter=`@INLINE <ul class=\"bigTabs__linkBox [[+level]]\">[[+wrapper]]</ul>`\n            &toPlaceholder=`innerNav`\n        ]]\n        \n        <div class=\"bigTabs__contentContainer\">\n            [[+innerNav:is=``:then=`\n            <div class=\"bigTabs__content\">\n                <div class=\"content\">\n                    [[+main]]\n                </div>\n            </div>\n            `:else=`\n            <div class=\"bigTabs__content bigTabs__content--noWidth js-tab-content\">\n                <div class=\"bigTabs__flexContent\">\n                    [[+innerNav]]\n                    <div class=\"content\">\n                        [[+main]]\n                    </div>\n                </div>\n            </div>\n            `]]\n        </div>\n        \n    </div>\n</div>"
+availability: '[{"field":"context","value":"hidden"}]'
+times_per_page: 0
+layout_only_nested: '0'
+settings: '[{"reference":"paddingTop","title":"Abstand Oben","fieldtype":"select","default_value":"2","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"0==kein Abstand\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10","field_is_exposed":"modal"},{"reference":"paddingBottom","title":"Abstand Unten","fieldtype":"select","default_value":"0","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"0==kein Abstand\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10","field_is_exposed":"modal"},{"reference":"anchor","title":"Menü-Titel / Modul-ID","fieldtype":"textfield","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"modal"}]'

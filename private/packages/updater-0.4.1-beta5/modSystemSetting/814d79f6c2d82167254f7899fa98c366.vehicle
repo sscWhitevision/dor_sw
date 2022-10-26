@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'updater',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c6bcaa663ee2fac563caa39997c458c3',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '814d79f6c2d82167254f7899fa98c366',
+  'native_key' => 'updater.cache_expires_packages',
+  'object' => '{"key":"updater.cache_expires_packages","value":43200,"xtype":"textfield","namespace":"updater","area":"(7) Cache","editedon":null}',
+);

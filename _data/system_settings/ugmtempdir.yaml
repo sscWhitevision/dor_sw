@@ -1,0 +1,4 @@
+key: ugm_temp_dir
+value: '{base_path}ugmtemp/'
+namespace: upgrademodx
+area: Widget
