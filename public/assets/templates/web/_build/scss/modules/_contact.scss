@@ -17,10 +17,9 @@
 	}
 
 	&__info {
-		align-items: top;
 		display: flex;
 		font-size: 0.8rem;
-		 
+
 
 		&:not(:last-child) {
 			margin-bottom: 8px;
@@ -31,7 +30,7 @@
 		fill: $colorPrimary;
 		height: 1rem;
 		margin-right: 6px;
-		margin-top: 6px;
+		margin-top: 1px;
 		width: 1rem;
 	}
 
