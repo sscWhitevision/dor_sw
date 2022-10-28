@@ -1,0 +1,30 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'consentfriend',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b99e80f3d8b6440767e1952ca241f171',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '50a4255a8a25cdc4ce8dea38ac910b0a',
+  'native_key' => 'consentfriend.menu_home',
+  'object' => '{"text":"consentfriend.menu_home","parent":"components","action":"home","description":"consentfriend.menu_home_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"consentfriend"}',
+);

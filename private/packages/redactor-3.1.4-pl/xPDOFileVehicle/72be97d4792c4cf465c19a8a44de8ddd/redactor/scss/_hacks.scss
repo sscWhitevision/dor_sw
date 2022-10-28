@@ -1,0 +1,35 @@
+/**
+ * Due to ExtJS prototype pollution on the Array object (it adds a remove() and in_array() method), the formatting
+ * dropdown will show 2 additional items it shouldn't. It isn't exactly clear to me where this pollution is making
+ * its way into the formatting array, but it is really easy to hide them with CSS so that at least gets rid of the
+ * immediate problem.
+ */
+a.redactor-dropdown-item-remove, a.redactor-dropdown-item-in_array {
+  display: none !important;
+}
+
+/**
+ * Make sure that bold/italic/underline/strikethrough are properly formatted when text labels are on.
+ */
+.redactor-text-labeled-on {
+  .re-bold {
+    font-weight: bold;
+  }
+  .re-italic {
+    font-style: italic;
+  }
+  .re-underline {
+    text-decoration: underline;
+  }
+  .re-deleted {
+    text-decoration: line-through;
+  }
+}
+
+/**
+ * ExtJS for some incomprehensible reason defines a font-weight for `em` tags. This causes <em> within <strong> to
+ * only appear as italic, not also as bold. This resolves that.
+ */
+.redactor-styles em {
+  font-weight: inherit;
+}

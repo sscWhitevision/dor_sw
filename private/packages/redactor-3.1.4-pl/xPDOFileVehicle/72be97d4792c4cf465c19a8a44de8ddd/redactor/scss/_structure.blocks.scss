@@ -1,0 +1,48 @@
+
+/**
+ * Blocks structure theme to separate content into distinct sections, bit like redactor v1
+ */
+.redactor-structure__blocks .redactor-styles {
+  h1, h2, h3, h4, h5, h6, div, p, figure, ol, ul, blockquote, pre {
+    position: relative;
+    background: #fff;
+    padding: 5px 5px 5px;
+    border: 1px dashed #ccc;
+
+    &::before {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      font-size: 11px;
+      color: #8d8d8d;
+      line-height: 11px;
+      width: auto;
+      margin-top: 0;
+      background: #fff;
+      padding: 0 5px;
+      font-style: normal; // reset italics and such
+    }
+  }
+
+  td > div {
+    border: 0;
+  }
+
+  // Use longer descriptions as we have room now
+  h1:before  { content: "header 1";  }
+  h2:before  { content: "header 2";  }
+  h3:before  { content: "header 3";  }
+  h4:before  { content: "header 4";  }
+  h5:before  { content: "header 5";  }
+  h6:before  { content: "header 6";  }
+  div:before { content: "div"; }
+  p::before { content: 'paragraph'; }
+  figure:before { content: 'figure'; }
+  figure[data-redactor-type=table]:before {
+    content: 'table';
+  }
+  ol:before { content: 'ordered list'; }
+  ul:before { content: 'unordered list'; }
+  blockquote:before { content: 'quote'; }
+  pre:before { content: 'code'; }
+}

@@ -1,0 +1,350 @@
+<?php
+
+$defaults = array(
+    'layouts' => array(
+        'foundation5' => array(
+            array(
+                'name' => 'Full Width',
+                'description' => 'A full width (100%) layout, single column.',
+                'sortorder' => 0,
+                'icon' => 'layout_1',
+                'columns' => '[{"reference":"main","width":"100"}]',
+                'template' => '[[+main]]'
+            ),
+            array(
+                'name' => 'Single Column',
+                'description' => 'A single column, with a defined max width.',
+                'sortorder' => 1,
+                'icon' => 'layout_1',
+                'columns' => '[{"reference":"main","width":"100"}]',
+                'template' => '<div class="row">
+  <div class="large-12 columns">
+    [[+main]]
+  </div>
+</div>'
+            ),
+            array(
+                'name' => 'Content + Sidebar',
+                'description' => 'Combination of a main content area (65%) and a sidebar on the right (35%)',
+                'sortorder' => 2,
+                'icon' => 'layout_2-1',
+                'columns' => '[{"reference":"main","width":"65"},{"reference":"sidebar","width":"35"}]',
+                'template' => '<div class="row">
+  <div class="large-7 columns">
+    [[+main]]
+  </div>
+  <div class="large-5 columns">
+    [[+sidebar]]
+  </div>
+</div>'
+            ),
+            array(
+                'name' => 'Sidebar + Content',
+                'description' => 'Combination of a left sidebar (35%) and a main content area (65%)',
+                'sortorder' => 3,
+                'icon' => 'layout_1-2',
+                'columns' => '[{"reference":"sidebar","width":"35"},{"reference":"main","width":"65"}]',
+                'template' => '<div class="row">
+  <div class="large-5 columns">
+    [[+sidebar]]
+  </div>
+  <div class="large-7 columns">
+    [[+main]]
+  </div>
+</div>'
+            ),
+            array(
+                'name' => '4-Columns',
+                'description' => 'Four equally wide columns, ideal for product grids.',
+                'sortorder' => 4,
+                'icon' => 'layout_1-1-1-1',
+                'columns' => '[{"reference":"col_1","width":"25"},{"reference":"col_2","width":"25"},{"reference":"col_3","width":"25"},{"reference":"col_4","width":"25"}]',
+                'template' => '<div class="row">
+  <div class="large-3 columns">
+    [[+col_1]]
+  </div>
+  <div class="large-3 columns">
+    [[+col_2]]
+  </div>
+  <div class="large-3 columns">
+    [[+col_3]]
+  </div>
+  <div class="large-3 columns">
+    [[+col_4]]
+  </div>
+</div>'
+            ),
+        ),
+        'bootstrap3' => array(
+            array(
+                'name' => 'Full Width',
+                'description' => 'A full width (100%) layout, single column.',
+                'sortorder' => 0,
+                'icon' => 'layout_1',
+                'columns' => '[{"reference":"main","width":"100"}]',
+                'template' => '[[+main]]'
+            ),
+            array(
+                'name' => 'Single Column',
+                'description' => 'A single column, with a defined max width.',
+                'sortorder' => 1,
+                'icon' => 'layout_1',
+                'columns' => '[{"reference":"main","width":"100"}]',
+                'template' => '<div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        [[+main]]
+        </div>
+        </div>'
+            ),
+            array(
+                'name' => 'Content + Sidebar',
+                'description' => 'Combination of a main content area (65%) and a sidebar on the right (35%)',
+                'sortorder' => 2,
+                'icon' => 'layout_2-1',
+                'columns' => '[{"reference":"main","width":"65"},{"reference":"sidebar","width":"35"}]',
+                'template' => '<div class="row">
+        <div class="col-lg-7">
+        [[+main]]
+        </div>
+        <div class="col-lg-5">
+        [[+sidebar]]
+        </div>
+        </div>'
+            ),
+            array(
+                'name' => 'Sidebar + Content',
+                'description' => 'Combination of a left sidebar (35%) and a main content area (65%)',
+                'sortorder' => 3,
+                'icon' => 'layout_1-2',
+                'columns' => '[{"reference":"sidebar","width":"35"},{"reference":"main","width":"65"}]',
+                'template' => '<div class="row">
+        <div class="col-lg-5">
+        [[+sidebar]]
+        </div>
+        <div class="col-lg-7">
+        [[+main]]
+        </div>
+        </div>'
+            ),
+            array(
+                'name' => '4-Columns',
+                'description' => 'Four equally wide columns, ideal for product grids. Down to two columns after the media break',
+                'sortorder' => 4,
+                'icon' => 'layout_1-1-1-1',
+                'columns' => '[{"reference":"col_1","width":"25"},{"reference":"col_2","width":"25"},{"reference":"col_3","width":"25"},{"reference":"col_4","width":"25"}]',
+                'template' => '<div class="row">
+        <div class="col-lg-3 col-sm-6">
+        [[+col_1]]
+        </div>
+        <div class="col-lg-3 col-sm-6">
+        [[+col_2]]
+        </div>
+        <div class="col-lg-3 col-sm-6">
+        [[+col_3]]
+        </div>
+        <div class="col-lg-3 col-sm-6">
+        [[+col_4]]
+        </div>
+        </div>'
+            ),
+        )
+    ),
+
+    'fields' => array(
+        'basic' => array(
+            array(
+                'input' => 'heading',
+                'name' => 'Heading',
+                'sortorder' => 0,
+                'icon' => 'heading',
+                'template' => '<[[+level]] class="heading">[[+value]]</[[+level]]>',
+                'properties' => '{"default_level":"h2","available_levels":"h1=heading_1,h2=heading_2,h3=heading_3,h4=heading_4,h5=heading_5,h6=heading_6"}'
+            ),
+            array(
+                'input' => 'video',
+                'name' => 'Video',
+                'sortorder' => 1,
+                'icon' => 'video',
+                'template' => '<div class="video-embed"><iframe src="//www.youtube.com/embed/[[+value]]" frameborder="0" allowfullscreen></iframe></div>',
+                'properties' => '{}'
+            ),
+            array(
+                'input' => 'table',
+                'name' => 'Table',
+                'sortorder' => 2,
+                'icon' => 'table',
+                'template' => '<td>[[+cell]]</td>',
+                'properties' => '{"row_template":"<tr>[[+row]]<\/tr>","wrapper_template":"<table>[[+body]]<\/table>"}'
+            ),
+            array(
+                'input' => 'textarea',
+                'name' => 'Textarea',
+                'sortorder' => 3,
+                'icon' => 'paragraph',
+                'template' => '<p>[[+value]]</p>',
+                'properties' => '{}'
+            ),
+            array(
+                'input' => 'hr',
+                'name' => 'Horizontal Line',
+                'sortorder' => 4,
+                'icon' => 'horizontalrule',
+                'template' => '<hr/>',
+                'properties' => '{}'
+            ),
+            array(
+                'input' => 'richtext',
+                'name' => 'Rich Text',
+                'sortorder' => 5,
+                'icon' => 'richtext',
+                'template' => '[[+value]]',
+                'properties' => '{}'
+            ),
+            array(
+                'input' => 'image',
+                'name' => 'Image',
+                'sortorder' => 6,
+                'icon' => 'image',
+                'template' => '<img src="[[+url]]" width="[[+width]]" height="[[+height]]" alt="">',
+                'properties' => '{}'
+            ),
+            array(
+                'input' => 'image_with_title',
+                'name' => 'Image (with Title)',
+                'sortorder' => 7,
+                'icon' => 'image',
+                'template' => '<img src="[[+url]]" width="[[+width]]" height="[[+height]]" alt="[[+title:htmlent]]">
+<p class="caption"><small>[[+title]]</small></p>',
+                'properties' => '{}'
+            ),
+            array(
+                'input' => 'gallery',
+                'name' => 'Gallery',
+                'sortorder' => 8,
+                'icon' => 'gallery',
+                'template' => '<li><a href="[[+url]]" title="[[+title]]"><img src="[[+url]]" width="[[+width]]" height="[[+height]]" alt="[[+title]]"></a></li>',
+                'properties' => '{"wrapper_template":"<ul class=\"special-gallery\">[[+images]]<\/ul>","max_images":"6"}'
+            ),
+            array(
+                'input' => 'list',
+                'name' => 'List',
+                'sortorder' => 9,
+                'icon' => 'unorderedlist',
+                'template' => '<li>[[+value]] [[+items]]</li>',
+                'properties' => '{"wrapper_template":"<ul>[[+items]]<\/ul>","nested_template":"<ul class=\"sub\">[[+items]]<\/ul>"}'
+            ),
+            array(
+                'input' => 'ordered_list',
+                'name' => 'List (Ordered)',
+                'sortorder' => 10,
+                'icon' => 'orderedlist',
+                'template' => '<li>[[+value]] [[+items]]</li>',
+                'properties' => '{"wrapper_template":"<ol>[[+items]]<\/ol>","nested_template":"<ol class=\"sub\">[[+items]]<\/ol>"}'
+            ),
+            array(
+                'input' => 'code',
+                'name' => 'Code',
+                'sortorder' => 11,
+                'icon' => 'code',
+                'template' => '<pre><code class="language-[[+lang]]">
+[[+value]]
+</code></pre>',
+                'properties' => '{"available_languages":"html=HTML,javascript=JavaScript,css=CSS,php=PHP","default_language":"html","entities":"1"}'
+            ),
+            array(
+                'input' => 'code',
+                'name' => 'HTML Code',
+                'sortorder' => 12,
+                'icon' => 'code',
+                'template' => '[[+value]]',
+                'properties' => '{"available_languages":"html=HTML","default_language":"html","entities":"0"}'
+            ),
+            array(
+                'input' => 'quote',
+                'name' => 'Quote',
+                'sortorder' => 13,
+                'icon' => 'quote',
+                'template' => '<blockquote>
+  [[+value]]
+  <cite>[[+cite]]</cite>
+</blockquote>',
+                'properties' => '{}'
+            ),
+            array(
+                'input' => 'snippet',
+                'name' => 'Snippet',
+                'sortorder' => 14,
+                'icon' => 'snippet_A',
+                'template' => '[[+value]]',
+                'properties' => '{"available_snippets":"","categories":"","allow_uncached":"Yes"}'
+            ),
+            array(
+                'input' => 'file',
+                'name' => 'File Attachment',
+                'sortorder' => 15,
+                'icon' => 'attachment',
+                'template' => '<li><a href="[[+url]]" title="[[+title]]">[[+title]] ([[+size:cbFileFormatSize]])</a></li>',
+                'properties' => '{"wrapper_template":"<ul class=\"files\">[[+files]]<\/ul>","max_files":"12","source":"0","directory":"files","file_types":"pdf,doc,docx,xls,xlsx,txt,ppt,pptx"}'
+            ),
+            array(
+                'input' => 'layout',
+                'name' => 'Nested Layout',
+                'sortorder' => 16,
+                'icon' => 'chunk_A',
+                'template' => '[[+value]]',
+                'properties' => '{"available_layouts":"","available_templates":""}'
+            ),
+            array(
+                'input' => 'link',
+                'name' => 'Link',
+                'sortorder' => 17,
+                'icon' => 'link',
+                'template' => '<a href="[[+link]]" data-type="[[+linkType]]">[[+link]]</a>',
+                'properties' => '{}'
+            ),
+        ),
+    ),
+);
+
+// Convenience
+if (!isset($modx) && isset($object) && isset($object->xpdo)) {
+    $modx = $object->xpdo;
+}
+
+
+$corePath = $modx->getOption('contentblocks.core_path',null,$modx->getOption('core_path').'components/contentblocks/');
+$contentBlocks = $modx->getService('contentblocks','ContentBlocks',$corePath.'model/contentblocks/');
+
+if (!$contentBlocks) {
+    $modx->log(modX::LOG_LEVEL_ERROR, 'Could not add layouts & fields, ContentBlocks class could not be loaded from ' . $corePath . 'model/contentblocks/');
+    return true;
+}
+
+if (isset($options['contentblocks_layouts']) && !empty($options['contentblocks_layouts'])) {
+    $layouts = isset($defaults['layouts'][$options['contentblocks_layouts']]) ? $defaults['layouts'][$options['contentblocks_layouts']] : null;
+
+    if (!empty($layouts)) {
+        foreach ($layouts as $layout) {
+            $t = $modx->newObject('cbLayout', $layout);
+            if (!$t->save()) {
+                $modx->log(modX::LOG_LEVEL_WARN, 'Could not save Layout ' . $layout['name']);
+            }
+        }
+    }
+}
+
+
+if (isset($options['contentblocks_fields']) && !empty($options['contentblocks_fields'])) {
+    $fields = isset($defaults['fields'][$options['contentblocks_fields']]) ? $defaults['fields'][$options['contentblocks_fields']] : null;
+
+    if (!empty($fields)) {
+        foreach ($fields as $field) {
+            $t = $modx->newObject('cbField', $field);
+            if (!$t->save()) {
+                $modx->log(modX::LOG_LEVEL_WARN, 'Could not save Field ' . $field['name']);
+            }
+        }
+    }
+}
+
+return true;

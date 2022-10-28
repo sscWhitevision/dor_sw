@@ -1,0 +1,251 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      'd39781992da6c7600d736d4d7d01a3b0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"ConsentFriendChangeSetting","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<a onclick=\\"klaro.show();return false;\\">[[%consentfriend.services.change_setting? &namespace=`consentfriend`]]<\\/a>\\n","locked":0,"properties":"a:0:{}","static":0,"static_file":"","content":"<a onclick=\\"klaro.show();return false;\\">[[%consentfriend.services.change_setting? &namespace=`consentfriend`]]<\\/a>\\n"}',
+        'guid' => '2b83565a596a9d4b7a743447823286de',
+        'native_key' => NULL,
+        'signature' => '0f67add3d25bb2aab03c1d51d151bc8f',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      '70cf457bed94add4ea90a3adc8b51753' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '6e80b2906180144e511e5456d35eeb60' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":0,"propertyset":0}',
+              'guid' => 'cc8e73e59ad6845a3cf1aab1ad96bddd',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => 'f1e22821ddedad415ad48d535033b1cb',
+            ),
+            '92be527dd35bff489ce208721f3eb714' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => 'de13ea35a68e5fc6b72f9ef0e157ada7',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => '1a24680963141504d70001415d7f3892',
+            ),
+            '1eccbdf755a29fc8002ddc093fb4c360' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSiteRefresh","priority":0,"propertyset":0}',
+              'guid' => '5c0d34ed629669201aad49ff675eaf68',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSiteRefresh',
+              ),
+              'signature' => '208f9243132257f31fd8e0b5b81b91ea',
+            ),
+            'eb66aba0257adabed4359820176074d4' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPagePrerender","priority":0,"propertyset":0}',
+              'guid' => 'a00aedefef449ed76a517572bd4ff6df',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPagePrerender',
+              ),
+              'signature' => 'a011fa531bbbebb6cf83e5c39d9bde8c',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"ConsentFriend","description":"Consent management platform for MODX","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * ConsentFriend Plugin\\n *\\n * @package consentfriend\\n * @subpackage plugin\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n\\n$className = \'TreehillStudio\\\\ConsentFriend\\\\Plugins\\\\Events\\\\\\\\\' . $modx->event->name;\\n\\n$corePath = $modx->getOption(\'consentfriend.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/consentfriend\\/\');\\n\\/** @var ConsentFriend $consentfriend *\\/\\n$consentfriend = $modx->getService(\'consentfriend\', \'ConsentFriend\', $corePath . \'model\\/consentfriend\\/\', [\\n    \'core_path\' => $corePath\\n]);\\n\\nif ($consentfriend) {\\n    if (class_exists($className)) {\\n        $handler = new $className($modx, $scriptProperties);\\n        if (get_class($handler) == $className) {\\n            $handler->run();\\n        } else {\\n            $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' could not be initialized!\', \'\', \'ConsentFriend Plugin\');\\n        }\\n    } else {\\n        $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' was not found!\', \'\', \'ConsentFriend Plugin\');\\n    }\\n}\\n\\nreturn;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * ConsentFriend Plugin\\n *\\n * @package consentfriend\\n * @subpackage plugin\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n\\n$className = \'TreehillStudio\\\\ConsentFriend\\\\Plugins\\\\Events\\\\\\\\\' . $modx->event->name;\\n\\n$corePath = $modx->getOption(\'consentfriend.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/consentfriend\\/\');\\n\\/** @var ConsentFriend $consentfriend *\\/\\n$consentfriend = $modx->getService(\'consentfriend\', \'ConsentFriend\', $corePath . \'model\\/consentfriend\\/\', [\\n    \'core_path\' => $corePath\\n]);\\n\\nif ($consentfriend) {\\n    if (class_exists($className)) {\\n        $handler = new $className($modx, $scriptProperties);\\n        if (get_class($handler) == $className) {\\n            $handler->run();\\n        } else {\\n            $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' could not be initialized!\', \'\', \'ConsentFriend Plugin\');\\n        }\\n    } else {\\n        $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' was not found!\', \'\', \'ConsentFriend Plugin\');\\n    }\\n}\\n\\nreturn;"}',
+        'guid' => 'd9b05c950dd13308fb0388a63a459c54',
+        'native_key' => NULL,
+        'signature' => 'b69880e1f2590b9ff3540f77328a3840',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'consentfriend',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"consentfriend"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"consentfriend"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.gpm.resolve.tables.resolver","type":"php","name":"gpm.resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.resolve.composer.resolver","type":"php","name":"resolve.composer"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.resolve.synctables.resolver","type":"php","name":"resolve.synctables"}',
+    ),
+    5 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.resolve.version.resolver","type":"php","name":"resolve.version"}',
+    ),
+    6 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.resolve.setupoptions.resolver","type":"php","name":"resolve.setupoptions"}',
+    ),
+    7 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.resolve.plugins_order.resolver","type":"php","name":"resolve.plugins_order"}',
+    ),
+    8 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.resolve.cleanup.resolver","type":"php","name":"resolve.cleanup"}',
+    ),
+    9 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"consentfriend-1.5.3-pl\\/modCategory\\/3086f0a2efb70f9c87c6a8c9554480a4.resolve.treehillstudio.resolver","type":"php","name":"resolve.treehillstudio"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9a937764d53e812c1bc6280665e180f0',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '3086f0a2efb70f9c87c6a8c9554480a4',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"ConsentFriend","rank":0}',
+);

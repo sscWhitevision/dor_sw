@@ -1,0 +1,71 @@
+/**
+  MODX Media Browser
+ */
+.redactor-modx-browser-button {
+  display: block !important;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+/**
+  Simple media browser
+ */
+.redactormedia__images {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  justify-content: center;
+
+  &:empty {
+    position: relative;
+    &:after {
+      content: 'No images found.'; // @todo replace with some sort of non-verbal image? Or lexicon?
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      color: #444;
+      font-size: 1em;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+.redactormedia__image {
+  position: relative;
+  img {
+    width: 180px;
+    height: 135px;
+    margin: 3px;
+    cursor: pointer;
+    object-fit: cover;
+    &:hover, &:focus {
+      box-shadow: 0 0 1px 1px rgb(0, 65, 255);
+    }
+  }
+  .redactormedia__image_sizes, .redactormedia__image_name {
+    display: none;
+    position: absolute;
+    bottom: 2px;
+    background: rgba(255,255,255,0.7);
+    color: rgba(0,0,0,0.7);
+    padding: 0.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0.25rem;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+  .redactormedia__image_name {
+    bottom: auto;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &:hover, &:focus {
+    .redactormedia__image_sizes, .redactormedia__image_name {
+      display: block;
+    }
+  }
+}

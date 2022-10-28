@@ -1,0 +1,89 @@
+<?php
+/**
+ * Resolve version changes
+ *
+ * @package consentfriend
+ * @subpackage build
+ *
+ * @var array $options
+ * @var xPDOObject $object
+ */
+
+$success = false;
+
+if (!function_exists('resolveAdvertisementPurposes')) {
+    function resolveAdvertisementPurposes($modx)
+    {
+        /** @var ConsentfriendPurposes $purpose */
+        $purpose = $modx->getObject('ConsentfriendPurposes', ['key' => 'advertisement']);
+        if ($purpose) {
+            if (!$modx->getObject('ConsentfriendPurposes', ['key' => 'advertising'])) {
+                $purpose->set('key', 'advertising');
+                $purpose->save();
+                $modx->log(xPDO::LOG_LEVEL_INFO, 'Changed purpose key advertisement to advertising.');
+            } else {
+                /** @var ConsentfriendPurposes $existingPurpose */
+                $existingPurpose = $modx->getObject('ConsentfriendPurposes', ['key' => 'advertising']);
+                /** @var ConsentfriendServicePurposes[] $servicePurposes */
+                $servicePurposes = $modx->getIterator('ConsentfriendServicePurposes', ['purpose_id' => $purpose->get('id')]);
+                foreach ($servicePurposes as $servicePurpose) {
+                    $servicePurpose->set('purpose_id', $existingPurpose->get('id'));
+                    $servicePurpose->save();
+                }
+                $purpose->remove();
+                $modx->log(xPDO::LOG_LEVEL_INFO, 'Changed the purpose of services from advertisement to advertising.');
+            }
+        }
+    }
+}
+
+if ($object->xpdo) {
+    /** @var xPDO $modx */
+    $modx =& $object->xpdo;
+
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            $c = $modx->newQuery('transport.modTransportPackage');
+            $c->where(
+                [
+                    'workspace' => 1,
+                    "(SELECT
+            `signature`
+            FROM {$modx->getTableName('transport.modTransportPackage')} AS `latestPackage`
+            WHERE `latestPackage`.`package_name` = `modTransportPackage`.`package_name`
+            ORDER BY
+                `latestPackage`.`version_major` DESC,
+                `latestPackage`.`version_minor` DESC,
+                `latestPackage`.`version_patch` DESC,
+                IF(`release` = '' OR `release` = 'ga' OR `release` = 'pl','z',`release`) DESC,
+                `latestPackage`.`release_index` DESC
+                LIMIT 1,1) = `modTransportPackage`.`signature`",
+                ]
+            );
+            $c->where(
+                [
+                    'modTransportPackage.signature:LIKE' => $options['namespace'] . '-%',
+                    'modTransportPackage.installed:IS NOT' => null
+                ]
+            );
+            $c->limit(1);
+
+            /** @var modTransportPackage $oldPackage */
+            $oldPackage = $modx->getObject('transport.modTransportPackage', $c);
+
+            $modelPath = $modx->getOption('consentfriend.core_path', null, $modx->getOption('core_path') . 'components/consentfriend/') . 'model/';
+            $modx->addPackage('consentfriend', $modelPath);
+
+            if ($oldPackage && $oldPackage->compareVersion('1.2.0', '>')) {
+                resolveAdvertisementPurposes($modx);
+            }
+
+            $success = true;
+            break;
+        case xPDOTransport::ACTION_UNINSTALL:
+            $success = true;
+            break;
+    }
+}
+return $success;

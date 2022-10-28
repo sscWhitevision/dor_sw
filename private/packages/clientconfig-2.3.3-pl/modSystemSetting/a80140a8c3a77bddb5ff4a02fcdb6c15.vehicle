@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'clientconfig',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f8bccdb10fe58ef26528521f1a4c3aa0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a80140a8c3a77bddb5ff4a02fcdb6c15',
+  'native_key' => 'clientconfig.google_fonts_api_key',
+  'object' => '{"key":"clientconfig.google_fonts_api_key","value":"","xtype":"textfield","namespace":"clientconfig","area":"Default","editedon":null}',
+);

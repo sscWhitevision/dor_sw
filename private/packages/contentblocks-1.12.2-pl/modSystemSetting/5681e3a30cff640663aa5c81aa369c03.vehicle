@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'contentblocks',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4458d274835c593156a8076f0b372f82',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '5681e3a30cff640663aa5c81aa369c03',
+  'native_key' => 'contentblocks.image.upload_path',
+  'object' => '{"key":"contentblocks.image.upload_path","value":"assets\\/uploads\\/","xtype":"textfield","namespace":"contentblocks","area":"Input: Image","editedon":1666779063}',
+);

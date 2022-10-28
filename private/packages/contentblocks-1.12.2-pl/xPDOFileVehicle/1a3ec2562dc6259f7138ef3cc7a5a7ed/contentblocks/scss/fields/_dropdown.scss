@@ -1,0 +1,39 @@
+.contentblocks-field-dropdown, .contentblocks-setting-select {
+  .select2-container {
+    .select2-selection {
+      border-radius: 2px;
+      background: #fbfbfb url("../img/trigger.png") no-repeat center right;
+      border: 1px solid #ccc;
+      height: 33px;
+      display: flex;
+    }
+    .select2-search__field {
+      min-height: inherit !important;
+      height: 0;
+    }
+    .select2-selection__arrow {
+      display:none;
+    }
+    .select2-selection--single {
+      .select2-selection__rendered {
+        line-height: 33px;
+        color: #000;
+      }
+    }
+  }
+  .select2-container--default.select2-container--focus .select2-selection--single {
+    border-color: rgb(63, 142, 185) !important;
+  }
+}
+
+// This needs to be outside wrapper ContentBlocks selectors, as it's attached to the page "body".
+.select2-container.select2-container--default.select2-container--open {
+  .contentblocks-select-setting-dropdown.select2-dropdown.select2-dropdown--below,
+  .contentblocks-select-setting-dropdown.select2-dropdown.select2-dropdown--above {
+    z-index: 10301 !important;
+  }
+  .contentblocks-dropdown-inputtype-dropdown.select2-dropdown.select2-dropdown--below,
+  .contentblocks-dropdown-inputtype-dropdown.select2-dropdown.select2-dropdown--above {
+    z-index: 10301 !important;
+  }
+}

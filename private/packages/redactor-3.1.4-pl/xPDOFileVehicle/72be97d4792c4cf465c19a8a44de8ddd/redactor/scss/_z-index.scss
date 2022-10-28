@@ -1,0 +1,42 @@
+// The standard index defines the regular index for the editor.
+$standardIndex: 100;
+
+// The window index is the minimum when the editor is opened in a MODX window
+// ExtJS windows start at 9003, incrementing by 10 at a time.
+// By setting this to 10004, the windowIndex will always be in front of up to 10 extjs windows
+$windowIndex: 100004;
+
+// the primary toolbar
+.redactor-toolbar {
+  z-index: $standardIndex + 1;
+  .x-window & {
+    z-index: $windowIndex + 1;
+  }
+}
+
+// the small popup for links and such; show ahead of content
+.redactor-context-toolbar {
+  z-index: $windowIndex + 1;
+}
+
+// THe resize caret thingy at the bottom right of an image needs to show in front of windows
+#redactor-image-resizer {
+  z-index: $windowIndex + 1;
+}
+
+// toolbar dropdowns
+.redactor-dropdown {
+  z-index: $windowIndex + 2;
+}
+
+// Redactor-built modals and autocompletion dropdown should appear before dropdowns and context toolbars
+.redactor-modal-box, .redactor-autocomplete .aa-dropdown-menu {
+  z-index: $windowIndex + 3;
+}
+
+#modx-navbar {
+  z-index: $standardIndex + 10;
+}
+.ace_editor.ace_maximized {
+  z-index: $standardIndex + 11;
+}

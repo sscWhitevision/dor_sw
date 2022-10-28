@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'consentfriend',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c0f557de25a9d462c8f48b2458d61f53',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '8a6fb24a108c4beffa3389c21ec737aa',
+  'native_key' => 'consentfriend.group_by_purpose',
+  'object' => '{"key":"consentfriend.group_by_purpose","value":"1","xtype":"combo-boolean","namespace":"consentfriend","area":"consentfriend","editedon":null}',
+);

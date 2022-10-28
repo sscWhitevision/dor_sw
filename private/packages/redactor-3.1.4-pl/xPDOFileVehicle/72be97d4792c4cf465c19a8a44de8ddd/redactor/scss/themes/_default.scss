@@ -1,0 +1,22 @@
+.redactor-box.redactor-styles-on {
+  background: #FBFBFB;
+}
+
+.redactor-styles ul {
+  list-style-type: disc;
+}
+.redactor-styles ol {
+  list-style-type: decimal;
+}
+.redactor-styles table th {
+  /* border-color: #ccc; */
+  background-color: #ffffff;
+}
+
+/**
+  Make the html button show as the hover color when it is active, to make it more pronounced #21098
+ */
+.redactor-toolbar a.re-html.redactor-button-active {
+  background: #449aef;
+  color: #fff;
+}

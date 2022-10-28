@@ -1,5 +1,5 @@
 <?php return array (
-  '1fef91f76b73a09f920b5c97ee0b6cea' => 
+  '8397440dcd30ae909af719655abb1c23' => 
   array (
     'criteria' => 
     array (
@@ -12,7 +12,7 @@
       'assets_path' => '{assets_path}components/contentblocks/',
     ),
   ),
-  '2c0a7d8ad09a7f994d68f4bbc3120baf' => 
+  '623c41847ecf3e7994987807441f9057' => 
   array (
     'criteria' => 
     array (
@@ -25,7 +25,7 @@
       'groupname' => 'contentblocks',
     ),
   ),
-  'edeef76c44637af148f2fbea86bba0ae' => 
+  '0ee1aceb2a098f03a19eabc5b7748ab0' => 
   array (
     'criteria' => 
     array (
@@ -38,7 +38,7 @@
       'groupname' => 'contentblocks',
     ),
   ),
-  '93dad6e330e98446ef763b5150d78935' => 
+  '34a14c9575ee3a29251ffabb85bca821' => 
   array (
     'criteria' => 
     array (
@@ -51,7 +51,7 @@
       'groupname' => 'contentblocks',
     ),
   ),
-  '5cdb7fae5091ae514ade6146040eb0c4' => 
+  '7a737a35bdbd4b1aa36fc05be2fee678' => 
   array (
     'criteria' => 
     array (
@@ -64,7 +64,7 @@
       'groupname' => 'contentblocks',
     ),
   ),
-  '72ef8c9cb4dd931eccb14f16abed017f' => 
+  '3d0db23b990b7f16680e322216a92326' => 
   array (
     'criteria' => 
     array (
@@ -80,7 +80,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '008d806347ec2e064b5985413894a231' => 
+  '0eeb3999fe9b972fe68379d79b1c0df5' => 
   array (
     'criteria' => 
     array (
@@ -96,7 +96,7 @@
       'editedon' => '2019-01-25 11:51:20',
     ),
   ),
-  '05aa21caa7c8691b354ce798e8695310' => 
+  '4458d274835c593156a8076f0b372f82' => 
   array (
     'criteria' => 
     array (
@@ -112,7 +112,7 @@
       'editedon' => '2019-01-25 11:51:16',
     ),
   ),
-  '3992909e9723b794d274110f89e2e4d1' => 
+  '19aa64120dd31fde2c93e58102894241' => 
   array (
     'criteria' => 
     array (
@@ -128,7 +128,7 @@
       'editedon' => '2019-01-25 11:51:06',
     ),
   ),
-  '75d7e0900be9914272c5338c9a95ab87' => 
+  '4ef03f9e830d45066668cd37cd151359' => 
   array (
     'criteria' => 
     array (
@@ -144,7 +144,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '1d01ac17f39a5beae94a8253a7f02cb9' => 
+  '65eb3023568dde9c8fa09f530bbb09ba' => 
   array (
     'criteria' => 
     array (
@@ -160,7 +160,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '4d90cc6d18cc847f3142e12f5c4949ac' => 
+  '89a9ed71f2f94958679ce45e6dec8918' => 
   array (
     'criteria' => 
     array (
@@ -176,7 +176,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '39ebc1fd54e1dc2bdb9f9cbd1c1990df' => 
+  '3f26d05782445700d6ced008cc3b2f3a' => 
   array (
     'criteria' => 
     array (
@@ -192,7 +192,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'ed88a243ba5654203a978a537a10aeb7' => 
+  'dd79d760aa9d6c46803c10a0f12bffd5' => 
   array (
     'criteria' => 
     array (
@@ -208,7 +208,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '16906dcf1382e3ab5fd56a9dc0463c53' => 
+  '095c4d19fd3bb423f8079c008579a137' => 
   array (
     'criteria' => 
     array (
@@ -224,7 +224,7 @@
       'editedon' => '2019-01-25 11:49:37',
     ),
   ),
-  '8f04f115a47cc0efdf78133ca9da0444' => 
+  'a0da817acaf0402137cd1bbc73298f94' => 
   array (
     'criteria' => 
     array (
@@ -240,7 +240,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'bab2413e1d3d01f2d0c1ba40bbdc743d' => 
+  'b56c98ab86c8d489cef6a486edb96541' => 
   array (
     'criteria' => 
     array (
@@ -256,7 +256,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '74409589fe606d1eac5dcbe9af0c1e56' => 
+  'd7d8f8bdbc34a8a671ce9e9b0dfd99c8' => 
   array (
     'criteria' => 
     array (
@@ -272,7 +272,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'bfe47504664f133b7bddd63f01e78146' => 
+  '8822b3f331efce74531d57d5ce71f8aa' => 
   array (
     'criteria' => 
     array (
@@ -288,7 +288,7 @@
       'editedon' => '2019-01-25 11:56:13',
     ),
   ),
-  'c0c4e26293ea4b0ffa0340893e1ab575' => 
+  '0916cd4ce33ce5c8f13e998d17831560' => 
   array (
     'criteria' => 
     array (
@@ -304,7 +304,7 @@
       'editedon' => '2019-07-17 18:13:59',
     ),
   ),
-  'ea77aba1a4c2b1dfb8d6100d3de936fd' => 
+  '9ab167604ea8206b181b37d798590dc5' => 
   array (
     'criteria' => 
     array (
@@ -320,7 +320,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'ddbd735c08ed781516bb470f756499e2' => 
+  '4d699ee9ebb36ae8cdd7c618d9095e12' => 
   array (
     'criteria' => 
     array (
@@ -336,7 +336,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'db9eff9320c58aa4dc95351e0c0065d0' => 
+  '9bf51ed117da86cb25fc1867ba23fcfb' => 
   array (
     'criteria' => 
     array (
@@ -352,7 +352,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '1f4a0d233ba87b78c3a1f84b3345b1a1' => 
+  '35d4de05448e4d32c5cb602d1a4451d8' => 
   array (
     'criteria' => 
     array (
@@ -368,7 +368,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'c307cfd2e917d422e54cbac84c033af8' => 
+  'b0ced7aebb10ecaaf3ba8939caf55dab' => 
   array (
     'criteria' => 
     array (
@@ -384,7 +384,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '5e0dec63847f286092ececede2fac68b' => 
+  'd20fd908f7a8a863f257764d34488001' => 
   array (
     'criteria' => 
     array (
@@ -400,7 +400,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'bf7e08873a3a65ee2031f34fcb7ac822' => 
+  'd19257384ebd6f82aec9ffc5e63c9200' => 
   array (
     'criteria' => 
     array (
@@ -416,7 +416,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '4056ccc68252247864fa335ea5eb30e9' => 
+  '29d6bfa18a1baf2127d089cc7976fa01' => 
   array (
     'criteria' => 
     array (
@@ -432,7 +432,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'b9e0de0590a2b9dc94b3585089b88bb5' => 
+  'e014f53eefe7f683627c645ce3c2e7db' => 
   array (
     'criteria' => 
     array (
@@ -448,7 +448,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'ccecbfce7a884439f629c0d41dc62a91' => 
+  '804532c52444a2134f00da5a6f738808' => 
   array (
     'criteria' => 
     array (
@@ -464,7 +464,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'a2a7905fdc25428c71f18f4637023256' => 
+  '1fc734b2d8797d0caa3d86c8ca80872b' => 
   array (
     'criteria' => 
     array (
@@ -482,7 +482,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '2e4709a90149330cbd8ede07b50c1d29' => 
+  '011bdd8076f4a0de121b1de97374b838' => 
   array (
     'criteria' => 
     array (
@@ -498,7 +498,7 @@
       'editedon' => '2019-01-25 11:45:15',
     ),
   ),
-  '16a9705ce78bf2b9e1f1a7b47b83b3e3' => 
+  '661b6e1113687d61260f5fa450a9f098' => 
   array (
     'criteria' => 
     array (
@@ -514,7 +514,7 @@
       'editedon' => '2019-01-25 11:45:18',
     ),
   ),
-  '944ec9242a68371b11679edf7d1b76bb' => 
+  'a527c8986473321806bf7be1ea3acb6e' => 
   array (
     'criteria' => 
     array (
@@ -530,7 +530,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '677a1b0d7700df94e3ffe8b307b84e10' => 
+  'b625ee8f25011b91dadf7cd7f3c77347' => 
   array (
     'criteria' => 
     array (
@@ -546,7 +546,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '7577f69b2b3b7690545681b0e30b6a05' => 
+  'af60004adcab5911b710ea5ad5ba17ce' => 
   array (
     'criteria' => 
     array (
@@ -562,7 +562,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '6fe9d2882f3c7886cda7e7466d31415e' => 
+  '97dae810ef02f90d29d5c8d52fa7103c' => 
   array (
     'criteria' => 
     array (
@@ -578,7 +578,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '6c816df9678a07b0ba3955dfca35b0fa' => 
+  'd040c76e965ba1b25cff827166447048' => 
   array (
     'criteria' => 
     array (
@@ -594,7 +594,7 @@
       'editedon' => '2020-04-24 09:32:13',
     ),
   ),
-  '5f55054ed520611fe2e0c28e2cfe3d16' => 
+  'f41fa971c29a1fe19b2b633b81511129' => 
   array (
     'criteria' => 
     array (
@@ -610,7 +610,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '9b2aa9681bb1da4dc7409f02c37ace57' => 
+  '27cc65f514231fb7d35ed1a6cade6496' => 
   array (
     'criteria' => 
     array (
@@ -626,7 +626,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'c2ab2a8e48171042c8d7ec801ddac110' => 
+  '3fc81d4553309fe75fc6c198dcc7da70' => 
   array (
     'criteria' => 
     array (
@@ -642,7 +642,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '8fb28eb8b7b978155647234e13648a83' => 
+  'ea596c60fd2a5e50f6b134b96cd1e1d0' => 
   array (
     'criteria' => 
     array (
@@ -658,7 +658,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '251239acd59e9948430ba41cb5af3745' => 
+  '48fa142b4abb5aa2c7920c3b3c52c2a7' => 
   array (
     'criteria' => 
     array (
@@ -674,7 +674,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '871b51ab068f1747c387ec43c4f94ce9' => 
+  '66e01400b27299decbef9786fe84ed8c' => 
   array (
     'criteria' => 
     array (
@@ -690,7 +690,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  'e9063ea6fae7cc198bfd76b5ca55dd24' => 
+  '70864de664b68757f9ebfa845fafbbe3' => 
   array (
     'criteria' => 
     array (
@@ -706,7 +706,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '998b4c758c4d2014b322ab984242e809' => 
+  '034b484847eef15a962490a231c0b4d5' => 
   array (
     'criteria' => 
     array (
@@ -722,7 +722,7 @@
       'editedon' => '0000-00-00 00:00:00',
     ),
   ),
-  '09db74c794693778733d30085f54a683' => 
+  '86fab6d267bac73b76d7e29c7227d196' => 
   array (
     'criteria' => 
     array (
@@ -737,7 +737,7 @@
       'lexicon' => 'contentblocks:permissions',
     ),
   ),
-  '1e56a1c83d77e7898f3e2b2a97a48b41' => 
+  '5164f8df42f7dd17f7800d2e5146f637' => 
   array (
     'criteria' => 
     array (
@@ -753,7 +753,7 @@
       'value' => 1,
     ),
   ),
-  '8bef96a776dfe1ff1e3096546c7d8308' => 
+  'a9f0510d68451c8ac8d0b8d7d806ea9b' => 
   array (
     'criteria' => 
     array (
@@ -769,7 +769,7 @@
       'value' => 1,
     ),
   ),
-  '3477924518211e049de627c7ea0b12fa' => 
+  '457f86cac9601aa4219466f27aec353b' => 
   array (
     'criteria' => 
     array (
@@ -785,7 +785,7 @@
       'value' => 1,
     ),
   ),
-  'd1bb04881a52563a29d539688360ec8a' => 
+  '3e34950b8da7b78f5d7631e82d1efbc0' => 
   array (
     'criteria' => 
     array (
@@ -801,7 +801,7 @@
       'value' => 1,
     ),
   ),
-  '567f728dfb3617657f26c87a08b08c66' => 
+  'db43e2fed9131f0bb0cecb1943cb3294' => 
   array (
     'criteria' => 
     array (
@@ -817,7 +817,7 @@
       'value' => 1,
     ),
   ),
-  '1004c7862abbe822c487345d6fe9bea6' => 
+  '068d3153bab08b83bb1202408f64d8fe' => 
   array (
     'criteria' => 
     array (
@@ -833,7 +833,7 @@
       'value' => 1,
     ),
   ),
-  '721cc68addabe1797d9b811ee483c98b' => 
+  '15862efa8c607bca46baff38010a7dd5' => 
   array (
     'criteria' => 
     array (
@@ -849,7 +849,7 @@
       'value' => 1,
     ),
   ),
-  '950987ab063d547671038b8be1090596' => 
+  '43b0ecba21b9722808dfcdba10c1d402' => 
   array (
     'criteria' => 
     array (
@@ -865,7 +865,7 @@
       'value' => 1,
     ),
   ),
-  '13fd489d1b6a6643618be5369325f24e' => 
+  '635a664db47501291989d11fc10708cf' => 
   array (
     'criteria' => 
     array (
@@ -881,7 +881,7 @@
       'value' => 1,
     ),
   ),
-  '259954a3181a406e36142c9cd767331d' => 
+  '36cd1182595160344d57c49b4efc9cb6' => 
   array (
     'criteria' => 
     array (
@@ -897,7 +897,7 @@
       'value' => 1,
     ),
   ),
-  'c0b7a45dd6318c514eaada9727df19ea' => 
+  '5f54f24ba336880a4105bd001d69b186' => 
   array (
     'criteria' => 
     array (
@@ -913,7 +913,7 @@
       'value' => 1,
     ),
   ),
-  '34a25ffb4cf27eacc56214a7f2ae2e80' => 
+  '29abf57ed9d4dddc172f65ed80acd779' => 
   array (
     'criteria' => 
     array (
@@ -929,7 +929,7 @@
       'value' => 1,
     ),
   ),
-  '739098b4bc00de54ea5ab5b9bde6b0fe' => 
+  '9e91f012f7375261f77c66a603da3e4a' => 
   array (
     'criteria' => 
     array (
@@ -945,7 +945,7 @@
       'value' => 1,
     ),
   ),
-  'b73289146ab478434df02bfdc5290d9c' => 
+  '3476cfb21369ad75bf7d8a92656a921e' => 
   array (
     'criteria' => 
     array (
@@ -961,7 +961,7 @@
       'value' => 1,
     ),
   ),
-  'fec19d10bb3884c96c44853b03860d4f' => 
+  '4fd1c51274cab7d3876d57bdef102e06' => 
   array (
     'criteria' => 
     array (
@@ -977,7 +977,7 @@
       'value' => 1,
     ),
   ),
-  'e4411edd2ef0792d1e028d236b5c2065' => 
+  'b040861e8120034c41c9f45aa14880e5' => 
   array (
     'criteria' => 
     array (
@@ -993,7 +993,7 @@
       'value' => 1,
     ),
   ),
-  '635118fa960fa0f0b5f41a791de8c0ff' => 
+  'cb5a1953c9ea0be8cee6e92cec76dae7' => 
   array (
     'criteria' => 
     array (
@@ -1009,7 +1009,7 @@
       'value' => 1,
     ),
   ),
-  'aa04e22723c5ceae365d0c25ee19f616' => 
+  '8a11e3d319811bd8912ff4ed6ba6eca4' => 
   array (
     'criteria' => 
     array (
@@ -1025,7 +1025,7 @@
       'value' => 1,
     ),
   ),
-  '725e83294b85f2a6ef68009bbfb385fc' => 
+  '5cd6e6277430a8682fbecaadd10c2fc5' => 
   array (
     'criteria' => 
     array (
@@ -1041,7 +1041,7 @@
       'value' => 1,
     ),
   ),
-  '5e2359bbca7da35dce89c6705c2093e2' => 
+  '19febe575e1051ad6ac1c81b23f2cd89' => 
   array (
     'criteria' => 
     array (
@@ -1057,7 +1057,7 @@
       'value' => 1,
     ),
   ),
-  '9c81873852b2ed565e66d739abd5fdf3' => 
+  'd40d6822614918ab84fbf55443b1ec86' => 
   array (
     'criteria' => 
     array (
@@ -1073,7 +1073,7 @@
       'value' => 1,
     ),
   ),
-  'b9c5e63cc30b1ce36de599ae1ed6563c' => 
+  'd26e89937c7e25774599eed295dfdbb8' => 
   array (
     'criteria' => 
     array (
@@ -1089,7 +1089,7 @@
       'value' => 1,
     ),
   ),
-  '59da4c658798ed75f287e0b2778c2b8a' => 
+  'e1654e28275cef7b4b4e672202fe4610' => 
   array (
     'criteria' => 
     array (
@@ -1105,7 +1105,7 @@
       'value' => 1,
     ),
   ),
-  '75e1f2331f8d1a0999a0c0fe66e583e7' => 
+  'dec1a9f2ce04fef7a6e3b8bcc50b1814' => 
   array (
     'criteria' => 
     array (
@@ -1121,7 +1121,7 @@
       'value' => 1,
     ),
   ),
-  '800ad790aaa115053dfecb278ce74803' => 
+  '0818ae29c256b8d14d05d68bc84909ef' => 
   array (
     'criteria' => 
     array (
@@ -1137,7 +1137,7 @@
       'value' => 1,
     ),
   ),
-  '5037c6090049542da03cc943f6126fa5' => 
+  '5211bc372324fb807217169b8f452760' => 
   array (
     'criteria' => 
     array (
@@ -1153,7 +1153,7 @@
       'value' => 1,
     ),
   ),
-  '2c941a98d35643c028c1f0ff8288db53' => 
+  '952d29bdb57db39e6523e5150e0c642e' => 
   array (
     'criteria' => 
     array (
@@ -1169,7 +1169,7 @@
       'value' => 1,
     ),
   ),
-  '74ae0b839b5a8218e4e7f2197df6f458' => 
+  '3194141ec1f08a957f01c24d0a91c381' => 
   array (
     'criteria' => 
     array (
@@ -1185,7 +1185,7 @@
       'value' => 1,
     ),
   ),
-  '3556b40e046fd3eb38acff922059ebb6' => 
+  '44ad0885d5f86e71e5872c9e90c14f19' => 
   array (
     'criteria' => 
     array (
@@ -1201,7 +1201,7 @@
       'value' => 1,
     ),
   ),
-  'f9b18791daba084dae05be6a3c899b31' => 
+  '11a451c0e6f1a72f2991a0ec4fc841e0' => 
   array (
     'criteria' => 
     array (
@@ -1217,7 +1217,7 @@
       'value' => 1,
     ),
   ),
-  '8edabd26650792de1fc533be17842d58' => 
+  'aa1a10cb126a6b0bd4f5db883eabef94' => 
   array (
     'criteria' => 
     array (
@@ -1233,7 +1233,7 @@
       'value' => 1,
     ),
   ),
-  '0e85276d105244685164a3a9024d54ed' => 
+  '17b58ecd27dad568242568c948bc0057' => 
   array (
     'criteria' => 
     array (
@@ -1249,7 +1249,7 @@
       'value' => 1,
     ),
   ),
-  '2f15f7def4b11556cfbf55a9e056dab3' => 
+  'd27da5295d94ddc175e8c04c18c3b249' => 
   array (
     'criteria' => 
     array (
@@ -1265,7 +1265,7 @@
       'value' => 1,
     ),
   ),
-  '51d20fd7393a33f5df691bdd20ffec9b' => 
+  'f3fcaec25c3d54dec1c0e2301af1ca9c' => 
   array (
     'criteria' => 
     array (
@@ -1281,7 +1281,7 @@
       'value' => 1,
     ),
   ),
-  '97dc9e30cc79266a2abe9005bc499255' => 
+  '8a26bec21d0b802edfda70930ccf2382' => 
   array (
     'criteria' => 
     array (
@@ -1297,7 +1297,7 @@
       'value' => 1,
     ),
   ),
-  '497f77ef474c4f8b5107f37622f6f3f5' => 
+  '8f3e8017bf8633890f202fe587526258' => 
   array (
     'criteria' => 
     array (
@@ -1312,11 +1312,11 @@
       'parent' => 0,
       'template' => 9,
       'class' => '',
-      'data' => '{"contentblocks_categories":true,"contentblocks_categories_delete":true,"contentblocks_categories_edit":true,"contentblocks_categories_export":true,"contentblocks_categories_import":true,"contentblocks_categories_new":true,"contentblocks_categories_save":true,"contentblocks_component":true,"contentblocks_defaults":true,"contentblocks_defaults_delete":true,"contentblocks_defaults_edit":true,"contentblocks_defaults_new":true,"contentblocks_defaults_save":true,"contentblocks_fields":true,"contentblocks_fields_delete":true,"contentblocks_fields_edit":true,"contentblocks_fields_export":true,"contentblocks_fields_import":true,"contentblocks_fields_new":true,"contentblocks_fields_save":true,"contentblocks_layouts":true,"contentblocks_layouts_delete":true,"contentblocks_layouts_edit":true,"contentblocks_layouts_export":true,"contentblocks_layouts_import":true,"contentblocks_layouts_new":true,"contentblocks_layouts_save":true,"contentblocks_rebuild_content":true,"contentblocks_templates":true,"contentblocks_templates_delete":true,"contentblocks_templates_edit":true,"contentblocks_templates_export":true,"contentblocks_templates_import":true,"contentblocks_templates_new":true,"contentblocks_templates_save":true}',
+      'data' => '{"contentblocks_categories":true,"contentblocks_categories_delete":true,"contentblocks_categories_edit":true,"contentblocks_categories_export":true,"contentblocks_categories_import":true,"contentblocks_categories_new":true,"contentblocks_categories_save":true,"contentblocks_component":true,"contentblocks_defaults":true,"contentblocks_defaults_delete":true,"contentblocks_defaults_edit":true,"contentblocks_defaults_new":true,"contentblocks_defaults_save":true,"contentblocks_fields":true,"contentblocks_fields_delete":true,"contentblocks_fields_edit":true,"contentblocks_fields_export":true,"contentblocks_fields_import":true,"contentblocks_fields_new":true,"contentblocks_fields_save":true,"contentblocks_layouts":true,"contentblocks_layouts_delete":true,"contentblocks_layouts_edit":true,"contentblocks_layouts_export":true,"contentblocks_layouts_import":true,"contentblocks_layouts_new":true,"contentblocks_layouts_save":true,"contentblocks_rebuild_content":true,"contentblocks_templates":true,"contentblocks_templates_delete":true,"contentblocks_templates_edit":true,"contentblocks_templates_export":true,"contentblocks_templates_import":true,"contentblocks_templates_new":true,"contentblocks_templates_save":true,"formit":true,"formit_encryptions":false}',
       'lexicon' => 'contentblocks:permissions',
     ),
   ),
-  '0e8b83552ec81db5330d659df1b4447b' => 
+  'cb671bc0285b472ff4268a282653fda6' => 
   array (
     'criteria' => 
     array (
@@ -1336,7 +1336,7 @@
       'namespace' => 'contentblocks',
     ),
   ),
-  '6a2c432880e8fc8616d6d0427d00ee2a' => 
+  '4106dd4f9dc6f60e5c7b957c102ad0c3' => 
   array (
     'criteria' => 
     array (
@@ -1350,7 +1350,7 @@
       'rank' => 0,
     ),
   ),
-  '3eb080d6f559755548b892053fb16610' => 
+  '8306469330cb23dae26ac38005e59f9a' => 
   array (
     'criteria' => 
     array (
@@ -1497,7 +1497,7 @@ else {
 return $else;',
     ),
   ),
-  'a6190c523c0083e1c94afcb9ac4c7ff1' => 
+  'e1846fc9b0c1e5f7ca1ed4c0787c529c' => 
   array (
     'criteria' => 
     array (
@@ -1982,7 +1982,7 @@ if(!$returnAsJSON && $showDebug) {
 return $output;',
     ),
   ),
-  '707a956a72d46f43cf7b9ef7f14b09d2' => 
+  'bcf8d2a8fc48cea84d7bdd3bb85e527f' => 
   array (
     'criteria' => 
     array (
@@ -2057,7 +2057,7 @@ $decimals = (isset($options) && is_numeric($options)) ? $options : 2;
 return $contentBlocks->formatBytes($bytes, $decimals);',
     ),
   ),
-  '12938ad20cb607979718b2cae483ad71' => 
+  '5d801ba86f910c0665082f68707b7ac8' => 
   array (
     'criteria' => 
     array (
@@ -2589,7 +2589,7 @@ HTML
 return;',
     ),
   ),
-  '8192bf63eab39dd9704ad079999ef64b' => 
+  'd1014abb800f542c423ac2c2b9c9d5f5' => 
   array (
     'criteria' => 
     array (
@@ -2604,7 +2604,7 @@ return;',
       'propertyset' => 0,
     ),
   ),
-  '78a7d305c54b2d9a82e31daa73f1f460' => 
+  '68b73c5e06a52ef9bad42aacd3906fbc' => 
   array (
     'criteria' => 
     array (
@@ -2619,7 +2619,7 @@ return;',
       'propertyset' => 0,
     ),
   ),
-  'b0386f8bf855d49af056626edcee162e' => 
+  '25652ec4b9ff88ff82575e32b6b005e8' => 
   array (
     'criteria' => 
     array (
@@ -2634,7 +2634,7 @@ return;',
       'propertyset' => 0,
     ),
   ),
-  '31e1f3e747d0ed114f73a1957816103b' => 
+  '5a4a08f25c5e85f5b29d539bcb467447' => 
   array (
     'criteria' => 
     array (

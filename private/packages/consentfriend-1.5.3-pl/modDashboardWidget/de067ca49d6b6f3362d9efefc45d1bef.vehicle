@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'namespace' => 'consentfriend',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0f677c479a0f9759af8ea1296652a646',
+  'package' => 'modx',
+  'class' => 'modDashboardWidget',
+  'signature' => 'de067ca49d6b6f3362d9efefc45d1bef',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"consentfriend.widget.statistics","description":"consentfriend.widget.statistics_desc","type":"file","content":"[[++core_path]]components\\/consentfriend\\/elements\\/widgets\\/statistics.widget.php","namespace":"consentfriend","lexicon":"consentfriend:default","size":"full","name_trans":"consentfriend.widget.statistics","description_trans":"consentfriend.widget.statistics_desc"}',
+);

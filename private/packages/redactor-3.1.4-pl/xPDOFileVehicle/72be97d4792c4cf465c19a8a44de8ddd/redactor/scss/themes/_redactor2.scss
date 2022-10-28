@@ -1,0 +1,58 @@
+
+// A v2 inspired toolbar theme
+.redactor-theme-redactor2.redactor-box {
+  &.redactor-theme__dark {
+
+    .redactor-toolbar-wrapper {
+      background: rgba(0, 0, 0, .97);
+    }
+
+    .redactor-toolbar {
+      a {
+        color: #fff;
+      }
+      &.redactor-toolbar__fixed {
+        background: rgba(0, 0, 0, .97);
+      }
+    }
+  }
+  .redactor-toolbar-wrapper {
+    background: #F2F2F2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    border-radius: 2px 2px 0 0;
+
+    .redactor-toolbar {
+      padding: 0;
+
+      a {
+        background: none;
+        box-shadow: none;
+        padding: 9px 10px;
+        margin: 0;
+        border-radius: 0;
+
+        &:hover, &:focus {
+          background: #09978F;
+          color: #FFF;
+        }
+
+        &.re-html.redactor-button-active {
+          background: #09978F;
+          color: #fff;
+        }
+      }
+
+      &.redactor-toolbar__fixed {
+        background: #F2F2F2;
+      }
+
+      @for $i from 1 through 20 {
+        a.re-divider#{$i} {
+          padding: 9px 0;
+          border-left: 1px solid #999;
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
+}

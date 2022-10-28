@@ -1,0 +1,70 @@
+<?php
+/**
+ * Resolve plugins order
+ *
+ * @package consentfriend
+ * @subpackage build
+ *
+ * @var array $options
+ * @var xPDOObject $object
+ */
+
+if (!function_exists('updatePluginsOrder')) {
+    /**
+     * @param modX $modx
+     * @param array $otherPlugins
+     * @param string $thisPlugin
+     * @param string $event
+     * @param string $order
+     */
+    function updatePluginsOrder($modx, $otherPlugins, $thisPlugin, $event, $order)
+    {
+        $order = ($order === 'DESC') ? 'DESC' : 'ASC';
+        $priority = ($order === 'DESC') ? +1 : -1;
+        $result = ($order === 'DESC') ? 'after' : 'before';
+
+        // Other plugins
+        $c = $modx->newQuery('modPluginEvent');
+        $c->leftJoin('modPlugin', 'Plugin', ['modPluginEvent.pluginid = Plugin.id']);
+        $c->where([
+            'event' => $event,
+            'Plugin.name:IN' => $otherPlugins
+        ]);
+        $c->sortby('priority', $order);
+        /** @var modPluginEvent $lastPluginEvent */
+        $lastPluginEvent = $modx->getObject('modPluginEvent', $c);
+
+        if ($lastPluginEvent) {
+            // This plugin
+            $c = $modx->newQuery('modPluginEvent');
+            $c->leftJoin('modPlugin', 'Plugin', ['modPluginEvent.pluginid = Plugin.id']);
+            $c->where([
+                'event' => $event,
+                'Plugin.name:=' => $thisPlugin
+            ]);
+            /** @var modPluginEvent $consentFriendPluginEvent */
+            $consentFriendPluginEvent = $modx->getObject('modPluginEvent', $c);
+            $consentFriendPluginEvent->set('priority', $lastPluginEvent->get('priority') + $priority);
+            $consentFriendPluginEvent->save();
+
+            $modx->log(xPDO::LOG_LEVEL_INFO, 'Updated ' . $thisPlugin . ' plugin running ' . $result . ' ' . implode(', ', $otherPlugins) . ' plugins in ' . $event . ' event.');
+        }
+    }
+}
+
+if ($object->xpdo) {
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+        case xPDOTransport::ACTION_UPGRADE:
+            /** @var modX $modx */
+            $modx =& $object->xpdo;
+
+            $modelPath = $modx->getOption('consentfriend.core_path', null, $modx->getOption('core_path') . 'components/consentfriend/') . 'model/';
+            $modx->addPackage('consentfriend', $modelPath);
+
+            updatePluginsOrder($modx, ['LangRouter', 'XRouting', 'ContextRouter', 'ContextGateway', 'ClientConfig'], 'ConsentFriend', 'OnHandleRequest', 'DESC');
+
+            break;
+    }
+}
+return true;
