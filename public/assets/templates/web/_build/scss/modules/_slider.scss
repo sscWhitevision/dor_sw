@@ -73,6 +73,7 @@
 		}
 	}
 
+
 	&__nav {
 		bottom: 40px;
 		font-size: 0.9rem;
@@ -104,7 +105,7 @@
 			padding: 8px 0 8px 12px;
 			position: relative;
 
-			&:active {
+			&.active {
 				font-weight: bold;
 			}
 
