@@ -41,6 +41,13 @@
         }
     }
 
+    &__field {
+
+        &--error {
+            color: red;
+        }
+    }
+
     &__error {
         font-size: 0.55rem;
         padding-left: 20px;
