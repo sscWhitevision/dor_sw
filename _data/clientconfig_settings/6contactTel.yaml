@@ -1,9 +1,0 @@
-id: 6
-key: contactTel
-label: Telefon
-xtype: textfield
-description: ''
-is_required: 1
-sortorder: 20
-value: a
-group: 2

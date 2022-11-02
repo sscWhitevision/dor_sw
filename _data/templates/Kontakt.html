@@ -20,24 +20,16 @@ properties: 'a:0:{}'
                     <div>
                         <div class="contact__wrapper">
                             <div class="contact">
-                                <div class="contact__headline">SW International headquarters</div>
-                                <div class="contact__info">
-                                    <div>
-                                        <svg class="contact__icon">
-                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#globe-solid`]]"></use>
-                                        </svg>
-                                    </div>
-                                    <a class="contact__link" href="">sw.international</a>
-                                </div>
+                                <div class="contact__headline">[[++contactName]]</div>
                                 <div class="contact__info">
                                     <div>
                                         <svg class="contact__icon">
                                             <use xlink:href="[[checksumFile? &file=`img/sprite.svg#location-dot-solid`]]"></use>
                                         </svg>
                                     </div>
-                                    <span>17/F, Chubb Tower, Windsor House, 311 Gloucester Road, Causeway Bay,
+                                    <span>[[++contactStreet]]
                                         <br>
-                                        Hong Kong
+                                        [[++contactCity]]
                                     </span>
                                 </div>
                                 <div class="contact__info">
@@ -57,145 +49,18 @@ properties: 'a:0:{}'
                                 <div class="countrySelect__label">Select Country / Region</div>
                                 <select class="js-country-select countrySelect" name="country" id="country">
                                     <option hidden value="0">Select Country / Region</option>
-                                    <option value="0">No Country Selected</option>
-                                    <option value="Chile">China</option>
-                                    <option value="China">Chile</option>
-                                    <option value="Germany">Germany</option>
+                                    [[!tvOptions?
+                                        &tpl=`contactsOptionsTpl`
+                                        &tv=`10`
+                                    ]]
                                 </select>
     
                                 <div class="js-country-result-wrapper">
                                     <div class="js-country-result" id="No Country Selected"></div>
-                                    <div class="js-country-result" id="No Country Selected"></div>
-                                    <div class="countrySelect__resultsWrapper js-country-result" id="China">
-                                        <div class="countrySelect__results ">
-                                            <div class="contact">
-                                                <div class="contact__headline">Beijing</div>
-    
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#location-dot-solid`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    17/F, Chubb Tower, Windsor House, 311 Gloucester Road, Causeway Bay,
-                                                    <br>
-                                                    Hong Kong
-                                                </div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#envelope-regular`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="contact__link" href="">
-                                                        info@shinewing.com</a>
-                                                </div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#globe-solid`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="contact__link" href="">sw.international</a>
-                                                </div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#phone-solid`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="contact__link" href="">(86) 10 6554 2288</a>
-                                                </div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#fax-solid`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="contact__link" href="">(86) 10 6554 7190</a>
-                                                </div>
-                                            </div>
-                                            <div class="contact">
-                                                <div class="contact__headline">Changchun</div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#location-dot-solid`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <span>17/F, Chubb Tower, Windsor House, 311 Gloucester Road, Causeway
-                                                        Bay,
-                                                        <br>
-                                                        Hong Kong
-                                                    </span>
-                                                </div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#brand-icon`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="contact__link" href="">sw.international</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="countrySelect__resultsWrapper js-country-result" id="Chile">
-                                        <div class="countrySelect__results ">
-                                            <div class="contact">
-                                                <div class="contact__headline">Something</div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <div>
-                                                            <svg class="contact__icon">
-                                                                <use xlink:href="[[checksumFile? &file=`img/sprite.svg#location-dot-solid`]]"></use>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                    <span>17/F, Chubb Tower, Windsor House, 311 Gloucester Road, Causeway
-                                                        Bay,
-                                                        <br>
-                                                        Hong Kong
-                                                    </span>
-                                                </div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <div>
-                                                            <svg class="contact__icon">
-                                                                <use xlink:href="[[checksumFile? &file=`img/sprite.svg#brand-icon`]]"></use>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                    <a class="contact__link" href="">sw.international</a>
-                                                </div>
-                                            </div>
-                                            <div class="contact">
-                                                <div class="contact__headline">Changchun</div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <div>
-                                                            <svg class="contact__icon">
-                                                                <use xlink:href="[[checksumFile? &file=`img/sprite.svg#location-dot-solid`]]"></use>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                    <span>17/F, Chubb Tower, Windsor House, 311 Gloucester Road, Causeway
-                                                        Bay,
-                                                        <br>
-                                                        Hong Kong
-                                                    </span>
-                                                </div>
-                                                <div class="contact__info">
-                                                    <div>
-                                                        <svg class="contact__icon">
-                                                            <use xlink:href="[[checksumFile? &file=`img/sprite.svg#brand-icon`]]"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="contact__link" href="">sw.international</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    [[!tvOptions?
+                                        &tpl=`contactsRegionTpl`
+                                        &tv=`10`
+                                    ]]
                                 </div>
                             </div>
                         </div>
@@ -203,7 +68,7 @@ properties: 'a:0:{}'
                         <!-- MemmberCard -->
                         <div class="cardMember">
                             <div class="cardMember__headline">
-                                Become a Memeber
+                                Become a Member
                             </div>
                             <div class="cardMember__text">Member firms of SW International are known for their outstanding
                                 and high-quality services.
@@ -214,59 +79,86 @@ properties: 'a:0:{}'
                         </div>
     
                     </div>
+                    
+                    [[!FormIt?
+                        &hooks=`spam,email,redirect`
+                        &emailTpl=`emailContactTpl`
+                        &emailSubject=`Inquiry`
+                        &redirectTo=`41`
+                        &emailFromName=`[[+firstname]] [[+lastname]]`
+                        &emailTo=`st.wachter@gmail.com`
+                        &emailReplyTo=`[[+email]]`
+                        &emailFrom=`noreply@whitevision-hosting.de`
+                        &validate=`nospam:blank,
+                                   firstname:required,
+                                   lastname:required,
+                                   salutation:required,
+                                   company:required,
+                                   email:email:required,
+                                   tel:required,
+                                   country:required,
+                                   message:required`
+                    ]]
+                    
                     <div>
-                        <div>
-                            <div class="form__headline">Contact form</div>
-                            <form action="" class="form" method="post">
-                                <div class="form__row form__row--2">
-                                    <div class="form__field form__field--error">
-                                        <div class="form__label">First Name</div>
-                                        <div class="form__field">
-                                            <input class="form__input" type="text">
-                                        </div>
-                                        <div class="form__error">• This Value is required</div>
-                                    </div>
-                                    <div class="form__field">
-                                        <div class="form__label">Last Name</div>
-                                        <div class="form__field">
-                                            <input class="form__input" type="text">
-                                        </div>
-                                    </div>
+                        <div class="form__headline">Contact form</div>
+                        
+                        <form action="[[~[[*id]]]]#cf" class="form" method="post" id="cf">
+                            <input type="hidden" name="nospam:blank" value="[[!+fi.nospam]]">
+                            
+                            <div class="form__row form__row--2">
+                                <div class="form__field [[!+fi.error.firstname:notempty=`form__field--error`]]">
+                                    <div class="form__label">First Name</div>
+                                    <input value="[[!+fi.firstname]]" name="firstname" class="form__input" type="text">
+                                    [[!+fi.error.firstname:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div class="form__row form__row--2">
-                                    <div class="form__field">
-                                        <div class="form__label">E-Mail</div>
-                                        <div class="form__field">
-                                            <input class="form__input" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form__field">
-                                        <div class="form__label">Contact Number</div>
-                                        <div class="form__field">
-                                            <input class="form__input" type="text">
-                                        </div>
-                                    </div>
+                                <div class="form__field [[!+fi.error.lastname:notempty=`form__field--error`]]">
+                                    <div class="form__label">Last Name</div>
+                                    <input value="[[!+fi.lastname]]" name="lastname" class="form__input" type="text">
+                                    [[!+fi.error.lastname:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div class="form__row form__row--2">
-                                    <div class="form__field">
-                                        <div class="form__label">Country/Region</div>
-                                        <div class="form__field">
-                                            <input class="form__input" type="text">
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="form__row form__row--2">
+                                <div class="form__field [[!+fi.error.salutation:notempty=`form__field--error`]]">
+                                    <div class="form__label">Title</div>
+                                    <input value="[[!+fi.salutation]]" name="salutation" class="form__input" type="text">
+                                    [[!+fi.error.salutation:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div class="form__row">
-                                    <div class="form__field">
-                                        <div class="form__label">Your Enquiry / Comment</div>
-                                        <div class="form__field">
-                                            <textarea name="message" class="form__input form__input--textarea"></textarea>
-                                        </div>
-                                    </div>
+                                <div class="form__field [[!+fi.error.company:notempty=`form__field--error`]]">
+                                    <div class="form__label">Company</div>
+                                    <input value="[[!+fi.company]]" name="company" class="form__input" type="text">
+                                    [[!+fi.error.company:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div class="form__note">Fields marked with an asteriks (*) are required.</div>
-                                <button type="submit" class="form__button">Submit</button>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form__row form__row--2">
+                                <div class="form__field [[!+fi.error.email:notempty=`form__field--error`]]">
+                                    <div class="form__label">E-Mail</div>
+                                    <input value="[[!+fi.email]]" name="email" class="form__input" type="email">
+                                    [[!+fi.error.email:notempty=`<div class="form__error">This Value is required</div>`]]
+                                </div>
+                                <div class="form__field [[!+fi.error.tel:notempty=`form__field--error`]]">
+                                    <div class="form__label">Contact Number</div>
+                                    <input value="[[!+fi.tel]]" name="tel" class="form__input" type="text">
+                                    [[!+fi.error.tel:notempty=`<div class="form__error">This Value is required</div>`]]
+                                </div>
+                            </div>
+                            <div class="form__row form__row--2">
+                                <div class="form__field [[!+fi.error.country:notempty=`form__field--error`]]">
+                                    <div class="form__label">Country/Region</div>
+                                    <input value="[[!+fi.country]]" name="country" class="form__input" type="text">
+                                    [[!+fi.error.country:notempty=`<div class="form__error">This Value is required</div>`]]
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__field [[!+fi.error.message:notempty=`form__field--error`]]">
+                                    <div class="form__label">Your Enquiry / Comment</div>
+                                    <textarea name="message" class="form__input form__input--textarea">[[!+fi.message]]</textarea>
+                                    [[!+fi.error.message:notempty=`<div class="form__error">This Value is required</div>`]]
+                                </div>
+                            </div>
+                            <div class="form__note">Fields marked with an asteriks (*) are required.</div>
+                            <button type="submit" class="form__button">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

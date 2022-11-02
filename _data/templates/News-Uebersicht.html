@@ -28,13 +28,23 @@ properties: 'a:0:{}'
         <div class="pt2 pb2">
             <div class="containerBig">
                 <div class="news__wrapper js-news-result-wrapper">
-                    [[pdoResources?
-                        &depth=`0`
+                    [[!pdoPage?
+                        &limit=`12`
                         &tpl=`newsTeaserTpl`
                         &includeTVs=`newsImage,newsIntro`
                         &processTVs=`1`
                         &tvPrefix=``
-                        &limit=`0`
+                        &tplPage=`@INLINE <a class="pagination__button" href="[[+href]]">[[+pageNo]]</a>`
+                        &tplPageWrapper=`@INLINE <div class="pagination">[[+first]][[+prev]][[+pages]][[+next]][[+last]]</div>`
+                        &tplPageActive=`@INLINE <a class="pagination__button active" href="[[+href]]">[[+pageNo]]</a>`
+                        &tplPageFirst=``
+                        &tplPageFirstEmpty=``
+                        &tplPageLastEmpty=``
+                        &tplPageLast=``
+                        &tplPagePrevEmpty=``
+                        &tplPageNextEmpty=``
+                        &tplPagePrev=`@INLINE <a class="pagination__button" href="[[+href]]">«</a>`
+                        &tplPageNext=`@INLINE <a class="pagination__button" href="[[+href]]">»</a>`
                     ]]
                 </div>
             </div>
@@ -43,26 +53,7 @@ properties: 'a:0:{}'
         <!-- paginationButtons -->
         <div class="pt0 pb4">
             <div class="container">
-                <div class="pagination">
-                    <a class="pagination__button">
-                        «
-                    </a>
-                    <a class="pagination__button">
-                        1
-                    </a>
-                    <a class="pagination__button">
-                        2
-                    </a>
-                    <a class="pagination__button">
-                        3
-                    </a>
-                    <a class="pagination__button active">
-                        4
-                    </a>
-                    <a class="pagination__button">
-                        »
-                    </a>
-                </div>
+                [[!+page.nav]]
             </div>
         </div>
 

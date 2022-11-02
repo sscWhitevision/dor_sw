@@ -1,0 +1,18 @@
+id: 39
+source: 2
+name: searchResultsTpl
+description: ''
+category: Suche
+properties: 'a:0:{}'
+
+-----
+
+<li class="searchResults">
+    <a class="searchResults__title" href="[[~[[+id]]]]">
+        <svg class="searchResults__icon"><use xlink:href="[[checksumFile? &file=`img/sprite.svg#search`]]"></use></svg>
+        [[+pagetitle]]
+    </a>
+    <div class="searchResults__text">
+        [[+extract]]
+    </div>
+</li>

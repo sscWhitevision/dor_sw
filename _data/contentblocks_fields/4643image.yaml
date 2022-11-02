@@ -1,6 +1,6 @@
 id: 46
 parent: 43
-parent_properties: '{"key":"image","width":"15"}'
+parent_properties: '{"key":"image","width":"50"}'
 input: image
 name: Icon
 description: ''

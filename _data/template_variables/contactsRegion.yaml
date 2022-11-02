@@ -1,0 +1,12 @@
+id: 10
+source: 2
+type: listbox
+name: contactsRegion
+category: Contacts
+elements: 'Australia==1||Chile==2||China==3||Egypt==4||Germany==7||Hong Kong==8||India==9||Indonesia==10||Japan==11||Macau==12||Malaysia==13||Pakistan==14||Singapore==15||Taiwan==16||Thailand==17||Turkey==18||United Kingdom==19'
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:7:{s:10:"allowBlank";s:5:"false";s:9:"listWidth";s:0:"";s:5:"title";s:0:"";s:9:"typeAhead";s:5:"false";s:14:"typeAheadDelay";s:3:"250";s:14:"forceSelection";s:4:"true";s:13:"listEmptyText";s:0:"";}'
+output_properties: 'a:0:{}'
+content: ''

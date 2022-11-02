@@ -5,5 +5,5 @@ xtype: textfield
 description: ''
 is_required: 1
 sortorder: 1
-value: a
+value: 'SW International headquarters'
 group: 2

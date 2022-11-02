@@ -11,5 +11,6 @@ action_props: ''
 handler: 'ClientSupport.supportWindow(); return false;'
 link: null
 newwindow: 1
+active: 0
 iconcls: fa-info-circle
 iconpath: ''

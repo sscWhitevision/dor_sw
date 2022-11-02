@@ -1,0 +1,58 @@
+id: 9
+templatename: Suche
+description: ''
+category: Admin
+icon: icon-search
+properties: 'a:0:{}'
+
+-----
+
+[[$htmlHeader]]
+
+        [[$header]]
+        
+        [[*content]]
+        
+        <div class="pt0 pb0">
+            <div class="banner">
+                <img class="banner__image" width="600" height="400" src="[[++checksumfile.assets_path]]img/search-hero.jpeg" alt="" loading="lazy">
+                <div class="banner__content">
+                    <div class="banner__headline">
+                        <svg class="banner__icon">
+                            <use xlink:href="/assets/templates/web/img/sprite.de8e8877.svg#brand-icon"></use>
+                        </svg>
+                        <h1>Search Result(s) for 
+                        [[!SimpleSearch?
+                            &containerTpl=`searchResultsQuery`
+                        ]]
+                        </h1>
+                    </div>
+                    <div class="banner__breadcrump">
+                        <ul id="breadcrumb" itemprop="breadcrumb"><li><a href="/">Startsite</a></li><li>Search</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pt0 pb2">
+            <div class="containerBig">
+                <div class="containerFloat">
+                    <div class="wrapperFloat">
+                        <ul>
+                            [[!SimpleSearch?
+                                &extractLength=`300`
+                                &tpl=`searchResultsTpl`
+                                &containerTpl=`searchResultsContainer`
+                                &highlightTag=`strong`
+                            ]]
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        [[$footer]]
+        
+        [[$scripts]]
+
+[[$htmlFooter]]

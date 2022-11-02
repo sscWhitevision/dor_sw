@@ -1,0 +1,12 @@
+id: 15
+set: 2
+icon: 347
+icon_file: null
+text: Standorte
+description: 'Verwalten Sie Ihre Standorte.'
+action_props: ''
+handler: null
+link: '?a=index&namespace=migx&configs=contacts'
+ranking: 3
+iconcls: fa-map-pin
+iconpath: ''

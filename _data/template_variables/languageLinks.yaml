@@ -1,0 +1,13 @@
+id: 11
+source: 2
+type: migx
+name: languageLinks
+caption: Sprachwechsler
+category: Kontakt
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: "a:7:{s:7:\"configs\";s:0:\"\";s:8:\"formtabs\";s:141:\"[\n{\"caption\":\"Länder\", \"fields\": [\n    {\"field\":\"country\",\"caption\":\"Land\"},\n    {\"field\":\"link\",\"caption\":\"Link\",\"inputTVtype\":\"url\"}\n]}\n] \";s:7:\"columns\";s:82:\"[\n{\"header\": \"Land\", \"width\": \"100\", \"sortable\": \"true\", \"dataIndex\": \"country\"}\n]\";s:7:\"btntext\";s:16:\"Land hinzufügen\";s:10:\"previewurl\";s:0:\"\";s:10:\"jsonvarkey\";s:0:\"\";s:19:\"autoResourceFolders\";s:5:\"false\";}"
+output_properties: 'a:0:{}'
+content: ''

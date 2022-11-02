@@ -22,85 +22,106 @@ properties: 'a:0:{}'
                         <div class="textLeft__headline2">
                             If you are interested in joining SW International, please complete the form below.
                         </div>
-        
-                        <form action="" class="form" method="post">
+                        
+                        [[!FormIt?
+                            &hooks=`spam,email,redirect`
+                            &emailTpl=`emailMemberTpl`
+                            &emailSubject=`Member Application`
+                            &redirectTo=`41`
+                            &emailFromName=`[[+firstname]] [[+lastname]]`
+                            &emailTo=`st.wachter@gmail.com`
+                            &emailReplyTo=`[[+email]]`
+                            &emailFrom=`noreply@whitevision-hosting.de`
+                            &validate=`nospam:blank,
+                                       firstname:required,
+                                       lastname:required,
+                                       salutation:required,
+                                       company:required,
+                                       email:email:required,
+                                       tel:required,
+                                       country:required,
+                                       partners:required,
+                                       staff:required,
+                                       scope:required,
+                                       locations:required,
+                                       message:required`
+                        ]]
+                        
+                        <form action="[[~[[*id]]]]#cf" class="form" method="post" id="cf">
+                            <input type="hidden" name="nospam:blank" value="[[!+fi.nospam]]">
+                                
                             <div class="form__row form__row--2wide">
-                                <div class="form__field--error">
+                                <div class="form__field [[!+fi.error.firstname:notempty=`form__field--error`]]">
                                     <div class="form__label">First Name</div>
-                                    <input class="form__input" type="text">
-                                    <div class="form__error">• This Value is required</div>
+                                    <input class="form__input" name="firstname" value="[[!+fi.firstname]]" type="text">
+                                    [[!+fi.error.firstname:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div>
+                                <div class="form__field [[!+fi.error.lastname:notempty=`form__field--error`]]">
                                     <div class="form__label">Last Name</div>
-                                    <div>
-                                        <input class="form__input" type="text">
-                                    </div>
+                                    <input class="form__input" name="lastname" value="[[!+fi.lastname]]" type="text">
+                                    [[!+fi.error.lastname:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                            </div>
+                            </div>  
                             <div class="form__row form__row--2wide">
-                                <div>
+                                <div class="form__field [[!+fi.error.salutation:notempty=`form__field--error`]]">
                                     <div class="form__label">Title</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" name="salutation" value="[[!+fi.salutation]]" type="text">
+                                    [[!+fi.error.salutation:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div>
+                                <div class="form__field [[!+fi.error.company:notempty=`form__field--error`]]">
                                     <div class="form__label">Company</div>
-                                    <div>
-                                        <input class="form__input" type="text">
-                                    </div>
+                                    <input class="form__input" name="company" value="[[!+fi.company]]" type="text">
+                                    [[!+fi.error.company:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
                             </div>
                             <div class="form__row form__row--2wide">
-                                <div>
+                                <div class="form__field [[!+fi.error.email:notempty=`form__field--error`]]">
                                     <div class="form__label">E-Mail</div>
-                                    <div>
-                                        <input class="form__input" type="text">
-                                    </div>
+                                    <input class="form__input" name="email" value="[[!+fi.email]]" type="email">
+                                    [[!+fi.error.email:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div>
+                                <div class="form__field [[!+fi.error.tel:notempty=`form__field--error`]]">
                                     <div class="form__label">Contact Number</div>
-                                    <div>
-                                        <input class="form__input" type="text">
-                                    </div>
+                                    <input class="form__input" name="tel" value="[[!+fi.tel]]" type="tel">
+                                    [[!+fi.error.tel:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
                             </div>
                             <div class="form__row form__row--2wide">
-                                <div>
+                                <div class="form__field [[!+fi.error.country:notempty=`form__field--error`]]">
                                     <div class="form__label">Country</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" name="country" value="[[!+fi.country]]" type="text">
+                                    [[!+fi.error.country:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div>
+                                <div class="form__field [[!+fi.error.partners:notempty=`form__field--error`]]">
                                     <div class="form__label">No. of Partners</div>
-                                    <div>
-                                        <input class="form__input" type="text">
-                                    </div>
+                                    <input class="form__input" name="partners" value="[[!+fi.partners]]" type="text">
+                                    [[!+fi.error.partners:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
                             </div>
                             <div class="form__row form__row--2wide">
-                                <div>
+                                <div class="form__field [[!+fi.error.staff:notempty=`form__field--error`]]">
                                     <div class="form__label">No. of Staff</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" name="staff" value="[[!+fi.staff]]" type="text">
+                                    [[!+fi.error.staff:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
-                                <div>
+                                <div class="form__field [[!+fi.error.scope:notempty=`form__field--error`]]">
                                     <div class="form__label">Scope of Services</div>
-                                    <div>
-                                        <input class="form__input" type="text">
-                                    </div>
+                                    <input class="form__input" name="scope" value="[[!+fi.scope]]" type="text">
+                                    [[!+fi.error.scope:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
                             </div>
                             <div class="form__row form__row--2wide">
-                                <div>
+                                <div class="form__field [[!+fi.error.locations:notempty=`form__field--error`]]">
                                     <div class="form__label">Locations(s) of Offices</div>
-                                    <div>
-                                        <input class="form__input" type="text">
-                                    </div>
+                                    <input class="form__input" name="locations" value="[[!+fi.locations]]" type="text">
+                                    [[!+fi.error.locations:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
                             </div>
                             <div class="form__row">
-                                <div>
+                                <div class="form__field [[!+fi.error.message:notempty=`form__field--error`]]">
                                     <div class="form__label">Your Enquiry / Comment</div>
-                                    <div>
-                                        <textarea name="message" class="form__input form__input--textarea"></textarea>
-                                    </div>
+                                    <textarea name="message" class="form__input form__input--textarea">[[!+fi.message]]</textarea>
+                                    [[!+fi.error.message:notempty=`<div class="form__error">This Value is required</div>`]]
                                 </div>
                             </div>
                             <div class="form__note">Fields marked with an asteriks (*) are required.</div>

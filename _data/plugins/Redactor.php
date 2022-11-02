@@ -64,13 +64,13 @@ switch ($modx->event->name) {
             return;
         }
 
-        if (isset($resource) && $resource instanceof modResource) {
+        if (isset($resource) && ($resource instanceof modResource || $resource instanceof \MODX\Revolution\modResource)) {
             $redactor->setResource($resource);
         }
-        elseif ($modx->resource && $modx->resource instanceof modResource) {
+        elseif ($modx->resource && ($modx->resource instanceof modResource || $modx->resource instanceof \MODX\Revolution\modResource)) {
             $redactor->setResource($modx->resource);
         }
-        elseif ($modx->controller && isset($modx->controller->resource) && $modx->controller->resource instanceof modResource) {
+        elseif ($modx->controller && isset($modx->controller->resource) && ($modx->controller->resource instanceof modResource || $modx->controller->resource instanceof \MODX\Revolution\modResource)) {
             $redactor->setResource($modx->controller->resource);
         }
 
@@ -79,9 +79,9 @@ switch ($modx->event->name) {
 
         $set = (int)$redactor->getOption('redactor.configuration_set', null, 1, true);
         if (isset($resource)
-            && ($resource instanceof modResource)
+            && ($resource instanceof modResource || $resource instanceof \MODX\Revolution\modResource)
             && ($template = $resource->getOne('Template'))
-            && ($template instanceof modTemplate)
+            && ($template instanceof modTemplate || $template instanceof \MODX\Revolution\modTemplate)
         ) {
             $props = $template->getProperties();
             $templateSet = array_key_exists('redactor.configuration_set', $props) ? (int)$props['redactor.configuration_set'] : 0;
@@ -157,16 +157,16 @@ HTML;
         $js .= $redactor->getGeneratedConfigurationSets([Redactor::OPT_IS_FRED => true]);
 
         // Make the resource/wctx available
-        if (isset($modx->resource) && $modx->resource instanceof modResource) {
+        if (isset($modx->resource) && ($modx->resource instanceof modResource || $modx->resource instanceof \MODX\Revolution\modResource)) {
             $redactor->setResource($modx->resource);
         }
 
         // Get the default configuration set to use from template or setting. This can be overriden with a Fred RTE Config.
         $set = (int)$redactor->getOption('redactor.configuration_set', null, 1, true);
         if (isset($modx->resource)
-            && ($modx->resource instanceof modResource)
+            && ($modx->resource instanceof modResource || $modx->resource instanceof \MODX\Revolution\modResource)
             && ($template = $modx->resource->getOne('Template'))
-            && ($template instanceof modTemplate)
+            && ($template instanceof modTemplate || $template instanceof \MODX\Revolution\modTemplate)
         ) {
             $props = $template->getProperties();
             $templateSet = array_key_exists('redactor.configuration_set', $props) ? (int)$props['redactor.configuration_set'] : 0;

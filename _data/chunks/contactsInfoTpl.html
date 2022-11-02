@@ -1,0 +1,42 @@
+id: 37
+source: 2
+name: contactsInfoTpl
+description: ''
+category: Kontakt
+properties: 'a:0:{}'
+
+-----
+
+<div class="contact">
+    <div class="contact__headline">[[+city]]</div>
+    [[+address:notempty=`
+    <div class="contact__info">
+        <svg class="contact__icon"><use xlink:href="[[checksumFile? &file=`img/sprite.svg#location-dot-solid`]]"></use></svg>
+        [[+address:nl2br]]
+    </div>
+    `]]
+    [[+email:notempty=`
+    <div class="contact__info">
+        <svg class="contact__icon"><use xlink:href="[[checksumFile? &file=`img/sprite.svg#envelope-regular`]]"></use></svg>
+        <a class="contact__link" href="mailto:[[+email]]">[[+email]]</a>
+    </div>
+    `]]
+    [[+url:notempty=`
+    <div class="contact__info">
+        <svg class="contact__icon"><use xlink:href="[[checksumFile? &file=`img/sprite.svg#globe-solid`]]"></use></svg>
+        <a class="contact__link" href="[[+url]]">[[+url]]</a>
+    </div>
+    `]]
+    [[+tel:notempty=`
+    <div class="contact__info">
+        <svg class="contact__icon"><use xlink:href="[[checksumFile? &file=`img/sprite.svg#phone-solid`]]"></use></svg>
+        <a class="contact__link" href="tel:[[+tel:sanitizeTel]]">[[+tel]]</a>
+    </div>
+    `]]
+    [[+fax:notempty=`
+    <div class="contact__info">
+        <svg class="contact__icon"><use xlink:href="[[checksumFile? &file=`img/sprite.svg#fax-solid`]]"></use></svg>
+        [[+fax]]
+    </div>
+    `]]
+</div>

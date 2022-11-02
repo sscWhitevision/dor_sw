@@ -2,6 +2,7 @@ id: 8
 source: 2
 name: ManagerCustomizations
 properties: 'a:0:{}'
+disabled: 1
 
 -----
 
