@@ -222,7 +222,6 @@ $(document).ready(function () {
 
         $languageList.find(".js-header-language-listitem").hide();
         $languageList.find(".js-header-language-listitem:Contains(" + input + ")").show();
-        console.log(input);
     });
 
     // * * * * * * * * * * * * * * * * * * * * * * * * *
