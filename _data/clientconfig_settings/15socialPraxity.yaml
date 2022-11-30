@@ -4,5 +4,4 @@ label: Praxity
 xtype: textfield
 description: ''
 sortorder: 60
-value: 'https://www.praxity.com/'
 group: 3

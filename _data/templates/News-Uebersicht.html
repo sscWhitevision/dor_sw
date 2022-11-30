@@ -16,11 +16,12 @@ properties: 'a:0:{}'
         <!-- filter -->
         <div class="pt1 pb1">
             <div class="containerBig">
-                <div class="filter">
-                    <select name="year" class="filter__select js-news-select">
-                        <option value="0" class="js-news-default-option">All News</option>
+                <form action="[[~[[*id]]]]" class="filter" method="get">
+                    <select name="year" class="filter__select" onchange="this.form.submit()">
+                        <option value="" class="js-news-default-option">All News</option>
+                        [[!getNewsYearOptions]]
                     </select>
-                </div>
+                </form>
             </div>
         </div>
     
@@ -34,6 +35,7 @@ properties: 'a:0:{}'
                         &includeTVs=`newsImage,newsIntro`
                         &processTVs=`1`
                         &tvPrefix=``
+                        &where=`[[!filterNewsByYear]]`
                         &tplPage=`@INLINE <a class="pagination__button" href="[[+href]]">[[+pageNo]]</a>`
                         &tplPageWrapper=`@INLINE <div class="pagination">[[+first]][[+prev]][[+pages]][[+next]][[+last]]</div>`
                         &tplPageActive=`@INLINE <a class="pagination__button active" href="[[+href]]">[[+pageNo]]</a>`

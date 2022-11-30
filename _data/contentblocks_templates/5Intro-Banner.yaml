@@ -1,7 +1,7 @@
 id: 5
 name: Intro-Banner
 description: ''
-category: 1
+category: 20
 icon: site-cb-banner
 icon_type: custom
 content: '[{"layout":6,"content":{"main":[{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"field":33,"settings":{}}]},"settings":[],"parent":0,"title":""}]'

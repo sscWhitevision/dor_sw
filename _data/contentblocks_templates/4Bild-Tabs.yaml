@@ -1,7 +1,7 @@
 id: 4
 name: Bild-Tabs
 description: ''
-category: 1
+category: 20
 icon: site-cb-imagecontenttabs
 icon_type: custom
 content: '[{"layout":5,"content":{"main":[{"rows":[{"tab":{"value":"","fieldId":"contentblocks-field-3"},"content":{"value":"","fieldId":"contentblocks-field-4"},"link":{"link":"","linkType":"link","fieldId":"contentblocks-field-5"}}],"field":24,"settings":{}}],"image":[{"url":"","title":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"field":32,"settings":{}}]},"settings":{"paddingTop":"2","paddingBottom":"0","anchor":"","reverse":"1","headline":"","link":"","button":""},"parent":0,"title":""}]'

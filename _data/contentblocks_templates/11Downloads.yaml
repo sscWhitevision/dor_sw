@@ -1,7 +1,7 @@
 id: 11
 name: Downloads
 description: ''
-category: 1
+category: 20
 icon: site-cb-magazin
 icon_type: custom
 content: '[{"layout":12,"content":{"main":[{"rows":[{"image":{"url":"","size":"","width":"","height":"","extension":"","source":"","crops":{},"fieldId":"contentblocks-field-2"},"name":{"value":"","fieldId":"contentblocks-field-3"},"download":{"files":[],"fieldId":"contentblocks-field-4"}}],"field":55,"settings":{}}]},"settings":[],"parent":0,"title":""}]'

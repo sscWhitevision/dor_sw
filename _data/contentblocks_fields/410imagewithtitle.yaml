@@ -5,6 +5,7 @@ name: Bild
 description: ''
 content_desc: ''
 sortorder: 16
+category: 18
 icon: image
 template: "<picture>\n    <source srcset=\"[[+crops.standard.url:pThumb=`f=webp`]]\" type=\"image/webp\">\n    <source srcset=\"[[+crops.standard.url]]\" type=\"image/jpeg\"> \n    <img class=\"textLeft__image\" width=\"[[+width]]\" height=\"[[+height]]\" src=\"[[+crops.standard.url]]\" alt=\"[[+title:htmlent]]\" loading=\"lazy\">\n</picture>"
 properties: '{"source":"0","directory":"bilder\/","crop_directory":"crops\/","crops":"standard:width=500","open_crops_automatically":"1","file_types":"png,gif,jpg,jpeg,svg","thumbnail_size":"0","thumbnail_crop":"standard","use_tinyrte":"0"}'
